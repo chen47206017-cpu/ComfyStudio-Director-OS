@@ -1,14 +1,17 @@
 ﻿
 
 import {
+
 qcRules
+
 }
+
 from "./rules";
 
 
 
 export function runQC(
-data:any
+ctx:any
 ){
 
 
@@ -17,48 +20,112 @@ const issues:string[]=[];
 
 
 
-if(!data.canon){
+
+// 年代检查
+
+const forbidden:any=
+
+(qcRules.timeline as any)[ctx.year];
+
+
+
+if(forbidden){
+
+
+for(
+const item of forbidden
+){
+
+
+if(
+JSON.stringify(ctx.props)
+.includes(item)
+
+){
+
 
 issues.push(
-"CANON_MISSING"
+"TIMELINE_PROP_CONFLICT:"+item
 );
+
+
+}
+
 
 }
 
 
 
-if(!data.reference){
+}
+
+
+
+
+
+// 场景检查
+
+
+if(
+ctx.scene.includes("2006")
+&&
+ctx.prompt.includes("未来")
+
+){
+
 
 issues.push(
-"REFERENCE_MISSING"
+"SCENE_TIME_MIX"
 );
+
 
 }
 
 
 
-if(!data.prompt){
+
+
+
+
+// 时空融合检查
+
+
+if(
+ctx.prompt.includes("三层")
+
+){
+
 
 issues.push(
-"PROMPT_MISSING"
+"TIME_SPACE_MERGE"
 );
 
+
 }
+
+
+
 
 
 
 return {
 
 
-pass:
+passed:
 issues.length===0,
 
 
-score:
-100-(issues.length*15),
+level:
+
+issues.length===0
+
+?"PASS"
+
+:"BLOCK",
+
 
 
 issues
+
 
 
 };

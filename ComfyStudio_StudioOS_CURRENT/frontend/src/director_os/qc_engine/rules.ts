@@ -1,106 +1,93 @@
 ﻿
 
-export const qcRules=[
-
-
-{
-
-
-id:"CANON_CHECK",
-
-name:"Canon一致性检查",
-
-severity:"HIGH"
-
-
-},
+export const qcRules={
 
 
 
-{
+timeline:{
 
 
-id:"AGE_CHECK",
+2006:[
 
-name:"人物年龄检查",
+"手机",
 
-severity:"HIGH"
+"智能设备",
 
+"未来设备"
 
-},
-
-
-
-{
+],
 
 
-id:"YEAR_CHECK",
 
-name:"年代检查",
+2026:[
 
-severity:"HIGH"
+"2006座机"
+
+],
+
+
+
+2046:[
+
+"2006旧家具"
+
+]
 
 
 },
 
 
 
-{
+
+character:{
 
 
-id:"PROP_CHECK",
+2006:{
 
-name:"道具一致性检查",
-
-severity:"MEDIUM"
-
+"苏晚晴":25
 
 },
 
 
 
-{
+2026:{
 
-
-id:"SCENE_CHECK",
-
-name:"场景一致性检查",
-
-severity:"MEDIUM"
-
+"苏晚晴":45
 
 },
 
 
 
-{
+2046:{
 
-
-id:"REFERENCE_CHECK",
-
-name:"参考图检查",
-
-severity:"HIGH"
-
-
-},
-
-
-
-{
-
-
-id:"PROMPT_CHECK",
-
-name:"提示词完整性检查",
-
-severity:"MEDIUM"
-
+"陈念":40
 
 }
 
 
-];
+
+},
+
+
+
+
+
+props:{
+
+
+"RECORDER_2046":[2046],
+
+
+"PHONE_2006":[2006],
+
+
+"DESIGN_DRAWING_2006":[2006]
+
+}
+
+
+
+};
 
 
 

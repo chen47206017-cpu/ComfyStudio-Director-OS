@@ -1,8 +1,11 @@
 ﻿
 
 import {
+
 runQC
+
 }
+
 from "../qc_engine/validator";
 
 
@@ -10,9 +13,7 @@ from "../qc_engine/validator";
 export class QCEngine{
 
 
-check(
-data:any
-){
+check(data:any){
 
 
 return runQC(data);

@@ -1,11 +1,21 @@
 ﻿
+export type QCLevel =
+
+"BLOCK" |
+
+"WARNING" |
+
+"PASS";
+
+
+
 export interface QCResult{
 
 
-pass:boolean;
+level:QCLevel;
 
 
-score:number;
+passed:boolean;
 
 
 issues:string[];
@@ -14,18 +24,29 @@ issues:string[];
 }
 
 
-export interface QCRule{
+
+export interface QCContext{
 
 
-id:string;
+year:number;
 
 
-name:string;
+character:string[];
 
 
-severity:string;
+scene:string;
+
+
+props:string[];
+
+
+references:any;
+
+
+prompt:string;
 
 
 }
+
 
 
