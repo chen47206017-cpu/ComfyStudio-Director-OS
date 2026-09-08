@@ -1,8 +1,18 @@
 ﻿
+import {
+
+PromptContext,
+
+CompiledPrompt
+
+}
+
+from "./schema";
+
 
 import {
 
-promptTemplates
+promptTemplate
 
 }
 
@@ -12,54 +22,75 @@ from "./templates";
 
 export function compilePrompt(
 
-context:any
+ctx:PromptContext
 
-){
-
-
-
-let positive=
-
-promptTemplates.cinematic
-
-.replace(
-
-"{{duration}}",
-
-context.duration || 6
-
-)
-
-.replace(
-
-"{{year}}",
-
-context.year
-
-);
-
-
-
-let negative=
-
-promptTemplates.negative;
+):CompiledPrompt{
 
 
 
 return {
 
 
-positive,
+
+positive:
 
 
-negative,
+
+`
+
+${promptTemplate.cinematic}
 
 
-model:
+角色:
 
-context.model ||
+${ctx.character.join(",")}
 
-"Seedance 2.5"
+
+场景:
+
+${ctx.scene.join(",")}
+
+
+道具:
+
+${ctx.props.join(",")}
+
+
+参考:
+
+${ctx.references.join(",")}
+
+
+
+模型:
+
+${ctx.model}
+
+
+`,
+
+
+
+negative:
+
+
+promptTemplate.forbidden,
+
+
+
+qc:[
+
+"人物年龄检查",
+
+"服装检查",
+
+"年代检查",
+
+"道具检查",
+
+"空间检查"
+
+]
 
 
 

@@ -2,32 +2,28 @@
 export interface PromptContext{
 
 
-shotId:string;
+episode:string;
 
 
 year:number;
 
 
-characters:string[];
+character:string[];
 
 
-scene:string;
+scene:string[];
 
 
 props:string[];
 
 
-camera?:string;
+references:string[];
 
 
-duration?:number;
-
-
-model?:string;
+model:string;
 
 
 }
-
 
 
 export interface CompiledPrompt{
@@ -39,7 +35,7 @@ positive:string;
 negative:string;
 
 
-model:string;
+qc:string[];
 
 
 }

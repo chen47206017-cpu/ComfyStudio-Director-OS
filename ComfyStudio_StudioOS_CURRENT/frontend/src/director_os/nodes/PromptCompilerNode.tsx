@@ -1,51 +1,37 @@
 ﻿
-
 import React from "react";
+
 
 import {
 
-PromptCompilerEngine
+PromptEngine
 
 }
 
-from "../engines/prompt_compiler_engine";
+from "../engines/prompt_engine";
 
 
 
-
-export default function PromptNode(
+export default function PromptCompilerNode(
 
 {data}:any
 
 ){
 
 
-const engine=
 
-new PromptCompilerEngine();
+const engine=new PromptEngine();
 
 
 
 function compile(){
 
 
-const result=
-
-engine.compile(
-
-data.shot
-
-);
-
-
 console.log(
 
-"Prompt Result",
-
-result
+engine.compile(data)
 
 );
-
 
 
 }
@@ -59,7 +45,7 @@ return (
 
 <h3>
 
-Prompt编译节点
+Prompt生成节点
 
 </h3>
 
@@ -70,15 +56,16 @@ onClick={compile}
 
 >
 
-生成AI提示词
+生成影视Prompt
 
 </button>
 
 
-
 </div>
 
+
 )
+
 
 
 }
