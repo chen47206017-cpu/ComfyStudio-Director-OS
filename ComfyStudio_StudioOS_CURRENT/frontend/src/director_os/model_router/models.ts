@@ -4,86 +4,74 @@ export const modelRegistry={
 
 SEEDANCE_25:{
 
+
 id:"SEEDANCE_25",
 
-name:"Seedance 2.5",
+quality:98,
 
-provider:"ByteDance",
+cost:90,
 
-type:"video",
-
-quality:95,
-
-cost:45,
-
-speed:80,
+speed:60,
 
 local:false
 
+
 },
+
 
 
 SEEDANCE_20:{
 
+
 id:"SEEDANCE_20",
 
-name:"Seedance 2.0",
+quality:90,
 
-provider:"ByteDance",
+cost:60,
 
-type:"video",
-
-quality:85,
-
-cost:25,
-
-speed:90,
+speed:85,
 
 local:false
 
+
 },
+
 
 
 COMFYUI_H3:{
 
+
 id:"COMFYUI_H3",
-
-name:"MiniMax H3",
-
-provider:"Local",
-
-type:"video",
-
-quality:80,
-
-cost:10,
-
-speed:60,
-
-local:true
-
-},
-
-
-COMFYUI_LOCAL:{
-
-id:"COMFYUI_LOCAL",
-
-name:"ComfyUI Local GPU",
-
-provider:"Local",
-
-type:"workflow",
 
 quality:85,
 
-cost:5,
+cost:20,
 
 speed:50,
 
 local:true
 
+
+},
+
+
+
+COMFYUI_LOCAL:{
+
+
+id:"COMFYUI_LOCAL",
+
+quality:75,
+
+cost:5,
+
+speed:70,
+
+local:true
+
+
 }
+
 
 
 };
