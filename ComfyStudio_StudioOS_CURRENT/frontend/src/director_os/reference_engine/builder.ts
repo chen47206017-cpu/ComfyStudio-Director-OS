@@ -1,9 +1,12 @@
 ﻿
 
 import {
-referenceAssets
+
+referenceRegistry
+
 }
-from "./assets";
+
+from "./registry";
 
 
 
@@ -13,15 +16,22 @@ shot:any
 
 
 
-const assets=[];
+const pack:any={};
 
 
 
 if(shot.character){
 
-assets.push(
-(referenceAssets as any)[shot.character]
+
+pack.character=
+
+shot.character.map(
+(x:string)=>
+
+(referenceRegistry as any)[x]
+
 );
+
 
 }
 
@@ -29,9 +39,11 @@ assets.push(
 
 if(shot.scene){
 
-assets.push(
-(referenceAssets as any)[shot.scene]
-);
+
+pack.scene=
+
+(referenceRegistry as any)[shot.scene];
+
 
 }
 
@@ -39,37 +51,54 @@ assets.push(
 
 if(shot.props){
 
-shot.props.forEach(
-(p:string)=>{
 
-assets.push(
-(referenceAssets as any)[p]
+pack.props=
+
+shot.props.map(
+(x:string)=>
+
+(referenceRegistry as any)[x]
+
 );
 
-}
-
-)
 
 }
 
 
 
-return {
+if(shot.previousFrame){
 
 
-shotId:shot.id,
+pack.previousFrame={
 
+type:"LAST_FRAME",
 
-assets,
-
-
-inheritPrevious:
-true
-
-
+path:shot.previousFrame
 
 };
 
+
+}
+
+
+
+if(shot.video){
+
+
+pack.video={
+
+type:"VIDEO",
+
+path:shot.video
+
+};
+
+
+}
+
+
+
+return pack;
 
 
 }

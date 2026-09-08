@@ -1,22 +1,15 @@
 ﻿
 export type ReferenceType =
 
-"CHARACTER"
+"CHARACTER" |
 
-|
+"SCENE" |
 
-"SCENE"
+"PROP" |
 
-|
+"LAST_FRAME" |
 
-"PROP"
-
-|
-
-"VIDEO"
-
-
-;
+"VIDEO";
 
 
 export interface ReferenceAsset{
@@ -31,14 +24,13 @@ type:ReferenceType;
 name:string;
 
 
+priority:number;
+
+
 path:string;
 
 
-weight:number;
-
-
-tags:string[];
-
+locked:boolean;
 
 
 }
@@ -48,16 +40,22 @@ tags:string[];
 export interface ReferencePack{
 
 
-shotId:string;
+character?:ReferenceAsset[];
 
 
-assets:ReferenceAsset[];
+scene?:ReferenceAsset[];
 
 
-inheritPrevious:boolean;
+props?:ReferenceAsset[];
 
+
+previousFrame?:ReferenceAsset;
+
+
+video?:ReferenceAsset;
 
 
 }
+
 
 
