@@ -1,38 +1,32 @@
 ﻿import React from "react";
 
 import {
-
 ReferenceEngine
-
 }
-
 from "../engines/reference_engine";
 
 
-
-const engine=new ReferenceEngine();
-
+export default function ReferenceNode({data}:any){
 
 
-export default function ReferenceNode(
-{data}:any
-){
+function buildReference(){
 
 
-function checkReference(){
+const engine =
+new ReferenceEngine();
 
 
-const result=
-engine.validate(
-data.referenceId
-);
+
+const result =
+engine.build(data);
 
 
 
 console.log(
-"Reference Check",
+"Reference Package",
 result
 );
+
 
 
 return result;
@@ -47,20 +41,15 @@ return (
 <div>
 
 <h3>
-参考资产节点
+Reference Engine
 </h3>
 
 
-<div>
-{data.referenceId}
-</div>
-
-
 <button
-onClick={checkReference}
+onClick={buildReference}
 >
 
-执行参考一致性检查
+生成参考资产包
 
 </button>
 

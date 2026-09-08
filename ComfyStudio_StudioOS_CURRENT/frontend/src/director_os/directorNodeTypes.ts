@@ -47,3 +47,16 @@ PromptNode
 };
 
 
+
+// V10.8.1 Reference Node
+
+import ReferenceNode from "./nodes/ReferenceNode";
+
+
+export const referenceNodes={
+
+ReferenceNode
+
+};
+
+
