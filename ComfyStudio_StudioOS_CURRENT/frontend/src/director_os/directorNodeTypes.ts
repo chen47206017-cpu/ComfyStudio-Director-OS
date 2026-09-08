@@ -34,3 +34,16 @@ cls
 1
 1
 1
+
+// V10.6.1 Prompt Node
+
+import PromptNode from "./nodes/PromptNode";
+
+
+export const directorPromptNodes={
+
+PromptNode
+
+};
+
+
