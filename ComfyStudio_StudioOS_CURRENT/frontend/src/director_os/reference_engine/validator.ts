@@ -1,50 +1,41 @@
 ﻿
-import {
-referenceAssets
-}
-from "./assets";
 
+export function validateReferencePackage(
 
+pkg:any
 
-export function validateReference(
-id:string
 ){
 
 
 const issues:string[]=[];
 
 
-const asset:any=
-(referenceAssets as any)[id];
 
-
-
-if(!asset){
+if(!pkg.shotId)
 
 issues.push(
-"REFERENCE_NOT_FOUND"
+"SHOT_ID_MISSING"
 );
 
 
-return {
 
-pass:false,
-
-issues
-
-};
-
-}
-
-
-
-if(!asset.locked){
+if(
+pkg.characterRefs.length===0
+)
 
 issues.push(
-"REFERENCE_UNLOCKED"
+"CHARACTER_REFERENCE_MISSING"
 );
 
-}
+
+
+if(
+pkg.sceneRefs.length===0
+)
+
+issues.push(
+"SCENE_REFERENCE_MISSING"
+);
 
 
 

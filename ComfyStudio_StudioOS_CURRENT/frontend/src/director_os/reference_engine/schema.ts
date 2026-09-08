@@ -1,30 +1,52 @@
-﻿export interface ReferenceAsset{
+﻿
+export interface ReferenceAsset{
+
 
 id:string;
 
+
 type:
-"character" |
-"scene" |
-"prop";
+"CHARACTER"
+|
+"SCENE"
+|
+"PROP"
+|
+"VIDEO_FRAME";
 
-name:string;
 
-source:string;
+path:string;
 
-image:string[];
 
 priority:number;
 
-locked:boolean;
 
 }
 
 
-export interface ReferenceValidation{
 
-pass:boolean;
+export interface ReferencePackage{
 
-issues:string[];
+
+shotId:string;
+
+
+year:number;
+
+
+characterRefs:ReferenceAsset[];
+
+
+sceneRefs:ReferenceAsset[];
+
+
+propRefs:ReferenceAsset[];
+
+
+videoRefs:ReferenceAsset[];
+
 
 }
+
+
 

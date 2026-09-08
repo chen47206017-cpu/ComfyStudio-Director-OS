@@ -1,7 +1,18 @@
 ﻿
+
 import {
 
-validateReference
+createReferencePackage
+
+}
+
+from "../reference_engine/reference_package";
+
+
+
+import {
+
+validateReferencePackage
 
 }
 
@@ -10,15 +21,31 @@ from "../reference_engine/validator";
 
 
 
+
 export class ReferenceEngine{
 
 
-validate(id:string){
+
+build(data:any){
 
 
-return validateReference(
-id
-);
+const pkg=
+createReferencePackage(data);
+
+
+
+return {
+
+
+package:pkg,
+
+
+validation:
+validateReferencePackage(pkg)
+
+
+};
+
 
 
 }
