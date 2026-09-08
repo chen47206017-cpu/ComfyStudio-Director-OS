@@ -1,28 +1,66 @@
-﻿import React from "react";
+﻿
+
+import React from "react";
 
 
-export default function ModelNode(props:any){
+import {
+routeModel
+}
+from "../model_router/router";
+
+
+
+export default function ModelNode({data}:any){
+
+
+
+function select(){
+
+
+const model=
+routeModel(data);
+
+
+
+console.log(
+"Selected Model",
+model
+);
+
+
+
+return model;
+
+
+}
+
+
 
 return (
 
-<div className="director-node">
-
-<strong>
-{props.data?.label || "ModelNode"}
-</strong>
-
-
 <div>
 
-状态:
-{props.data?.status || "等待"}
+
+<h3>
+模型路由节点
+</h3>
+
+
+<button
+onClick={select}
+>
+
+自动选择模型
+
+</button>
+
 
 </div>
 
+);
 
-</div>
-
-)
 
 }
+
+
 

@@ -1,5 +1,6 @@
 ﻿
-export const modelRegistry={
+
+export const modelProfiles={
 
 
 SEEDANCE_25:{
@@ -7,13 +8,17 @@ SEEDANCE_25:{
 
 id:"SEEDANCE_25",
 
-quality:98,
+name:"Seedance 2.5",
 
-cost:90,
+provider:"ByteDance",
 
-speed:60,
+type:"cloud-video",
 
-local:false
+strength:
+"真人影视、多图参考、角色一致性",
+
+costLevel:
+"HIGH"
 
 
 },
@@ -25,49 +30,83 @@ SEEDANCE_20:{
 
 id:"SEEDANCE_20",
 
-quality:90,
+name:"Seedance 2.0",
 
-cost:60,
+provider:"ByteDance",
 
-speed:85,
+type:"cloud-video",
 
-local:false
+strength:
+"快速短剧生成",
 
-
-},
-
-
-
-COMFYUI_H3:{
-
-
-id:"COMFYUI_H3",
-
-quality:85,
-
-cost:20,
-
-speed:50,
-
-local:true
+costLevel:
+"MEDIUM"
 
 
 },
 
 
 
-COMFYUI_LOCAL:{
+WAN30:{
 
 
-id:"COMFYUI_LOCAL",
+id:"WAN30",
 
-quality:75,
+name:"Wan 3.0",
 
-cost:5,
+provider:"Alibaba",
 
-speed:70,
+type:"video-generation",
 
-local:true
+strength:
+"风格化视频",
+
+costLevel:
+"MEDIUM"
+
+
+},
+
+
+
+MINIMAX_H3:{
+
+
+id:"MINIMAX_H3",
+
+name:"MiniMax H3",
+
+provider:"MiniMax",
+
+type:"video-generation",
+
+strength:
+"多图参考",
+
+costLevel:
+"LOW"
+
+
+},
+
+
+
+COMFY_LOCAL:{
+
+
+id:"COMFY_LOCAL",
+
+name:"ComfyUI Local",
+
+provider:"Local GPU",
+
+type:"workflow",
+
+strength:
+"自定义工作流",
+
+costLevel:
+"VARIABLE"
 
 
 }
@@ -75,6 +114,5 @@ local:true
 
 
 };
-
 
 

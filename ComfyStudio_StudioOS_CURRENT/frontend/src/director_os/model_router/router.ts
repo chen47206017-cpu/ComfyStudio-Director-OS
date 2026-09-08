@@ -1,22 +1,51 @@
 ﻿
+
 import {
-modelRegistry
+modelProfiles
 }
 from "./models";
 
 
-export function selectModel(requirement:any){
+
+export function routeModel(
+requirement:any
+){
 
 
-const models=
-Object.values(modelRegistry);
+
+if(
+requirement.characterConsistency
+&&
+requirement.multiReference
+){
+
+return modelProfiles.SEEDANCE_25;
+
+}
 
 
 
-return models.sort(
-(a:any,b:any)=>
-b.quality-a.quality
-)[0];
+if(
+requirement.local
+){
+
+return modelProfiles.COMFY_LOCAL;
+
+}
+
+
+
+if(
+requirement.fast
+){
+
+return modelProfiles.SEEDANCE_20;
+
+}
+
+
+
+return modelProfiles.WAN30;
 
 
 }

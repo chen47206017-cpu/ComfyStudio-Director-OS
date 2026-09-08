@@ -73,3 +73,16 @@ PromptNode
 };
 
 
+
+// V10.8.3 Model Router
+
+import ModelNode from "./nodes/ModelNode";
+
+
+export const modelRouterNodes={
+
+ModelNode
+
+};
+
+

@@ -1,23 +1,25 @@
 ﻿
-export interface ModelDefinition{
+export interface ModelProfile{
+
 
 id:string;
 
+
 name:string;
+
 
 provider:string;
 
+
 type:string;
 
-quality:number;
 
-cost:number;
+strength:string;
 
-speed:number;
 
-local:boolean;
+costLevel:string;
+
 
 }
-
 
 
