@@ -1,5 +1,6 @@
-﻿import React,{useState} from "react";
+﻿
 
+import React from "react";
 
 import {
 compilePrompt
@@ -11,27 +12,21 @@ from "../prompt_engine/compiler";
 export default function PromptNode({data}:any){
 
 
-const [result,setResult]=useState<any>(null);
+
+function generate(){
 
 
-
-function execute(){
-
-
-const output=
-compilePrompt(
-data.shot || {}
-);
-
-
-
-setResult(output);
+const prompt=
+compilePrompt(data);
 
 
 console.log(
-"PROMPT COMPILE RESULT",
-output
+"Generated Prompt",
+prompt
 );
+
+
+return prompt;
 
 
 }
@@ -40,72 +35,27 @@ output
 
 return (
 
-<div
-style={{
-padding:"12px",
-border:"1px solid #666",
-borderRadius:"8px"
-}}
->
-
+<div>
 
 <h3>
 Prompt编译节点
 </h3>
 
 
-<p>
-自动生成Seedance/ComfyUI提示词
-</p>
-
-
 <button
-onClick={execute}
+onClick={generate}
 >
 
-生成生产提示词
+生成影视提示词
 
 </button>
 
 
-
-{
-result &&
-
-<div>
-
-<h4>
-Seedance Prompt
-</h4>
-
-<textarea
-value={result.seedance}
-readOnly
-rows={8}
-/>
-
-
-
-<h4>
-ComfyUI Prompt
-</h4>
-
-<textarea
-value={result.comfyui}
-readOnly
-rows={8}
-/>
-
-
 </div>
+
+);
+
 
 }
 
-
-
-</div>
-
-)
-
-}
 

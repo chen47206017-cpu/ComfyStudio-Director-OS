@@ -60,3 +60,16 @@ ReferenceNode
 };
 
 
+
+// V10.8.2 Prompt Compiler
+
+import PromptNode from "./nodes/PromptNode";
+
+
+export const promptCompilerNodes={
+
+PromptNode
+
+};
+
+

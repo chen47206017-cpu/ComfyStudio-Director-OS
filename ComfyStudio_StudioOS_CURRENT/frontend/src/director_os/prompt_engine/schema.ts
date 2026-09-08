@@ -1,5 +1,5 @@
 ﻿
-export interface PromptShot{
+export interface PromptPackage{
 
 
 episode:string;
@@ -7,22 +7,19 @@ episode:string;
 shot:string;
 
 
-year:number;
-
-
-scene:string;
+canon:string;
 
 
 characters:string[];
 
 
+scene:string;
+
+
 props:string[];
 
 
-references:string[];
-
-
-action:string;
+referenceImages:string[];
 
 
 camera:string;
@@ -31,27 +28,9 @@ camera:string;
 lighting:string;
 
 
-dialogue:string;
-
-
-
-}
-
-
-
-export interface CompiledPrompt{
-
-
-seedance:string;
-
-
-comfyui:string;
-
-
-constraints:string[];
+style:string;
 
 
 }
-
 
 
