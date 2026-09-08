@@ -1,28 +1,94 @@
-﻿import React from "react";
+﻿
+
+import React from "react";
 
 
-export default function QCNode(props:any){
+import {
+
+QCEngine
+
+}
+
+from "../engines/qc_engine";
+
+
+
+
+export default function QCNode(
+
+{data}:any
+
+){
+
+
+
+const engine=
+
+new QCEngine();
+
+
+
+
+function check(){
+
+
+
+const result=
+
+engine.check(
+
+data.prompt
+
+);
+
+
+
+console.log(
+
+"QC Result",
+
+result
+
+);
+
+
+
+}
+
+
+
 
 return (
 
-<div className="director-node">
-
-<strong>
-{props.data?.label || "QCNode"}
-</strong>
-
-
 <div>
 
-状态:
-{props.data?.status || "等待"}
 
-</div>
+<h3>
+
+QC质量检查节点
+
+</h3>
+
+
+
+<button
+
+onClick={check}
+
+>
+
+执行生产检查
+
+</button>
 
 
 </div>
 
 )
 
+
+
 }
+
+
 
