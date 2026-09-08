@@ -1,36 +1,38 @@
 ﻿
-export type ReferenceType =
-
-"CHARACTER" |
-
-"SCENE" |
-
-"PROP" |
-
-"LAST_FRAME" |
-
-"VIDEO";
-
-
 export interface ReferenceAsset{
 
 
 id:string;
 
 
-type:ReferenceType;
+type:
+
+"CHARACTER"
+
+|
+
+"SCENE"
+
+|
+
+"PROP"
+
+|
+
+"STYLE";
+
 
 
 name:string;
 
 
+images:string[];
+
+
 priority:number;
 
 
-path:string;
-
-
-locked:boolean;
+tags:string[];
 
 
 }
@@ -49,10 +51,8 @@ scene?:ReferenceAsset[];
 props?:ReferenceAsset[];
 
 
-previousFrame?:ReferenceAsset;
+style?:ReferenceAsset[];
 
-
-video?:ReferenceAsset;
 
 
 }

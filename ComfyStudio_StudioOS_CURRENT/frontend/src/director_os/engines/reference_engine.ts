@@ -6,18 +6,20 @@ buildReferencePack
 
 }
 
-from "../reference_engine/builder";
+from "./compiler";
+
 
 
 
 export class ReferenceEngine{
 
 
-build(shot:any){
+
+compile(request:any){
 
 
 return buildReferencePack(
-shot
+request
 );
 
 
