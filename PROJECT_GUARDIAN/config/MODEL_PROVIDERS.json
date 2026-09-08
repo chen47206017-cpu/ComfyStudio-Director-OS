@@ -1,0 +1,36 @@
+﻿{
+"providers":[
+
+{
+"id":"local_gpu",
+"name":"Local RTX5060Ti",
+"type":"comfyui",
+"enabled":true
+},
+
+
+{
+"id":"autodl5090",
+"name":"AutoDL RTX5090",
+"type":"remote_comfyui",
+"enabled":false
+},
+
+
+{
+"id":"wan3_api",
+"name":"Wan3 API",
+"type":"cloud",
+"enabled":false
+},
+
+
+{
+"id":"seedance25",
+"name":"Seedance 2.5",
+"type":"cloud",
+"enabled":false
+}
+
+]
+}
