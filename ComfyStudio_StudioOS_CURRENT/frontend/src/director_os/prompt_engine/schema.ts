@@ -1,17 +1,19 @@
 ﻿
-export interface PromptContext{
+export interface PromptShot{
 
 
 episode:string;
+
+shot:string;
 
 
 year:number;
 
 
-character:string[];
+scene:string;
 
 
-scene:string[];
+characters:string[];
 
 
 props:string[];
@@ -20,22 +22,33 @@ props:string[];
 references:string[];
 
 
-model:string;
+action:string;
+
+
+camera:string;
+
+
+lighting:string;
+
+
+dialogue:string;
+
 
 
 }
 
 
+
 export interface CompiledPrompt{
 
 
-positive:string;
+seedance:string;
 
 
-negative:string;
+comfyui:string;
 
 
-qc:string[];
+constraints:string[];
 
 
 }

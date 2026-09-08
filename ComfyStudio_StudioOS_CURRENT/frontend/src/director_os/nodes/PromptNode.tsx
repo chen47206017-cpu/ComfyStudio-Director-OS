@@ -1,28 +1,74 @@
-﻿import React from "react";
+﻿
+
+import React from "react";
 
 
-export default function PromptNode(props:any){
+import {
+
+compilePrompt
+
+}
+
+from "../prompt_engine/compiler";
+
+
+
+
+
+export default function PromptNode(
+{data}:any
+){
+
+
+
+function compile(){
+
+
+const result=
+compilePrompt(
+data.shot
+);
+
+
+
+console.log(
+"Compiled Prompt",
+result
+);
+
+
+
+}
+
+
 
 return (
 
-<div className="director-node">
-
-<strong>
-{props.data?.label || "PromptNode"}
-</strong>
-
-
 <div>
 
-状态:
-{props.data?.status || "等待"}
+
+<h3>
+提示词编译节点
+</h3>
+
+
+<button
+onClick={compile}
+>
+
+生成生产Prompt
+
+</button>
+
+
 
 </div>
 
 
-</div>
+);
 
-)
+
 
 }
+
 

@@ -1,7 +1,6 @@
 ﻿
-import {
 
-PromptContext,
+import {
 
 CompiledPrompt
 
@@ -10,88 +9,122 @@ CompiledPrompt
 from "./schema";
 
 
-import {
-
-promptTemplate
-
-}
-
-from "./templates";
-
 
 
 export function compilePrompt(
 
-ctx:PromptContext
+shot:any
 
 ):CompiledPrompt{
+
+
+const constraints=[
+
+
+
+`年份限制:${shot.year}`,
+
+
+`场景:${shot.scene}`,
+
+
+`角色:${shot.characters?.join(",")}`,
+
+
+`道具:${shot.props?.join(",")}`,
+
+
+`参考:${shot.references?.join(",")}`
+
+
+
+];
+
+
+
+
+
+const seedance=`
+
+
+影视级真人短剧镜头。
+
+
+年份:
+${shot.year}
+
+
+场景:
+${shot.scene}
+
+
+角色:
+${shot.characters?.join(",")}
+
+
+动作:
+${shot.action}
+
+
+镜头:
+${shot.camera}
+
+
+光影:
+${shot.lighting}
+
+
+对白:
+${shot.dialogue}
+
+
+
+严格保持人物身份、年代、场景、道具一致。
+
+
+`;
+
+
+
+
+
+const comfyui=`
+
+positive:
+
+${seedance}
+
+
+
+negative:
+
+wrong age,
+
+wrong year,
+
+modern props,
+
+character change,
+
+scene mismatch
+
+
+
+`;
+
 
 
 
 return {
 
 
-
-positive:
-
+seedance,
 
 
-`
-
-${promptTemplate.cinematic}
+comfyui,
 
 
-角色:
-
-${ctx.character.join(",")}
-
-
-场景:
-
-${ctx.scene.join(",")}
-
-
-道具:
-
-${ctx.props.join(",")}
-
-
-参考:
-
-${ctx.references.join(",")}
-
-
-
-模型:
-
-${ctx.model}
-
-
-`,
-
-
-
-negative:
-
-
-promptTemplate.forbidden,
-
-
-
-qc:[
-
-"人物年龄检查",
-
-"服装检查",
-
-"年代检查",
-
-"道具检查",
-
-"空间检查"
-
-]
-
+constraints
 
 
 };
