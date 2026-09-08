@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-09-03",
+  "source_root": "G:\\ComfyUI\\models",
+  "download_policy": {
+    "automatic_downloads": false,
+    "reason": "No model download was authorized for this delivery."
+  },
+  "installed_and_used_by_validated_workflow": [
+    {
+      "id": "wan21_i2v_14b_fp8",
+      "purpose": "Local low-resolution image-to-video technical validation",
+      "file": "diffusion_models\\Wan2.1\\wan2.1_i2v_720p_14B_fp8_scaled.safetensors",
+      "size_bytes": 16401356938,
+      "license_status": "Verify from the original model source before redistribution.",
+      "observed_runtime": {
+        "preset": "LOCAL_DRAFT",
+        "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+        "observed_vram": "approximately 12GB",
+        "validated_resolution": "432x768",
+        "validated_duration_seconds": 5.04
+      },
+      "sha256": null,
+      "hash_status": "Not computed during this delivery; the file is more than 16GB and remains untouched."
+    },
+    {
+      "id": "umt5_xxl_fp8",
+      "purpose": "Wan text encoder",
+      "file": "text_encoders\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "size_bytes": 6735906897,
+      "license_status": "Verify from the original model source before redistribution.",
+      "sha256": null,
+      "hash_status": "Not computed during this delivery."
+    },
+    {
+      "id": "wan21_vae",
+      "purpose": "Wan video VAE",
+      "file": "vae\\wan_2.1_vae.safetensors",
+      "size_bytes": 253815318,
+      "license_status": "Verify from the original model source before redistribution.",
+      "sha256": null,
+      "hash_status": "Not computed during this delivery."
+    },
+    {
+      "id": "clip_vision_h",
+      "purpose": "Reference-image encoding for the validated Wan workflow",
+      "file": "clip_vision\\clip_vision_h.safetensors",
+      "size_bytes": 1264219396,
+      "license_status": "Verify from the original model source before redistribution.",
+      "sha256": null,
+      "hash_status": "Not computed during this delivery."
+    }
+  ],
+  "installed_supporting_models_not_used_by_validated_workflow": [
+    {
+      "id": "depth_anything_v2_vitl",
+      "file": "depthanything\\depth_anything_v2_vitl_fp16.safetensors",
+      "size_bytes": 670674810,
+      "purpose": "Potential depth preprocessing"
+    },
+    {
+      "id": "realvisxl_v4",
+      "file": "checkpoints\\RealVisXL_V4.0.safetensors",
+      "size_bytes": 6938040706,
+      "purpose": "Existing SDXL image generation checkpoint"
+    }
+  ],
+  "required_for_unvalidated_final_pipelines": [
+    {
+      "id": "qwen_image_edit_2511",
+      "purpose": "Three-image identity and scene composition",
+      "status": "not installed or not verified in this ComfyUI runtime",
+      "download_authorization_required": true
+    },
+    {
+      "id": "ltx_25_distilled_int8_or_blackwell_quantized",
+      "purpose": "Final T2V/I2V/first-last-frame rendering",
+      "status": "not installed or not verified in this ComfyUI runtime",
+      "download_authorization_required": true
+    },
+    {
+      "id": "wan22_fun_control_a14b_fp8",
+      "purpose": "Two-image plus driving-video dual-character control",
+      "status": "not installed or not verified in this ComfyUI runtime",
+      "download_authorization_required": true
+    },
+    {
+      "id": "wan22_animate_14b_fp8",
+      "purpose": "Single-character motion transfer only",
+      "status": "not installed or not verified in this ComfyUI runtime",
+      "download_authorization_required": true
+    }
+  ],
+  "integrity_notes": [
+    "The validated local workflow depends on the first four entries only.",
+    "A file name, size, or local presence is not a license assertion.",
+    "No model was downloaded, moved, deleted, or modified."
+  ]
+}

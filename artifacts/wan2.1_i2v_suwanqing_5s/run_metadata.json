@@ -1,0 +1,23 @@
+{
+  "prompt_id": "f6eaeeb7-8127-43ce-aa93-b3829c1ad404",
+  "status": "success",
+  "quality_status": "technical_pass_visual_quality_not_accepted",
+  "source_image": "F:\\AI短剧\\苏晚晴45.png",
+  "source_image_copied": "G:\\ComfyUI\\input\\suwanqing45_ref.png",
+  "workflow": "F:\\一人公司\\comfyui-production\\workflows\\wan2.1_i2v_ref_5s_local.json",
+  "video": "F:\\一人公司\\comfyui-production\\artifacts\\wan2.1_i2v_suwanqing_5s\\wanvideo_suwanqing_ref_5s_local_00001.mp4",
+  "thumbnail": "F:\\一人公司\\comfyui-production\\artifacts\\wan2.1_i2v_suwanqing_5s\\wanvideo_suwanqing_ref_5s_local_00001.png",
+  "resolution": "432x768",
+  "aspect_ratio": "9:16",
+  "frames": 121,
+  "fps": 24,
+  "duration_seconds": 5.04,
+  "model": "Wan2.1 I2V 14B FP8",
+  "steps": 24,
+  "seed": 20260903,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+  "output_sha256": "0E7C41318A7EBC27BDCF88F4A057073B66213D429AEFFD2BCED8797218F04AB6",
+  "generated_at": "2026-09-04T00:17:22+08:00",
+  "notes": "Generated through POST /prompt on local ComfyUI 127.0.0.1:8188; no model download.",
+  "visual_notes": "0:00, 0:02.50, and end-frame review found strong grain, facial distortion, and identity drift."
+}

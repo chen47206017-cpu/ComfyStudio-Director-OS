@@ -1,0 +1,68 @@
+{
+  "timestamp_beijing": "2026-09-07T11:39:46.293788+08:00",
+  "provider": "jojo-max",
+  "status": "BLOCKED",
+  "base_url": "https://max2.jojocode.com/v1",
+  "key_present": true,
+  "key_length": 67,
+  "models_endpoint": {
+    "supported": false,
+    "status_code": 429,
+    "models": []
+  },
+  "responses": {
+    "supported": false,
+    "status_code": null,
+    "model": null
+  },
+  "tool_calling": {
+    "supported": false,
+    "status_code": null
+  },
+  "structured_output": {
+    "supported": false,
+    "status_code": null
+  },
+  "selected_model": null,
+  "errors": [
+    {
+      "stage": "models",
+      "detail": {
+        "status_code": 429,
+        "body_preview": "{'code': 'USAGE_LIMIT_EXCEEDED', 'message': 'error: code=429 reason=\"DAILY_LIMIT_EXCEEDED\" message=\"daily usage limit exceeded\" metadata=map[]'}"
+      }
+    },
+    {
+      "stage": "responses",
+      "model": "gpt-5.6",
+      "detail": {
+        "status_code": 429,
+        "body_preview": "{'code': 'USAGE_LIMIT_EXCEEDED', 'message': 'error: code=429 reason=\"DAILY_LIMIT_EXCEEDED\" message=\"daily usage limit exceeded\" metadata=map[]'}"
+      }
+    },
+    {
+      "stage": "responses",
+      "model": "gpt-5.6-codex",
+      "detail": {
+        "status_code": 429,
+        "body_preview": "{'code': 'USAGE_LIMIT_EXCEEDED', 'message': 'error: code=429 reason=\"DAILY_LIMIT_EXCEEDED\" message=\"daily usage limit exceeded\" metadata=map[]'}"
+      }
+    },
+    {
+      "stage": "responses",
+      "model": "gpt-5.5",
+      "detail": {
+        "status_code": 429,
+        "body_preview": "{'code': 'USAGE_LIMIT_EXCEEDED', 'message': 'error: code=429 reason=\"DAILY_LIMIT_EXCEEDED\" message=\"daily usage limit exceeded\" metadata=map[]'}"
+      }
+    },
+    {
+      "stage": "responses",
+      "model": "gpt-5",
+      "detail": {
+        "status_code": 429,
+        "body_preview": "{'code': 'USAGE_LIMIT_EXCEEDED', 'message': 'error: code=429 reason=\"DAILY_LIMIT_EXCEEDED\" message=\"daily usage limit exceeded\" metadata=map[]'}"
+      }
+    }
+  ]
+}

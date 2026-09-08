@@ -1,0 +1,28 @@
+test_bom_json_reader (test_backend_v10.BackendV10Tests.test_bom_json_reader) ... ok
+test_canvas_revision_cas (test_backend_v10.BackendV10Tests.test_canvas_revision_cas) ... ok
+test_director_and_health (test_backend_v10.BackendV10Tests.test_director_and_health) ... F:\һ�˹�˾\comfyui-production\ComfyStudio_StudioOS_CURRENT\tests\test_backend_v10.py:83: ResourceWarning: unclosed file <_io.BufferedReader name='F:\\һ�˹�˾\\comfyui-production\\ComfyStudio_StudioOS_CURRENT\\ui\\dist/index.html'>
+  self.assertEqual(self.client.get("/director/").status_code, 200)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+F:\һ�˹�˾\comfyui-production\ComfyStudio_StudioOS_CURRENT\tests\test_backend_v10.py:91: ResourceWarning: unclosed file <_io.BufferedReader name='F:\\һ�˹�˾\\comfyui-production\\ComfyStudio_StudioOS_CURRENT\\ui\\dist\\assets/index-D39VExhr.js'>
+  self.assertEqual(self.client.get(bundle_path).status_code, 200)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+F:\һ�˹�˾\comfyui-production\ComfyStudio_StudioOS_CURRENT\tests\test_backend_v10.py:91: ResourceWarning: unclosed file <_io.BufferedReader name='F:\\һ�˹�˾\\comfyui-production\\ComfyStudio_StudioOS_CURRENT\\ui\\dist\\assets/index-D9pSOSIF.css'>
+  self.assertEqual(self.client.get(bundle_path).status_code, 200)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\chen4\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py:589: ResourceWarning: unclosed file <_io.BufferedReader name='F:\\һ�˹�˾\\comfyui-production\\ComfyStudio_StudioOS_CURRENT\\ui\\dist/index.html'>
+  if method() is not None:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_gate_prompt_and_dry_run (test_backend_v10.BackendV10Tests.test_gate_prompt_and_dry_run) ... ok
+test_legacy_shots_route_is_unique (test_backend_v10.BackendV10Tests.test_legacy_shots_route_is_unique) ... ok
+test_production_assets_route_uses_registry (test_backend_v10.BackendV10Tests.test_production_assets_route_uses_registry) ... ok
+test_workers_capabilities_capsule_and_jobs (test_backend_v10.BackendV10Tests.test_workers_capabilities_capsule_and_jobs) ... ok
+test_history_output_descriptors_are_normalized (test_comfy_execution.ComfyExecutionTests.test_history_output_descriptors_are_normalized) ... ok
+test_job_events_and_outputs_are_durable (test_comfy_execution.ComfyExecutionTests.test_job_events_and_outputs_are_durable) ... ok
+test_wait_for_result_reports_completed (test_comfy_execution.ComfyExecutionTests.test_wait_for_result_reports_completed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.225s
+
+OK
+

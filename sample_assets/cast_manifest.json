@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "project": "楼上住着二十年前的我，楼下住着二十年后的女儿",
+  "characters": [
+    {
+      "character_id": "SW45",
+      "display_name": "苏晚晴",
+      "age": 45,
+      "reference_image": "F:\\AI短剧\\苏晚晴45.png",
+      "hair": "not yet locked in a single-subject reference",
+      "wardrobe": "not yet locked in a single-subject reference",
+      "face_dna": "Use a clean cropped reference before final generation; do not infer a precise identity profile from a multi-panel image.",
+      "must_not_confuse_with": [
+        "SW25"
+      ],
+      "allowed_use": "Local technical validation and user-authorized production jobs",
+      "rights_status": "user-supplied; confirm production rights before cloud upload"
+    },
+    {
+      "character_id": "SW25",
+      "display_name": "苏晚晴",
+      "age": 25,
+      "reference_image": null,
+      "hair": "not supplied",
+      "wardrobe": "not supplied",
+      "face_dna": "not supplied",
+      "must_not_confuse_with": [
+        "SW45"
+      ],
+      "allowed_use": "blocked until a user-supplied reference is registered",
+      "rights_status": "unknown"
+    }
+  ]
+}

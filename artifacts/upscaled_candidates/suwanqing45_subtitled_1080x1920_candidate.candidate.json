@@ -1,0 +1,198 @@
+{
+    "schema_version":  1,
+    "artifact_type":  "video",
+    "classification":  "UPSCALED_CANDIDATE",
+    "delivery_status":  "REJECTED_FOR_DELIVERY",
+    "quality_status":  "TECHNICAL_PASS_VISUAL_QUALITY_UNACCEPTED",
+    "generated_at":  "2026-09-04T07:23:50.3840156+08:00",
+    "source":  {
+                   "path":  "F:\\一人公司\\comfyui-production\\runtime\\artifacts\\local_suwanqing45_5s_20260904\\suwanqing45_local_draft_5s.mp4",
+                   "project_relative_path":  "runtime\\artifacts\\local_suwanqing45_5s_20260904\\suwanqing45_local_draft_5s.mp4",
+                   "size_bytes":  7953520,
+                   "sha256":  "0e7c41318a7ebc27bdcf88f4a057073b66213d429aeffd2bced8797218f04ab6",
+                   "probe":  {
+                                 "programs":  [
+
+                                              ],
+                                 "stream_groups":  [
+
+                                                   ],
+                                 "streams":  [
+                                                 {
+                                                     "index":  0,
+                                                     "codec_name":  "h264",
+                                                     "codec_type":  "video",
+                                                     "width":  432,
+                                                     "height":  768,
+                                                     "pix_fmt":  "yuv420p",
+                                                     "r_frame_rate":  "24/1",
+                                                     "avg_frame_rate":  "24/1",
+                                                     "bit_rate":  "12612541",
+                                                     "nb_frames":  "121"
+                                                 }
+                                             ],
+                                 "format":  {
+                                                "format_name":  "mov,mp4,m4a,3gp,3g2,mj2",
+                                                "duration":  "5.041667"
+                                            }
+                             }
+               },
+    "subtitle":  {
+                     "path":  "F:\\一人公司\\comfyui-production\\sample_assets\\subtitles\\SUBTITLE_LOCK_V1_preview.ass",
+                     "project_relative_path":  "sample_assets\\subtitles\\SUBTITLE_LOCK_V1_preview.ass",
+                     "size_bytes":  812,
+                     "sha256":  "df8830945ba84f428ac28dcd9db07aa8b4791c0b28b1c950011fa07b16a8b2e3",
+                     "preflight":  {
+                                       "ok":  true,
+                                       "path":  "F:\\һ�˹�˾\\comfyui-production\\sample_assets\\subtitles\\SUBTITLE_LOCK_V1_preview.ass",
+                                       "errors":  [
+
+                                                  ],
+                                       "warnings":  [
+                                                        "ASS v4+ has no dedicated line-spacing field; verify 8-12 px visually after burn.",
+                                                        "ASS Shadow is an offset, not a blurred-shadow layer; verify the weak shadow visually."
+                                                    ],
+                                       "playres":  {
+                                                       "width":  1080,
+                                                       "height":  1920
+                                                   },
+                                       "styles":  {
+                                                      "Primary":  {
+                                                                      "Name":  "Primary",
+                                                                      "Fontname":  "Source Han Sans CN Medium",
+                                                                      "Fontsize":  "60",
+                                                                      "PrimaryColour":  "\u0026H00FFFFFF",
+                                                                      "SecondaryColour":  "\u0026H00FFFFFF",
+                                                                      "OutlineColour":  "\u0026H26000000",
+                                                                      "BackColour":  "\u0026HB3000000",
+                                                                      "Bold":  "0",
+                                                                      "Italic":  "0",
+                                                                      "Underline":  "0",
+                                                                      "StrikeOut":  "0",
+                                                                      "ScaleX":  "100",
+                                                                      "ScaleY":  "100",
+                                                                      "Spacing":  "0",
+                                                                      "Angle":  "0",
+                                                                      "BorderStyle":  "1",
+                                                                      "Outline":  "4",
+                                                                      "Shadow":  "1",
+                                                                      "Alignment":  "2",
+                                                                      "MarginL":  "70",
+                                                                      "MarginR":  "70",
+                                                                      "MarginV":  "390",
+                                                                      "Encoding":  "1"
+                                                                  },
+                                                      "PrimarySemibold":  {
+                                                                              "Name":  "PrimarySemibold",
+                                                                              "Fontname":  "Source Han Sans CN SemiBold",
+                                                                              "Fontsize":  "60",
+                                                                              "PrimaryColour":  "\u0026H00FFFFFF",
+                                                                              "SecondaryColour":  "\u0026H00FFFFFF",
+                                                                              "OutlineColour":  "\u0026H1F000000",
+                                                                              "BackColour":  "\u0026HB3000000",
+                                                                              "Bold":  "-1",
+                                                                              "Italic":  "0",
+                                                                              "Underline":  "0",
+                                                                              "StrikeOut":  "0",
+                                                                              "ScaleX":  "100",
+                                                                              "ScaleY":  "100",
+                                                                              "Spacing":  "0",
+                                                                              "Angle":  "0",
+                                                                              "BorderStyle":  "1",
+                                                                              "Outline":  "4",
+                                                                              "Shadow":  "1",
+                                                                              "Alignment":  "2",
+                                                                              "MarginL":  "70",
+                                                                              "MarginR":  "70",
+                                                                              "MarginV":  "390",
+                                                                              "Encoding":  "1"
+                                                                          }
+                                                  },
+                                       "dialogue_count":  1,
+                                       "font_check":  "not_requested"
+                                   }
+                 },
+    "transform":  {
+                      "operation":  "lanczos_upscale_and_subtitle_burn",
+                      "target_width":  1080,
+                      "target_height":  1920,
+                      "target_fps":  24,
+                      "duration_window_seconds":  [
+                                                      4.8,
+                                                      5.2
+                                                  ],
+                      "codec":  "libx264",
+                      "subtitle_style":  "SUBTITLE_LOCK_V1"
+                  },
+    "output":  {
+                   "path":  "F:\\一人公司\\comfyui-production\\artifacts\\upscaled_candidates\\suwanqing45_subtitled_1080x1920_candidate.mp4",
+                   "project_relative_path":  "artifacts\\upscaled_candidates\\suwanqing45_subtitled_1080x1920_candidate.mp4",
+                   "size_bytes":  15453587,
+                   "sha256":  "a969e0f45ade1f3972e4719f5d89212404dcf644706d382ca55f8e220f004721",
+                   "probe":  {
+                                 "programs":  [
+
+                                              ],
+                                 "stream_groups":  [
+
+                                                   ],
+                                 "streams":  [
+                                                 {
+                                                     "index":  0,
+                                                     "codec_name":  "h264",
+                                                     "codec_type":  "video",
+                                                     "width":  1080,
+                                                     "height":  1920,
+                                                     "pix_fmt":  "yuv420p",
+                                                     "r_frame_rate":  "24/1",
+                                                     "avg_frame_rate":  "24/1",
+                                                     "bit_rate":  "24517403",
+                                                     "nb_frames":  "121"
+                                                 }
+                                             ],
+                                 "format":  {
+                                                "format_name":  "mov,mp4,m4a,3gp,3g2,mj2",
+                                                "duration":  "5.041667"
+                                            }
+                             },
+                   "width":  1080,
+                   "height":  1920,
+                   "fps":  24,
+                   "frames":  121,
+                   "duration_seconds":  5.041667,
+                   "aspect_ratio":  "9:16",
+                   "audio_present":  false
+               },
+    "qa":  {
+               "frames":  [
+                              {
+                                  "name":  "frame_first.jpg",
+                                  "path":  "F:\\一人公司\\comfyui-production\\artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_first.jpg",
+                                  "project_relative_path":  "artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_first.jpg",
+                                  "size_bytes":  282020,
+                                  "sha256":  "c38a0104c212951ea1ffe000a0296154f205b486485c70417dd0c6ac9569e6a3"
+                              },
+                              {
+                                  "name":  "frame_mid.jpg",
+                                  "path":  "F:\\一人公司\\comfyui-production\\artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_mid.jpg",
+                                  "project_relative_path":  "artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_mid.jpg",
+                                  "size_bytes":  284084,
+                                  "sha256":  "ea2dadd9ee4f540566e604ad00bfb1954fbaa4343332f6ec67f6f0600bddff74"
+                              },
+                              {
+                                  "name":  "frame_last.jpg",
+                                  "path":  "F:\\一人公司\\comfyui-production\\artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_last.jpg",
+                                  "project_relative_path":  "artifacts\\upscaled_candidates\\.suwanqing45_subtitled_1080x1920_candidate.69240c6cc84240a2b65606b5edf11207.staging\\qa_frames\\frame_last.jpg",
+                                  "size_bytes":  299731,
+                                  "sha256":  "7b08a91bb79d2622f0282e85064a4d832958f4b28470a809a4cbf1e811c0e6a7"
+                              }
+                          ],
+               "visual_review":  "NOT_PERFORMED_BY_SCRIPT"
+           },
+    "notes":  [
+                  "This file is an upscaled candidate derived from a 432x768 local Wan smoke render; it is not native 1080x1920 generation.",
+                  "The candidate passes container, dimensions, frame-rate, duration, subtitle-preflight, hash, and frame-extraction checks only.",
+                  "It remains REJECTED_FOR_DELIVERY until visual quality, identity consistency, motion, and the final production render gates pass.",
+                  "The source had no audio stream; audio_present is recorded from the exported file and is not synthesized here."
+              ]
+}

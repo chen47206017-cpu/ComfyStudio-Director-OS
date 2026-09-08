@@ -1,0 +1,21 @@
+{
+  "observed_at_beijing": "2026-09-08T08:01:25.1011450+08:00",
+  "timezone": "Asia/Shanghai",
+  "studio": {
+    "url": "http://127.0.0.1:8190",
+    "status": 200
+  },
+  "comfy": {
+    "url": "http://127.0.0.1:8189",
+    "system_stats": 200,
+    "object_info": 200
+  },
+  "listeners": [
+    "127.0.0.1:8190 LISTENING PID 28644",
+    "127.0.0.1:8189 LISTENING PID 16056"
+  ],
+  "notes": [
+    "8188未监听；不将其视为全局不可用",
+    "8189能力快照在线，真实提交和MP4仍未执行"
+  ]
+}

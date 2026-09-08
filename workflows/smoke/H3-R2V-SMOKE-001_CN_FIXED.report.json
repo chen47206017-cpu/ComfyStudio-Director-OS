@@ -1,0 +1,42 @@
+{
+  "timestamp_beijing": "2026-09-07T12:04:28.338942+08:00",
+  "source": "F:\\一人公司\\comfyui-production\\workflows\\smoke\\H3-R2V-SMOKE-001_CN.json",
+  "output": "F:\\一人公司\\comfyui-production\\workflows\\smoke\\H3-R2V-SMOKE-001_CN_FIXED.json",
+  "status": "PASS_READY_FOR_FIRST_GENERATION",
+  "changes": [
+    "所有用户可见节点标题和分组标题中文化",
+    "参考图1 -> H3_SMOKE_SW45.png",
+    "删除官方示例图节点139；删除links=[282]",
+    "Prompt -> 中文；仅引用 <Picture 1>",
+    "分辨率 -> 9:16 / 0.4MP / 32",
+    "视频时长 -> 5秒",
+    "完整模式20步；Turbo 4步分支保留但关闭"
+  ],
+  "local_checks": {
+    "known_workflow_structure": true,
+    "workflow_models": {
+      "unet": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "clip": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+      "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+      "lora": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors"
+    },
+    "input_image_exists": true,
+    "node_count_after_fix": 28,
+    "link_count_after_fix": 32
+  },
+  "runtime_checks": {
+    "missing_nodes": [],
+    "models": {
+      "unet": true,
+      "clip": true,
+      "video_vae": true,
+      "audio_vae": true,
+      "lora": true
+    },
+    "ratio_9_16_supported": true,
+    "reachable": true
+  },
+  "errors": [],
+  "warnings": []
+}

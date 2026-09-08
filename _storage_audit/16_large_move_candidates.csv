@@ -1,0 +1,6 @@
+﻿"SizeGB","Extension","RelativePath","FullName"
+"19.53",".safetensors","minimax_h3_ref2va_pruned_int8_convrot.safetensors","F:\一人公司\comfyui-production\minimax_h3_ref2va_pruned_int8_convrot.safetensors"
+"14.61",".safetensors","qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","F:\一人公司\comfyui-production\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"
+"4.85",".safetensors","minimax_h3_video_vae_fp16.safetensors","F:\一人公司\comfyui-production\minimax_h3_video_vae_fp16.safetensors"
+"0.564",".safetensors","minimax_h3_audio_vae_fp32 (1).safetensors","F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32 (1).safetensors"
+"0.564",".safetensors","minimax_h3_audio_vae_fp32.safetensors","F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32.safetensors"

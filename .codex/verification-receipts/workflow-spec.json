@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "workflow-spec",
+    "kind": "command",
+    "level": "static",
+    "argv": [
+      "python",
+      "scripts/check_workflow_json.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 60,
+    "covers": [
+      "The H3 workflow spec and public docs match the code's unverified-vendor-schema boundary."
+    ],
+    "oracle_files": [
+      "workflows/specs/07_minimax_h3_unified.json"
+    ]
+  },
+  "contract_sha256": "1103aa633058234f06b897a266a1343d5d48ad388c4f66a6f5767770bb204e25",
+  "started_at": "2026-09-05T03:19:12",
+  "finished_at": "2026-09-05T03:19:12",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/workflow-spec.stdout.log",
+  "stdout_sha256": "0e284a9219aaeed74284ed3f98197edda8485c4b4253d41fc69014b745f7bf11",
+  "stderr": ".codex/verification-receipts/workflow-spec.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/h3.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "fffd2dc56498e8496e6aab607c4fd99433903f8992c2b75f109ec0d16c5877ff"
+    }
+  ],
+  "oracle_hashes": {
+    "workflows/specs/07_minimax_h3_unified.json": "6edb83e9dde5145261d0c7f3adb7a9c236cf34000c3c952e510a998c08cba5f9"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "06_upscale_interpolate_export",
+  "execution_status": "BLOCKED",
+  "reason": "The complete upscale, deflicker, interpolation, audio-mux, and quality-control graph is not yet locally validated.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real local video and optional audio files; asset:// identifiers are prohibited.",
+  "inputs": {
+    "source_video": {"media_type": "video"},
+    "dialogue_audio": {"media_type": "audio", "optional": true},
+    "ambient_audio": {"media_type": "audio", "optional": true},
+    "music_audio": {"media_type": "audio", "optional": true},
+    "deflicker": {"type": "boolean", "default": false},
+    "interpolate_to_fps": {"type": "integer", "allowed": [24], "default": 24}
+  },
+  "required_components": ["validated spatial upscaler", "optional deflicker", "24 fps interpolation", "H.264 export", "video and audio quality control"],
+  "quality_gates": ["output 1080x1920 H.264 MP4 at 24 fps (final-delivery target; graph remains BLOCKED)", "check black frames, repeat frames, borders, audio presence, and final 0.5-second stability", "write thumbnail and media_info_json"],
+  "subtitle_style": "SUBTITLE_LOCK_V1",
+  "outputs": ["master_mp4", "thumbnail_png", "media_info_json", "subtitle_ass", "run_metadata_json"]
+}

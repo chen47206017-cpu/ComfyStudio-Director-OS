@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "04_ltx25_first_last_frame",
+  "execution_status": "BLOCKED",
+  "reason": "LTX 2.5 is not installed or validated in the local runtime.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real local image files uploaded by the selected ComfyUI provider; asset:// identifiers are prohibited.",
+  "inputs": {
+    "first_frame": {"media_type": "image", "role": "clean_single_frame"},
+    "last_frame": {"media_type": "image", "role": "clean_single_frame"},
+    "prompt": {"type": "string"},
+    "negative_prompt": {"type": "string"},
+    "duration_seconds": {"type": "number", "allowed": [4, 5]},
+    "seed": {"type": "integer"}
+  },
+  "required_components": ["LTX-2.5 FLF2V", "single-frame composition validator"],
+  "quality_gates": ["reject contact sheets, split screens, editor borders, and duplicate panels", "verify full-frame output before success"],
+  "presets": {"LOCAL_DRAFT": "legal low-resolution continuity test", "CLOUD_5090_QUALITY": "quality continuity render then 720x1280 export"},
+  "outputs": ["raw_video_mp4", "first_last_continuity_frames", "run_metadata_json"]
+}

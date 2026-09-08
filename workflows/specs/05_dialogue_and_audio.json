@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "05_dialogue_and_audio",
+  "execution_status": "BLOCKED",
+  "reason": "No local speech, lipsync, mixing, and quality-control graph has been installed and validated.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real local image, audio, and video files; asset:// identifiers are prohibited.",
+  "inputs": {
+    "character_image": {"media_type": "image", "role": "speaker"},
+    "dialogue_audio": {"media_type": "audio", "role": "dialogue"},
+    "ambient_audio": {"media_type": "audio", "optional": true, "role": "ambience"},
+    "music_audio": {"media_type": "audio", "optional": true, "role": "music"},
+    "prompt": {"type": "string"},
+    "seed": {"type": "integer"}
+  },
+  "required_components": ["validated lip-sync engine", "audio normalization and ducking", "single-speaker identity gate"],
+  "quality_gates": ["do not accept long alternating two-person dialogue in one generation", "check dialogue intelligibility, peak level, and lip-sync review frames"],
+  "shot_policy": "Split two-person dialogue into speaking close-up, reaction shot, response close-up, and silent two-shot.",
+  "outputs": ["video_with_audio_mp4", "separate_dialogue_track", "audio_measurement_json", "run_metadata_json"]
+}

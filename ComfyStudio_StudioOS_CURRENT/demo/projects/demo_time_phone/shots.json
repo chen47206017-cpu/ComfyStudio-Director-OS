@@ -1,0 +1,40 @@
+{
+  "version": "DemoShotOS_1.0",
+  "shots": [
+    {
+      "id": "SHOT001",
+      "title": "2006年苏晚晴第一次接到未来电话",
+      "duration_seconds": 5,
+      "year": 2006,
+      "scene_text": "2006年设计工作室",
+      "script": "2006年。25岁的苏晚晴正在设计工作室整理建筑设计稿。桌上的米黄色有线电话响起。她拿起电话。电话另一端传来未来女儿陈念的声音。",
+      "characters": ["CHAR_SW25_MASTER", "CHAR_CN40_MASTER"],
+      "props": ["PROP_PHONE_2006"],
+      "voices": ["SW25_VOICE_01", "CN40_VOICE_01"],
+      "scene": "SCENE_2006_STUDIO",
+      "output": "SHOT001.mp4",
+      "previous_shot_id": null,
+      "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+      "status": "READY"
+    },
+    {
+      "id": "SHOT002",
+      "title": "苏晚晴前往北城设计院提交设计稿",
+      "duration_seconds": 5,
+      "year": 2006,
+      "scene_text": "北城设计院门口",
+      "script": "第二天。苏晚晴离开设计工作室。来到北城设计院门口。她拿着建筑设计原稿。准备提交作品。",
+      "characters": ["CHAR_SW25_MASTER"],
+      "props": ["PROP_ARCHIVE_DESIGN"],
+      "voices": ["SW25_VOICE_01"],
+      "scene": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+      "output": "SHOT002.mp4",
+      "previous_shot_id": "SHOT001",
+      "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+      "status": "READY"
+    }
+  ]
+}
+
+
+

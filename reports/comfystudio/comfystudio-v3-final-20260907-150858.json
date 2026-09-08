@@ -1,0 +1,28 @@
+{
+  "version": "3.0",
+  "created_at": "2026-09-07T15:09:08",
+  "backup": "F:\\一人公司\\comfyui-production\\backups\\comfystudio-v3\\20260907-150858",
+  "database": "F:\\一人公司\\comfyui-production\\runtime\\comfystudio\\comfystudio_v3.db",
+  "asset_counts": {
+    "character": 1
+  },
+  "protected_ok": true,
+  "workflow_v3": "F:\\一人公司\\comfyui-production\\workflows\\smoke\\H3-R2V-PRODUCTION_V3.json",
+  "snapshot": "F:\\一人公司\\comfyui-production\\snapshots\\h3-f\\snapshot-v3-20260907-150908.json",
+  "url": "http://127.0.0.1:8189",
+  "features": {
+    "production_mode": true,
+    "advanced_canvas": true,
+    "asset_import": true,
+    "asset_search": true,
+    "asset_preview": true,
+    "asset_favorite": true,
+    "asset_rename": true,
+    "delete_to_trash": true,
+    "shot_management": true,
+    "shot_reference_binding": true,
+    "workflow_scan": true,
+    "runtime_snapshot": true,
+    "run_current_canvas_with_preflight": true
+  }
+}

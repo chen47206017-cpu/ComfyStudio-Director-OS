@@ -1,0 +1,32 @@
+{
+  "provider": "LOCAL",
+  "workflow_id": "02_two_images_one_video_dual_character_control",
+  "inputs": {
+    "prompt": "Two distinct women maintain their identities while following the driving-video blocking.",
+    "negative_prompt": "identity swap, fused face, duplicate person, costume swap",
+    "control_mode": "pose_depth_edges",
+    "duration_seconds": 5,
+    "seed": 20260903
+  },
+  "media": {
+    "character_a_image": {
+      "path": "F:\\AI短剧\\character_a_SW45.png",
+      "media_type": "image",
+      "role": "character_a"
+    },
+    "character_b_image": {
+      "path": "F:\\AI短剧\\character_b_SW25.png",
+      "media_type": "image",
+      "role": "character_b"
+    },
+    "driving_video": {
+      "path": "F:\\AI短剧\\driving_video.mp4",
+      "media_type": "video",
+      "role": "driving_video"
+    }
+  },
+  "options": {
+    "preset": "CLOUD_5090_QUALITY"
+  },
+  "status": "example_only_pipeline_not_installed"
+}

@@ -1,0 +1,29 @@
+﻿{
+    "workers":  [
+                    {
+                        "id":  "legacy-g",
+                        "name":  "旧版 ComfyUI / G盘",
+                        "endpoint":  "http://127.0.0.1:8188",
+                        "runtime_root":  "G:\\ComfyUI",
+                        "model_root":  "G:\\ComfyUI\\models",
+                        "status":  "legacy",
+                        "capabilities":  {
+                                             "h3":  false,
+                                             "legacy_workflows":  true
+                                         }
+                    },
+                    {
+                        "id":  "h3-f",
+                        "name":  "H3 ComfyUI / F盘",
+                        "endpoint":  "http://127.0.0.1:8189",
+                        "runtime_root":  "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0",
+                        "model_root":  "G:\\ComfyUI\\models",
+                        "status":  "candidate",
+                        "capabilities":  {
+                                             "h3":  true,
+                                             "ref2va":  true,
+                                             "extender":  true
+                                         }
+                    }
+                ]
+}

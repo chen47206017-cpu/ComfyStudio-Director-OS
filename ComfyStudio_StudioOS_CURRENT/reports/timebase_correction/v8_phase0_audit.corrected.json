@@ -1,0 +1,22 @@
+{
+  "generated_at_beijing": "2026-09-08T01:27:23+08:00",
+  "phase": "audit-and-migration-plan",
+  "backup": "reports/V8_backup_20260908_004712",
+  "status": "complete",
+  "protected": [
+    "database/assets.json",
+    "database/canon.json",
+    "database/shots.json",
+    "database/reference.json",
+    "database/projects.json",
+    "database/studio.json",
+    "database/studio_version.json",
+    "assets",
+    "workflows"
+  ],
+  "timebase_correction": {
+    "corrected_at_beijing": "2026-09-08T06:50:02+08:00",
+    "source_sha256": "904504B15452A4FD5FCE981750F762D66436644AD4A0DD290E4C2C9C2F5AB813",
+    "source_preserved": true
+  }
+}

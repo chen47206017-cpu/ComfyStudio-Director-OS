@@ -1,0 +1,21 @@
+﻿V8.1 API
+
+GET
+
+/api/v8/status
+
+
+POST
+
+/api/v8/canon/check
+
+
+POST
+
+/api/v8/prompt/build
+
+
+POST
+
+/api/v8/comfy/submit
+

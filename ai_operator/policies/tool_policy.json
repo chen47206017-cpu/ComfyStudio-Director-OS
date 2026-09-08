@@ -1,0 +1,40 @@
+﻿{
+  "version": 1,
+
+  "default_level": "L2",
+
+  "levels": {
+    "L0": "text_only",
+    "L1": "read_search",
+    "L2": "draft_modify",
+    "L3": "local_execute",
+    "L4": "runtime_install_modify",
+    "L5": "paid_delete_security"
+  },
+
+  "rules": {
+    "workflow_read": "L1",
+    "workflow_search": "L1",
+    "workflow_clone": "L2",
+    "workflow_patch_draft": "L2",
+    "workflow_diff": "L1",
+    "workflow_validate": "L1",
+
+    "asset_search": "L1",
+    "asset_bind": "L2",
+
+    "comfy_object_info": "L1",
+    "comfy_system_stats": "L1",
+    "comfy_queue_read": "L1",
+
+    "comfy_submit_local": "L3",
+    "comfy_cancel_job": "L3",
+
+    "install_custom_node": "L4",
+    "install_model": "L4",
+
+    "cloud_submit": "L5",
+    "delete_asset": "L5",
+    "delete_workflow": "L5"
+  }
+}

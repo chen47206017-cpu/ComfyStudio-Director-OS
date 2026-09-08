@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "02_two_images_one_video_dual_character_control",
+  "execution_status": "BLOCKED",
+  "reason": "Wan2.2 Fun Control A14B FP8 and its exact dual-character control graph are not installed or validated.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real image and video files uploaded by the selected ComfyUI provider; asset:// identifiers are prohibited.",
+  "inputs": {
+    "character_a_image": {"media_type": "image", "role": "SW45"},
+    "character_b_image": {"media_type": "image", "role": "SW25"},
+    "driving_video": {"media_type": "video", "role": "motion_camera_reference"},
+    "prompt": {"type": "string"},
+    "negative_prompt": {"type": "string"},
+    "control_mode": {"type": "string", "allowed": ["pose_depth_edges"]},
+    "duration_seconds": {"type": "number", "allowed": [4, 5]},
+    "seed": {"type": "integer"}
+  },
+  "required_components": ["Wan2.2 Fun Control A14B FP8", "pose extraction", "depth extraction", "edge extraction", "dual-character identity gate"],
+  "quality_gates": ["warn on cuts, occlusion, crossing, rapid rotation, or exit-frame motion", "reject identity swaps and fused faces", "route uncertain identity to NEEDS_REVIEW"],
+  "presets": {"LOCAL_DRAFT": "432x768 or legal low-memory model resolution", "CLOUD_5090_QUALITY": "1080x1920 final-delivery target, 24 fps; graph remains unverified"},
+  "outputs": ["reference_first_frame", "pose_depth_edge_controls", "raw_video_mp4", "run_metadata_json"]
+}

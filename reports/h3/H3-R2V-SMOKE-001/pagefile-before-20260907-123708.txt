@@ -1,0 +1,29 @@
+﻿时间：
+2026-09-07 12:37:09
+
+AutomaticManagedPagefile:
+True
+
+===== Win32_PageFileSetting =====
+
+
+===== Win32_PageFileUsage =====
+
+
+Status                : 
+Name                  : D:\pagefile.sys
+CurrentUsage          : 1200
+Caption               : D:\pagefile.sys
+Description           : D:\pagefile.sys
+InstallDate           : 2026/9/3 22:53:04
+AllocatedBaseSize     : 5888
+PeakUsage             : 2507
+TempPageFile          : False
+PSComputerName        : 
+CimClass              : root/cimv2:Win32_PageFileUsage
+CimInstanceProperties : {Caption, Description, InstallDate, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+
+
+
+

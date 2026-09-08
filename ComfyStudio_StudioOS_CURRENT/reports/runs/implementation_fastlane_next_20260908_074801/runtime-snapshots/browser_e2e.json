@@ -1,0 +1,11 @@
+{
+  "tested_at_beijing": "2026-09-08T07:48:01+08:00",
+  "url": "http://127.0.0.1:8190/director/",
+  "console_errors": 0,
+  "visible_nodes": 5,
+  "visible_edges": 4,
+  "all_in_one_reference": "角色身份 → 苏晚晴45岁",
+  "reload_restored": true,
+  "director_engineering_modes_shared": true,
+  "notes": "浏览器截图已在本轮验证中展示；标签页保持可复用。"
+}

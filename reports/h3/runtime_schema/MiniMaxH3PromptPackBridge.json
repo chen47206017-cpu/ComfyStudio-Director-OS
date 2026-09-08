@@ -1,0 +1,1061 @@
+﻿{
+    "input":  {
+                  "required":  {
+                                   "prompt_1":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Connect the first STRING prompt. More prompt inputs appear automatically."
+                                                    }
+                                                ]
+                               },
+                  "optional":  {
+                                   "prompt_2":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 2."
+                                                    }
+                                                ],
+                                   "prompt_3":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 3."
+                                                    }
+                                                ],
+                                   "prompt_4":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 4."
+                                                    }
+                                                ],
+                                   "prompt_5":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 5."
+                                                    }
+                                                ],
+                                   "prompt_6":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 6."
+                                                    }
+                                                ],
+                                   "prompt_7":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 7."
+                                                    }
+                                                ],
+                                   "prompt_8":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 8."
+                                                    }
+                                                ],
+                                   "prompt_9":  [
+                                                    "STRING",
+                                                    {
+                                                        "forceInput":  true,
+                                                        "tooltip":  "Dynamic STRING prompt 9."
+                                                    }
+                                                ],
+                                   "prompt_10":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 10."
+                                                     }
+                                                 ],
+                                   "prompt_11":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 11."
+                                                     }
+                                                 ],
+                                   "prompt_12":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 12."
+                                                     }
+                                                 ],
+                                   "prompt_13":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 13."
+                                                     }
+                                                 ],
+                                   "prompt_14":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 14."
+                                                     }
+                                                 ],
+                                   "prompt_15":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 15."
+                                                     }
+                                                 ],
+                                   "prompt_16":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 16."
+                                                     }
+                                                 ],
+                                   "prompt_17":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 17."
+                                                     }
+                                                 ],
+                                   "prompt_18":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 18."
+                                                     }
+                                                 ],
+                                   "prompt_19":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 19."
+                                                     }
+                                                 ],
+                                   "prompt_20":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 20."
+                                                     }
+                                                 ],
+                                   "prompt_21":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 21."
+                                                     }
+                                                 ],
+                                   "prompt_22":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 22."
+                                                     }
+                                                 ],
+                                   "prompt_23":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 23."
+                                                     }
+                                                 ],
+                                   "prompt_24":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 24."
+                                                     }
+                                                 ],
+                                   "prompt_25":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 25."
+                                                     }
+                                                 ],
+                                   "prompt_26":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 26."
+                                                     }
+                                                 ],
+                                   "prompt_27":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 27."
+                                                     }
+                                                 ],
+                                   "prompt_28":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 28."
+                                                     }
+                                                 ],
+                                   "prompt_29":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 29."
+                                                     }
+                                                 ],
+                                   "prompt_30":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 30."
+                                                     }
+                                                 ],
+                                   "prompt_31":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 31."
+                                                     }
+                                                 ],
+                                   "prompt_32":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 32."
+                                                     }
+                                                 ],
+                                   "prompt_33":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 33."
+                                                     }
+                                                 ],
+                                   "prompt_34":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 34."
+                                                     }
+                                                 ],
+                                   "prompt_35":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 35."
+                                                     }
+                                                 ],
+                                   "prompt_36":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 36."
+                                                     }
+                                                 ],
+                                   "prompt_37":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 37."
+                                                     }
+                                                 ],
+                                   "prompt_38":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 38."
+                                                     }
+                                                 ],
+                                   "prompt_39":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 39."
+                                                     }
+                                                 ],
+                                   "prompt_40":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 40."
+                                                     }
+                                                 ],
+                                   "prompt_41":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 41."
+                                                     }
+                                                 ],
+                                   "prompt_42":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 42."
+                                                     }
+                                                 ],
+                                   "prompt_43":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 43."
+                                                     }
+                                                 ],
+                                   "prompt_44":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 44."
+                                                     }
+                                                 ],
+                                   "prompt_45":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 45."
+                                                     }
+                                                 ],
+                                   "prompt_46":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 46."
+                                                     }
+                                                 ],
+                                   "prompt_47":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 47."
+                                                     }
+                                                 ],
+                                   "prompt_48":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 48."
+                                                     }
+                                                 ],
+                                   "prompt_49":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 49."
+                                                     }
+                                                 ],
+                                   "prompt_50":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 50."
+                                                     }
+                                                 ],
+                                   "prompt_51":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 51."
+                                                     }
+                                                 ],
+                                   "prompt_52":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 52."
+                                                     }
+                                                 ],
+                                   "prompt_53":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 53."
+                                                     }
+                                                 ],
+                                   "prompt_54":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 54."
+                                                     }
+                                                 ],
+                                   "prompt_55":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 55."
+                                                     }
+                                                 ],
+                                   "prompt_56":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 56."
+                                                     }
+                                                 ],
+                                   "prompt_57":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 57."
+                                                     }
+                                                 ],
+                                   "prompt_58":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 58."
+                                                     }
+                                                 ],
+                                   "prompt_59":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 59."
+                                                     }
+                                                 ],
+                                   "prompt_60":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 60."
+                                                     }
+                                                 ],
+                                   "prompt_61":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 61."
+                                                     }
+                                                 ],
+                                   "prompt_62":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 62."
+                                                     }
+                                                 ],
+                                   "prompt_63":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 63."
+                                                     }
+                                                 ],
+                                   "prompt_64":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 64."
+                                                     }
+                                                 ],
+                                   "prompt_65":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 65."
+                                                     }
+                                                 ],
+                                   "prompt_66":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 66."
+                                                     }
+                                                 ],
+                                   "prompt_67":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 67."
+                                                     }
+                                                 ],
+                                   "prompt_68":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 68."
+                                                     }
+                                                 ],
+                                   "prompt_69":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 69."
+                                                     }
+                                                 ],
+                                   "prompt_70":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 70."
+                                                     }
+                                                 ],
+                                   "prompt_71":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 71."
+                                                     }
+                                                 ],
+                                   "prompt_72":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 72."
+                                                     }
+                                                 ],
+                                   "prompt_73":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 73."
+                                                     }
+                                                 ],
+                                   "prompt_74":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 74."
+                                                     }
+                                                 ],
+                                   "prompt_75":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 75."
+                                                     }
+                                                 ],
+                                   "prompt_76":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 76."
+                                                     }
+                                                 ],
+                                   "prompt_77":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 77."
+                                                     }
+                                                 ],
+                                   "prompt_78":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 78."
+                                                     }
+                                                 ],
+                                   "prompt_79":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 79."
+                                                     }
+                                                 ],
+                                   "prompt_80":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 80."
+                                                     }
+                                                 ],
+                                   "prompt_81":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 81."
+                                                     }
+                                                 ],
+                                   "prompt_82":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 82."
+                                                     }
+                                                 ],
+                                   "prompt_83":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 83."
+                                                     }
+                                                 ],
+                                   "prompt_84":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 84."
+                                                     }
+                                                 ],
+                                   "prompt_85":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 85."
+                                                     }
+                                                 ],
+                                   "prompt_86":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 86."
+                                                     }
+                                                 ],
+                                   "prompt_87":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 87."
+                                                     }
+                                                 ],
+                                   "prompt_88":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 88."
+                                                     }
+                                                 ],
+                                   "prompt_89":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 89."
+                                                     }
+                                                 ],
+                                   "prompt_90":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 90."
+                                                     }
+                                                 ],
+                                   "prompt_91":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 91."
+                                                     }
+                                                 ],
+                                   "prompt_92":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 92."
+                                                     }
+                                                 ],
+                                   "prompt_93":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 93."
+                                                     }
+                                                 ],
+                                   "prompt_94":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 94."
+                                                     }
+                                                 ],
+                                   "prompt_95":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 95."
+                                                     }
+                                                 ],
+                                   "prompt_96":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 96."
+                                                     }
+                                                 ],
+                                   "prompt_97":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 97."
+                                                     }
+                                                 ],
+                                   "prompt_98":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 98."
+                                                     }
+                                                 ],
+                                   "prompt_99":  [
+                                                     "STRING",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Dynamic STRING prompt 99."
+                                                     }
+                                                 ],
+                                   "prompt_100":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 100."
+                                                      }
+                                                  ],
+                                   "prompt_101":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 101."
+                                                      }
+                                                  ],
+                                   "prompt_102":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 102."
+                                                      }
+                                                  ],
+                                   "prompt_103":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 103."
+                                                      }
+                                                  ],
+                                   "prompt_104":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 104."
+                                                      }
+                                                  ],
+                                   "prompt_105":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 105."
+                                                      }
+                                                  ],
+                                   "prompt_106":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 106."
+                                                      }
+                                                  ],
+                                   "prompt_107":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 107."
+                                                      }
+                                                  ],
+                                   "prompt_108":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 108."
+                                                      }
+                                                  ],
+                                   "prompt_109":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 109."
+                                                      }
+                                                  ],
+                                   "prompt_110":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 110."
+                                                      }
+                                                  ],
+                                   "prompt_111":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 111."
+                                                      }
+                                                  ],
+                                   "prompt_112":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 112."
+                                                      }
+                                                  ],
+                                   "prompt_113":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 113."
+                                                      }
+                                                  ],
+                                   "prompt_114":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 114."
+                                                      }
+                                                  ],
+                                   "prompt_115":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 115."
+                                                      }
+                                                  ],
+                                   "prompt_116":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 116."
+                                                      }
+                                                  ],
+                                   "prompt_117":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 117."
+                                                      }
+                                                  ],
+                                   "prompt_118":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 118."
+                                                      }
+                                                  ],
+                                   "prompt_119":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 119."
+                                                      }
+                                                  ],
+                                   "prompt_120":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 120."
+                                                      }
+                                                  ],
+                                   "prompt_121":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 121."
+                                                      }
+                                                  ],
+                                   "prompt_122":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 122."
+                                                      }
+                                                  ],
+                                   "prompt_123":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 123."
+                                                      }
+                                                  ],
+                                   "prompt_124":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 124."
+                                                      }
+                                                  ],
+                                   "prompt_125":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 125."
+                                                      }
+                                                  ],
+                                   "prompt_126":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 126."
+                                                      }
+                                                  ],
+                                   "prompt_127":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 127."
+                                                      }
+                                                  ],
+                                   "prompt_128":  [
+                                                      "STRING",
+                                                      {
+                                                          "forceInput":  true,
+                                                          "tooltip":  "Dynamic STRING prompt 128."
+                                                      }
+                                                  ]
+                               }
+              },
+    "input_order":  {
+                        "required":  [
+                                         "prompt_1"
+                                     ],
+                        "optional":  [
+                                         "prompt_2",
+                                         "prompt_3",
+                                         "prompt_4",
+                                         "prompt_5",
+                                         "prompt_6",
+                                         "prompt_7",
+                                         "prompt_8",
+                                         "prompt_9",
+                                         "prompt_10",
+                                         "prompt_11",
+                                         "prompt_12",
+                                         "prompt_13",
+                                         "prompt_14",
+                                         "prompt_15",
+                                         "prompt_16",
+                                         "prompt_17",
+                                         "prompt_18",
+                                         "prompt_19",
+                                         "prompt_20",
+                                         "prompt_21",
+                                         "prompt_22",
+                                         "prompt_23",
+                                         "prompt_24",
+                                         "prompt_25",
+                                         "prompt_26",
+                                         "prompt_27",
+                                         "prompt_28",
+                                         "prompt_29",
+                                         "prompt_30",
+                                         "prompt_31",
+                                         "prompt_32",
+                                         "prompt_33",
+                                         "prompt_34",
+                                         "prompt_35",
+                                         "prompt_36",
+                                         "prompt_37",
+                                         "prompt_38",
+                                         "prompt_39",
+                                         "prompt_40",
+                                         "prompt_41",
+                                         "prompt_42",
+                                         "prompt_43",
+                                         "prompt_44",
+                                         "prompt_45",
+                                         "prompt_46",
+                                         "prompt_47",
+                                         "prompt_48",
+                                         "prompt_49",
+                                         "prompt_50",
+                                         "prompt_51",
+                                         "prompt_52",
+                                         "prompt_53",
+                                         "prompt_54",
+                                         "prompt_55",
+                                         "prompt_56",
+                                         "prompt_57",
+                                         "prompt_58",
+                                         "prompt_59",
+                                         "prompt_60",
+                                         "prompt_61",
+                                         "prompt_62",
+                                         "prompt_63",
+                                         "prompt_64",
+                                         "prompt_65",
+                                         "prompt_66",
+                                         "prompt_67",
+                                         "prompt_68",
+                                         "prompt_69",
+                                         "prompt_70",
+                                         "prompt_71",
+                                         "prompt_72",
+                                         "prompt_73",
+                                         "prompt_74",
+                                         "prompt_75",
+                                         "prompt_76",
+                                         "prompt_77",
+                                         "prompt_78",
+                                         "prompt_79",
+                                         "prompt_80",
+                                         "prompt_81",
+                                         "prompt_82",
+                                         "prompt_83",
+                                         "prompt_84",
+                                         "prompt_85",
+                                         "prompt_86",
+                                         "prompt_87",
+                                         "prompt_88",
+                                         "prompt_89",
+                                         "prompt_90",
+                                         "prompt_91",
+                                         "prompt_92",
+                                         "prompt_93",
+                                         "prompt_94",
+                                         "prompt_95",
+                                         "prompt_96",
+                                         "prompt_97",
+                                         "prompt_98",
+                                         "prompt_99",
+                                         "prompt_100",
+                                         "prompt_101",
+                                         "prompt_102",
+                                         "prompt_103",
+                                         "prompt_104",
+                                         "prompt_105",
+                                         "prompt_106",
+                                         "prompt_107",
+                                         "prompt_108",
+                                         "prompt_109",
+                                         "prompt_110",
+                                         "prompt_111",
+                                         "prompt_112",
+                                         "prompt_113",
+                                         "prompt_114",
+                                         "prompt_115",
+                                         "prompt_116",
+                                         "prompt_117",
+                                         "prompt_118",
+                                         "prompt_119",
+                                         "prompt_120",
+                                         "prompt_121",
+                                         "prompt_122",
+                                         "prompt_123",
+                                         "prompt_124",
+                                         "prompt_125",
+                                         "prompt_126",
+                                         "prompt_127",
+                                         "prompt_128"
+                                     ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "H3_PROMPT_PACK",
+                   "INT"
+               ],
+    "output_is_list":  [
+                           false,
+                           false
+                       ],
+    "output_name":  [
+                        "prompt_pack",
+                        "prompt_count"
+                    ],
+    "name":  "MiniMaxH3PromptPackBridge",
+    "display_name":  "MiniMax H3 Prompt Pack Bridge",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  false,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

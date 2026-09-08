@@ -1,0 +1,21 @@
+{
+  "schema": "comfystudio.timebase-correction.v1",
+  "business_timezone": "Asia/Shanghai",
+  "corrected_at_beijing": "2026-09-08T06:50:02+08:00",
+  "source_files": [
+    {
+      "path": "upgrade_logs/v8_phase0_audit.json",
+      "sha256": "904504B15452A4FD5FCE981750F762D66436644AD4A0DD290E4C2C9C2F5AB813",
+      "corrected_copy": "reports/timebase_correction/v8_phase0_audit.corrected.json",
+      "history_modified": false
+    },
+    {
+      "path": "reports/V8_MIGRATION_PLAN.md",
+      "sha256": "4DB4CF850AFE846512105010F9DD92326AC0C165579D998ACE1E7F0290A73EFC",
+      "corrected_copy": "reports/timebase_correction/V8_MIGRATION_PLAN.corrected.md",
+      "history_modified": false
+    }
+  ],
+  "format": "YYYY-MM-DDTHH:mm:ss+08:00",
+  "note": "Historical source files remain byte-for-byte unchanged; corrected copies are additive evidence."
+}

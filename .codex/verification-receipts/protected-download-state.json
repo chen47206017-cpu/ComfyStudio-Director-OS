@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "protected-download-state",
+    "kind": "command",
+    "level": "runtime",
+    "argv": [
+      "python",
+      "scripts/check_h3_download_status.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 60,
+    "oracle_files": [
+      "minimax_h3.download-state.json"
+    ],
+    "covers": [
+      "Project regression, API smoke, workflow JSON validation, subtitle preflight, secret scan, and manifest-only download-state checks pass without accessing the protected model file.",
+      "The user-managed H3 Ref2VA transfer, G:\\ComfyUI, Clash Verge, network routing, live listeners, credentials, and cloud jobs are not accessed or changed.",
+      "The user-managed PowerShell transfer has not been confirmed to have naturally returned to a prompt."
+    ]
+  },
+  "contract_sha256": "1103aa633058234f06b897a266a1343d5d48ad388c4f66a6f5767770bb204e25",
+  "started_at": "2026-09-05T03:21:28",
+  "finished_at": "2026-09-05T03:21:28",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/protected-download-state.stdout.log",
+  "stdout_sha256": "20d95e90caa867761b5cc00d5efd44fb24bbb5574e1eceba765f55830bba463c",
+  "stderr": ".codex/verification-receipts/protected-download-state.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/h3.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "fffd2dc56498e8496e6aab607c4fd99433903f8992c2b75f109ec0d16c5877ff"
+    }
+  ],
+  "oracle_hashes": {
+    "minimax_h3.download-state.json": "243f85de800f753d0f9384d97440c72a1f97a17b0eea843f0ac17f4cab16fd1e"
+  }
+}

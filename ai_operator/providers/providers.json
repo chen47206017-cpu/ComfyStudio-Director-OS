@@ -1,0 +1,21 @@
+﻿{
+  "version": 1,
+  "default_provider": "jojo-max",
+  "providers": [
+    {
+      "id": "jojo-max",
+      "display_name": "JOJO MAX",
+      "adapter": "openai-compatible",
+      "protocol": "responses",
+      "base_url": "https://max2.jojocode.com/v1",
+      "model": "auto",
+      "secret_ref": "cred://comfystudio/jojo-max",
+      "capabilities": {
+        "responses": "pending_probe",
+        "streaming": "pending_probe",
+        "tool_calling": "pending_probe",
+        "structured_output": "pending_probe"
+      }
+    }
+  ]
+}

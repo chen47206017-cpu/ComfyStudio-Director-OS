@@ -1,0 +1,7 @@
+{
+  "version": "VoiceIdentityOS_1.0",
+  "voices": [
+    {"id":"SW25_VOICE_01","name":"苏晚晴25岁声音","character_id":"CHAR_SW25_MASTER","file":"assets/audio/SW25_VOICE_01.wav","status":"REFERENCE_REQUIRED"},
+    {"id":"CN40_VOICE_01","name":"陈念40岁声音","character_id":"CHAR_CN40_MASTER","file":"assets/audio/CN40_VOICE_01.wav","status":"REFERENCE_REQUIRED"}
+  ]
+}

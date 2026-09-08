@@ -1,0 +1,10 @@
+{
+  "contract": ".codex/tasks/TASK-20260908-103918/TASK_CONTRACT_DRAFT.json",
+  "contract_sha256": "419628371fa3da877c89aba5646d03f267e08871c03f9eb3b23bd8d5a7322089",
+  "goal": "继续执行 ComfyStudio StudioOS V10.1 Director Demo Production Upgrade：修复 Demo 生成界面的真实反馈与选中态问题，优先当前镜头场景解析，补齐运行态验收证据；不修改旧数据库结构、不删除资产、不声称 H3 已产出 MP4，所有新时间使用 Asia/Shanghai。",
+  "task_type": "high_risk",
+  "prepared_at": "2026-09-08T11:08:21",
+  "closed_at": "2026-09-08T12:16:28",
+  "outcome": "PARTIAL",
+  "supersede_reason": "用户已将旧 V10.1 反馈和预检任务升级为 V44 本机 local_comfy Render Pipeline；旧任务证据与未验证 MP4 状态保留，新任务负责 lane、严格 MP4 验证、安全播放和真实运行证据。"
+}

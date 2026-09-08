@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "loaded_at": "2026-09-08T10:39:06+08:00",
+  "system_root": "G:\\codex话术",
+  "project": "F:\\一人公司\\comfyui-production\\ComfyStudio_StudioOS_CURRENT",
+  "task": "feature",
+  "thread_sha256": "99a88e537e7746d8aa4d3c6f3e43c75373bd19b4570f3d2042c50559012a41e8",
+  "managed_project": false,
+  "references": [
+    {
+      "path": "G:\\codex话术\\AGENTS.md",
+      "sha256": "ac73151b2c0fdbcc59d540c86b68a8c3ac595fae848028acc6a578707cb15634"
+    },
+    {
+      "path": "G:\\codex话术\\AI_CONTEXT.md",
+      "sha256": "0032302b1bd5825fdd399809813baff61737599b40bff67a82676eed8951eb7f"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\START_HERE.md",
+      "sha256": "49dde6a4bd935dd77e3264f4cbddffed0c1d72baf40c9484ee440eed85b2578c"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\MEMORY_INDEX.md",
+      "sha256": "04b2cf05b4b53639fe2924f748f295a8635b9303a8472c944647eb000921aadc"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\VERSION.md",
+      "sha256": "5aede196889e6abcda147686be14e8800e2bccf549eb24584613bb804425c1d1"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\SESSION_LIFECYCLE_PROTOCOL.md",
+      "sha256": "832387fa67e55a1f9321a4008b5d3feb909cdabb67d1204bbabbc52907f1d1b4"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\CONTEXT_LOAD_PROTOCOL.md",
+      "sha256": "050de62777a712ae6423ae1162a398c424b365dd826d5466c14408a0072748bd"
+    },
+    {
+      "path": "G:\\codex话术\\01_PERSONAL_PROFILE\\USER_PROFILE.md",
+      "sha256": "5435855d3c5c7fb12b6916c70868724f0c2215ad0cadd5a7f02174120dc1871a"
+    },
+    {
+      "path": "G:\\codex话术\\USER_WORKSTYLE_SKILL.md",
+      "sha256": "d355cb61229d07bf556735b2f4e7122b0a3d90920c87098e55dd858b2ce41fb4"
+    },
+    {
+      "path": "G:\\codex话术\\02_DEVELOPMENT_RULES\\CODING_RULES.md",
+      "sha256": "4dbd29f70a2084fac553d77e002f25b6f808cf34027294a7290df483f6a194fc"
+    },
+    {
+      "path": "G:\\codex话术\\02_DEVELOPMENT_RULES\\TEST_RULES.md",
+      "sha256": "c3b48e638484a8602ee39e06e1e23f0e88b452ebc95cc22de02779887f1886a0"
+    },
+    {
+      "path": "G:\\codex话术\\06_AI_BEHAVIOR\\NATURAL_LANGUAGE_ITERATION_PROTOCOL.md",
+      "sha256": "dc6d3a643c954c1a99ac7dbe8bddf1444d2b5ef2f8f5f44b281fefa16aef1f9f"
+    },
+    {
+      "path": "G:\\codex话术\\00_SYSTEM\\WORKFLOW_PHASE_AND_DESTRUCTIVE_ACTION_PROTOCOL.md",
+      "sha256": "9204d442b25029e41bac914040947aec3d8c25f623157601aab315a7093e85b9"
+    }
+  ],
+  "missing_references": [],
+  "missing_governance": [],
+  "receipt_sha256": "e00bf4cd9d387a8ecf6ea4fce43fa467bb488edee73c4bba83aac9ddf1f9ce0b"
+}

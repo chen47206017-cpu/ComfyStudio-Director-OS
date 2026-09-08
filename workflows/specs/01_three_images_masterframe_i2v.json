@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "01_three_images_masterframe_i2v",
+  "execution_status": "BLOCKED",
+  "reason": "Qwen Image Edit 2511 and LTX 2.5 are not installed or validated in the local runtime.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real local image files uploaded by the selected ComfyUI provider; asset:// identifiers are prohibited.",
+  "inputs": {
+    "character_a_image": {"media_type": "image", "role": "SW45"},
+    "character_b_image": {"media_type": "image", "role": "SW25"},
+    "scene_or_layout_image": {"media_type": "image", "role": "scene_or_layout"},
+    "prompt": {"type": "string"},
+    "negative_prompt": {"type": "string"},
+    "duration_seconds": {"type": "number", "allowed": [4, 5]},
+    "seed": {"type": "integer"}
+  },
+  "required_components": ["Qwen-Image-Edit-2511", "LTX-2.5 I2V", "face-count and composition quality gate"],
+  "quality_gates": ["reject split screen or collage", "reject duplicate or fused faces", "reject age or wardrobe swaps", "require a single full-frame master image"],
+  "presets": {"LOCAL_DRAFT": "432x768 technical composition check", "CLOUD_5090_QUALITY": "1080x1920 final-delivery target, 24 fps; graph remains unverified"},
+  "outputs": ["master_first_frame", "last_frame", "raw_video_mp4", "run_metadata_json"]
+}

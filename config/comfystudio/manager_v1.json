@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "display_name": "ComfyStudio Manager V1",
+  "runtime": "h3-f",
+  "mutation_policy": {
+    "auto_install_custom_nodes": false,
+    "auto_update_custom_nodes": false,
+    "auto_update_comfyui": false,
+    "auto_change_torch": false,
+    "auto_change_cuda": false,
+    "runtime_snapshot": true,
+    "workflow_missing_node_scan": true
+  },
+  "protected_packages": {
+    "torch": "2.10.0+cu130",
+    "torchvision": "0.25.0+cu130",
+    "torchaudio": "2.10.0+cu130",
+    "safetensors": "0.8.0",
+    "comfy-kitchen": "0.2.31",
+    "comfy-aimdo": "0.4.15"
+  }
+}

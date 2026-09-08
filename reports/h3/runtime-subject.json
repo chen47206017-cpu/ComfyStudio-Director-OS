@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "subject": "existing G:/ComfyUI production runtime",
+  "mode": "read-only",
+  "future_dated_reference_records": {
+    "captured_at": "2026-09-07T01:17:55.8491903+08:00",
+    "system_stats_source": "F:/AI短剧/H3_UPGRADE_TEST/reports/system_stats_pre_extender.json",
+    "object_info_source": "F:/AI短剧/H3_UPGRADE_TEST/reports/object_info_pre_extender.json",
+    "object_info_summary_source": "F:/AI短剧/H3_UPGRADE_TEST/reports/object_info_pre_extender_summary.json",
+    "process_source": "F:/AI短剧/H3_UPGRADE_TEST/logs/comfyui-pre-extender-process.json",
+    "startup_stderr_source": "F:/AI短剧/H3_UPGRADE_TEST/logs/comfyui-pre-extender-startup.stderr.log",
+    "comfyui_path": "G:/ComfyUI",
+    "comfyui_version": "0.27.0",
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_build": "cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+    "listen": "127.0.0.1:8188",
+    "pid": 40436,
+    "timestamp_validity": "FUTURE_DATED_REFERENCE_ONLY"
+  },
+  "active_iteration_probe": {
+    "captured_on": "2026-09-06",
+    "system_stats": "HTTP 200",
+    "object_info": "HTTP 200",
+    "checked_classes_absent": [
+      "MiniMaxH3ReferenceToVideo",
+      "MiniMaxH3MotionContext",
+      "MiniMaxH3MotionContextTrim",
+      "MiniMaxH3MotionContextSaveLatent",
+      "MiniMaxH3MotionContextLoadLatent",
+      "MiniMaxH3MotionContextChain",
+      "MiniMaxH3MotionContextSeamProbe",
+      "MiniMaxH3Extender"
+    ],
+    "process_reinspection": "NOT_AVAILABLE",
+    "reason": "The sandbox was denied access to the Windows process record. PID and command-line facts are therefore unavailable as current observations."
+  },
+  "claim_boundary": "The 2026-09-07 reference files are future-dated and do not prove the current process state. The 2026-09-06 active iteration probe proves the two endpoints answered and the named H3 classes were absent when probed; it does not prove an installation, a restart, a workflow load, or any H3 generation."
+}

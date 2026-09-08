@@ -1,0 +1,11 @@
+{
+  "version": "DemoAssetOS_1.0",
+  "assets": [
+    {"id":"CHAR_SW25_MASTER","type":"character","name":"苏晚晴25岁","source":"database/assets.json","identity_key":"su_wanqing_25","required":true},
+    {"id":"CHAR_CN40_MASTER","type":"character","name":"陈念40岁","source":"database/assets.json","identity_key":"chen_nian_40","required":true},
+    {"id":"SCENE_2006_STUDIO","type":"scene","name":"2006设计工作室","source":"database/assets.json","required":true},
+    {"id":"SCENE_BEICHENG_DESIGN_INSTITUTE","type":"scene","name":"北城设计院门口","source":"demo://resolver","required":true},
+    {"id":"PROP_PHONE_2006","type":"prop","name":"米黄色有线座机","source":"database/assets.json","required":true},
+    {"id":"PROP_ARCHIVE_DESIGN","type":"prop","name":"建筑设计原稿","source":"demo://resolver","required":true}
+  ]
+}

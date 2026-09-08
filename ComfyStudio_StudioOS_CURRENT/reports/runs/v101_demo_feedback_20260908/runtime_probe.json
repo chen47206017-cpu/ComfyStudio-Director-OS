@@ -1,0 +1,719 @@
+{
+  "schema": "comfystudio.v101.runtime-probe.v1",
+  "observed_at_beijing": "2026-09-08T11:39:37+08:00",
+  "business_timezone": "Asia/Shanghai",
+  "claim_level": "runtime-verified",
+  "status": "PASS",
+  "real_mp4": {
+    "status": "UNVERIFIED",
+    "reason": "本探针只验证服务、Demo 预检和 H3 节点；没有把队列提交当作 MP4 成功。"
+  },
+  "listeners": {
+    "8189": {
+      "port": 8189,
+      "listening": true,
+      "pids": []
+    },
+    "8190": {
+      "port": 8190,
+      "listening": true,
+      "pids": []
+    }
+  },
+  "comfy": {
+    "system_stats": {
+      "url": "http://127.0.0.1:8189/system_stats",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 19.48,
+      "body": {
+        "system": {
+          "os": "win32",
+          "ram_total": 34076749824,
+          "ram_free": 17538650112,
+          "comfyui_version": "0.34.0",
+          "required_frontend_version": "1.49.6",
+          "installed_templates_version": "0.11.48",
+          "required_templates_version": "0.11.48",
+          "comfy_package_versions": [
+            {
+              "name": "comfyui-frontend-package",
+              "installed": "1.49.6",
+              "required": "1.49.6"
+            },
+            {
+              "name": "comfyui-workflow-templates",
+              "installed": "0.11.48",
+              "required": "0.11.48"
+            },
+            {
+              "name": "comfyui-embedded-docs",
+              "installed": "0.5.10",
+              "required": "0.5.10"
+            },
+            {
+              "name": "comfy-kitchen",
+              "installed": "0.2.31",
+              "required": "0.2.31"
+            },
+            {
+              "name": "comfy-aimdo",
+              "installed": "0.4.15",
+              "required": "0.4.15"
+            }
+          ],
+          "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "pytorch_version": "2.10.0+cu130",
+          "embedded_python": false,
+          "deploy_environment": "local-git",
+          "argv": [
+            "main.py",
+            "--listen",
+            "127.0.0.1",
+            "--port",
+            "8189",
+            "--preview-method",
+            "auto",
+            "--extra-model-paths-config",
+            "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0\\extra_model_paths.yaml"
+          ]
+        },
+        "devices": [
+          {
+            "name": "cuda:0 NVIDIA GeForce RTX 5060 Ti : cudaMallocAsync",
+            "type": "cuda",
+            "index": 0,
+            "vram_total": 17102864384,
+            "vram_free": 15908995072,
+            "torch_vram_total": 0,
+            "torch_vram_free": 0
+          }
+        ]
+      }
+    },
+    "object_info": {
+      "status": 200,
+      "ok": true,
+      "node_count": 907,
+      "h3_nodes": [
+        "MiniMaxH3Extender",
+        "MiniMaxH3MotionContextDiskFinalDecode",
+        "MiniMaxH3MotionContextDiskJoin",
+        "MiniMaxH3MotionContextRAM",
+        "MiniMaxH3ReferenceToVideo",
+        "MiniMaxH3TailFromLatent"
+      ],
+      "comfyui_version": "0.34.0"
+    }
+  },
+  "studio": {
+    "health_live": {
+      "url": "http://127.0.0.1:8190/api/v10/health/live",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 21.0,
+      "body": {
+        "now": "2026-09-08T11:39:37+08:00",
+        "status": "alive",
+        "timezone": "Asia/Shanghai",
+        "version": "V8.0"
+      }
+    },
+    "demo_project": {
+      "url": "http://127.0.0.1:8190/api/v10/demo/project",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 1.99,
+      "body": {
+        "assets": [
+          {
+            "id": "CHAR_SW25_MASTER",
+            "identity_key": "su_wanqing_25",
+            "name": "苏晚晴25岁",
+            "required": true,
+            "source": "database/assets.json",
+            "type": "character"
+          },
+          {
+            "id": "CHAR_CN40_MASTER",
+            "identity_key": "chen_nian_40",
+            "name": "陈念40岁",
+            "required": true,
+            "source": "database/assets.json",
+            "type": "character"
+          },
+          {
+            "id": "SCENE_2006_STUDIO",
+            "name": "2006设计工作室",
+            "required": true,
+            "source": "database/assets.json",
+            "type": "scene"
+          },
+          {
+            "id": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+            "name": "北城设计院门口",
+            "required": true,
+            "source": "demo://resolver",
+            "type": "scene"
+          },
+          {
+            "id": "PROP_PHONE_2006",
+            "name": "米黄色有线座机",
+            "required": true,
+            "source": "database/assets.json",
+            "type": "prop"
+          },
+          {
+            "id": "PROP_ARCHIVE_DESIGN",
+            "name": "建筑设计原稿",
+            "required": true,
+            "source": "demo://resolver",
+            "type": "prop"
+          }
+        ],
+        "project": {
+          "created_at": "dynamic",
+          "default_shot_id": "SHOT001",
+          "description": "V10.1 Director Production Demo：角色身份、声音、年代道具与跨镜连续性。",
+          "id": "demo_time_phone",
+          "status": "DEMO_READY_PARTIAL",
+          "timezone": "Asia/Shanghai",
+          "title": "楼上是25岁的我，楼下是未来女儿",
+          "version": "1.0.0",
+          "workflow_capsule": "h3_reference_to_video"
+        },
+        "runtime": {
+          "shots": {},
+          "updated_at": "2026-09-08T11:39:37+08:00",
+          "version": "1"
+        },
+        "shots": [
+          {
+            "characters": [
+              "CHAR_SW25_MASTER",
+              "CHAR_CN40_MASTER"
+            ],
+            "duration_seconds": 5,
+            "id": "SHOT001",
+            "output": "SHOT001.mp4",
+            "previous_shot_id": null,
+            "props": [
+              "PROP_PHONE_2006"
+            ],
+            "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+            "scene": "SCENE_2006_STUDIO",
+            "scene_text": "2006年设计工作室",
+            "script": "2006年。25岁的苏晚晴正在设计工作室整理建筑设计稿。桌上的米黄色有线电话响起。她拿起电话。电话另一端传来未来女儿陈念的声音。",
+            "status": "READY",
+            "title": "2006年苏晚晴第一次接到未来电话",
+            "voices": [
+              "SW25_VOICE_01",
+              "CN40_VOICE_01"
+            ],
+            "year": 2006
+          },
+          {
+            "characters": [
+              "CHAR_SW25_MASTER"
+            ],
+            "duration_seconds": 5,
+            "id": "SHOT002",
+            "output": "SHOT002.mp4",
+            "previous_shot_id": "SHOT001",
+            "props": [
+              "PROP_ARCHIVE_DESIGN"
+            ],
+            "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+            "scene": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+            "scene_text": "北城设计院门口",
+            "script": "第二天。苏晚晴离开设计工作室。来到北城设计院门口。她拿着建筑设计原稿。准备提交作品。",
+            "status": "READY",
+            "title": "苏晚晴前往北城设计院提交设计稿",
+            "voices": [
+              "SW25_VOICE_01"
+            ],
+            "year": 2006
+          }
+        ],
+        "time": "2026-09-08T11:39:37+08:00",
+        "voices": [
+          {
+            "character_id": "CHAR_SW25_MASTER",
+            "file": "assets/audio/SW25_VOICE_01.wav",
+            "id": "SW25_VOICE_01",
+            "name": "苏晚晴25岁声音",
+            "status": "REFERENCE_REQUIRED"
+          },
+          {
+            "character_id": "CHAR_CN40_MASTER",
+            "file": "assets/audio/CN40_VOICE_01.wav",
+            "id": "CN40_VOICE_01",
+            "name": "陈念40岁声音",
+            "status": "REFERENCE_REQUIRED"
+          }
+        ]
+      }
+    },
+    "shot001_prepare": {
+      "url": "http://127.0.0.1:8190/api/v10/demo/shots/SHOT001/prepare",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 14.14,
+      "body": {
+        "canon_gate": {
+          "allowed": true,
+          "blocked": false,
+          "errors": [],
+          "pass": true,
+          "rules_checked": [
+            "ERA_001",
+            "AGE_001",
+            "PROP_001"
+          ],
+          "warnings": []
+        },
+        "character_bindings": [
+          {
+            "age": 25,
+            "clothes": "2006建筑设计师日常服装",
+            "face_reference": "苏晚晴25岁主参考",
+            "forbidden": [
+              "45岁脸",
+              "现代服装",
+              "错误发型",
+              "智能手机"
+            ],
+            "id": "CHAR_SW25_MASTER",
+            "name": "苏晚晴25岁",
+            "role": "character_identity",
+            "voice_id": "SW25_VOICE_01",
+            "year_range": [
+              2006,
+              2006
+            ]
+          },
+          {
+            "age": 40,
+            "clothes": "未来时代声音身份",
+            "face_reference": "陈念40岁主参考",
+            "forbidden": [
+              "25岁苏晚晴脸",
+              "2006年现场人物"
+            ],
+            "id": "CHAR_CN40_MASTER",
+            "name": "陈念40岁",
+            "role": "character_identity",
+            "voice_id": "CN40_VOICE_01",
+            "year_range": [
+              2040,
+              2099
+            ]
+          }
+        ],
+        "continuity": {
+          "changes": [],
+          "inherited": {},
+          "issues": [],
+          "status": "ROOT_SHOT"
+        },
+        "prompt_bundle": {
+          "canon_gate": {
+            "allowed": true,
+            "blocked": false,
+            "errors": [],
+            "pass": true,
+            "rules_checked": [
+              "ERA_001",
+              "AGE_001",
+              "PROP_001"
+            ],
+            "warnings": []
+          },
+          "model": null,
+          "negative": "年龄错误，脸部漂移，年代错误，现代设备，服装错误，道具错误，画面闪烁，2006禁止现代智能手机、LED灯、现代家具，25岁苏晚晴禁止使用45岁造型，2006必须使用米黄色有线座机",
+          "negative_categories": {
+            "canon": [
+              "年龄错误",
+              "年代错误",
+              "现代设备",
+              "服装错误",
+              "道具错误",
+              "2006禁止现代智能手机、LED灯、现代家具",
+              "25岁苏晚晴禁止使用45岁造型",
+              "2006必须使用米黄色有线座机"
+            ],
+            "identity": [
+              "脸部漂移"
+            ],
+            "quality": [
+              "画面闪烁"
+            ]
+          },
+          "positive": "电影级真人写实短剧，SCENE_2006_STUDIO，CHAR_SW25_MASTER CHAR_CN40_MASTER，2006设计工作室，米黄色有线座机，苏晚晴25岁，陈念40岁",
+          "reference_list": [
+            {
+              "id": "SCENE_2006_STUDIO",
+              "match": "设计工作室|工作室|2006",
+              "name": "2006设计工作室",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_PHONE_2006",
+              "match": "米黄色有线电话|米黄色有线座机|有线电话|座机",
+              "name": "米黄色有线座机",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "25岁苏晚晴|苏晚晴25岁|25岁的苏晚晴",
+              "name": "苏晚晴25岁",
+              "type": "character"
+            },
+            {
+              "id": "CHAR_CN40_MASTER",
+              "match": "未来女儿|陈念|陈念40岁",
+              "name": "陈念40岁",
+              "type": "character"
+            }
+          ],
+          "references": [
+            {
+              "id": "SCENE_2006_STUDIO",
+              "match": "设计工作室|工作室|2006",
+              "name": "2006设计工作室",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_PHONE_2006",
+              "match": "米黄色有线电话|米黄色有线座机|有线电话|座机",
+              "name": "米黄色有线座机",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "25岁苏晚晴|苏晚晴25岁|25岁的苏晚晴",
+              "name": "苏晚晴25岁",
+              "type": "character"
+            },
+            {
+              "id": "CHAR_CN40_MASTER",
+              "match": "未来女儿|陈念|陈念40岁",
+              "name": "陈念40岁",
+              "type": "character"
+            }
+          ],
+          "shot_id": "SHOT001"
+        },
+        "resolved_assets": {
+          "asset_ids": [
+            "SCENE_2006_STUDIO",
+            "PROP_PHONE_2006",
+            "CHAR_SW25_MASTER",
+            "CHAR_CN40_MASTER"
+          ],
+          "assets": [
+            {
+              "id": "SCENE_2006_STUDIO",
+              "match": "设计工作室|工作室|2006",
+              "name": "2006设计工作室",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_PHONE_2006",
+              "match": "米黄色有线电话|米黄色有线座机|有线电话|座机",
+              "name": "米黄色有线座机",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "25岁苏晚晴|苏晚晴25岁|25岁的苏晚晴",
+              "name": "苏晚晴25岁",
+              "type": "character"
+            },
+            {
+              "id": "CHAR_CN40_MASTER",
+              "match": "未来女儿|陈念|陈念40岁",
+              "name": "陈念40岁",
+              "type": "character"
+            }
+          ],
+          "missing": []
+        },
+        "shot": {
+          "characters": [
+            "CHAR_SW25_MASTER",
+            "CHAR_CN40_MASTER"
+          ],
+          "duration_seconds": 5,
+          "id": "SHOT001",
+          "output": "SHOT001.mp4",
+          "previous_shot_id": null,
+          "props": [
+            "PROP_PHONE_2006"
+          ],
+          "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+          "scene": "SCENE_2006_STUDIO",
+          "scene_text": "2006年设计工作室",
+          "script": "2006年。25岁的苏晚晴正在设计工作室整理建筑设计稿。桌上的米黄色有线电话响起。她拿起电话。电话另一端传来未来女儿陈念的声音。",
+          "status": "READY",
+          "title": "2006年苏晚晴第一次接到未来电话",
+          "voices": [
+            "SW25_VOICE_01",
+            "CN40_VOICE_01"
+          ],
+          "year": 2006
+        },
+        "status": "READY",
+        "time": "2026-09-08T11:39:37+08:00",
+        "voice_bindings": [
+          {
+            "character_id": "CHAR_SW25_MASTER",
+            "id": "SW25_VOICE_01",
+            "name": "苏晚晴25岁声音",
+            "required": false
+          },
+          {
+            "character_id": "CHAR_CN40_MASTER",
+            "id": "CN40_VOICE_01",
+            "name": "陈念40岁声音",
+            "required": false
+          }
+        ]
+      }
+    },
+    "shot002_prepare": {
+      "url": "http://127.0.0.1:8190/api/v10/demo/shots/SHOT002/prepare",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 15.71,
+      "body": {
+        "canon_gate": {
+          "allowed": true,
+          "blocked": false,
+          "errors": [],
+          "pass": true,
+          "rules_checked": [
+            "ERA_001",
+            "AGE_001",
+            "PROP_001"
+          ],
+          "warnings": []
+        },
+        "character_bindings": [
+          {
+            "age": 25,
+            "clothes": "2006建筑设计师日常服装",
+            "face_reference": "苏晚晴25岁主参考",
+            "forbidden": [
+              "45岁脸",
+              "现代服装",
+              "错误发型",
+              "智能手机"
+            ],
+            "id": "CHAR_SW25_MASTER",
+            "name": "苏晚晴25岁",
+            "role": "character_identity",
+            "voice_id": "SW25_VOICE_01",
+            "year_range": [
+              2006,
+              2006
+            ]
+          }
+        ],
+        "continuity": {
+          "changes": [
+            {
+              "field": "scene",
+              "from": "SCENE_2006_STUDIO",
+              "reason": "镜头地点切换",
+              "to": "SCENE_BEICHENG_DESIGN_INSTITUTE"
+            },
+            {
+              "field": "props",
+              "from": [
+                "PROP_PHONE_2006"
+              ],
+              "reason": "道具随剧本变化",
+              "to": [
+                "PROP_ARCHIVE_DESIGN"
+              ]
+            }
+          ],
+          "inherited": {
+            "characters": [
+              "CHAR_SW25_MASTER",
+              "CHAR_CN40_MASTER"
+            ],
+            "face_lock": "inherit",
+            "time_year": 2006,
+            "voices": [
+              "SW25_VOICE_01",
+              "CN40_VOICE_01"
+            ],
+            "wardrobe_lock": "inherit"
+          },
+          "issues": [],
+          "status": "READY"
+        },
+        "prompt_bundle": {
+          "canon_gate": {
+            "allowed": true,
+            "blocked": false,
+            "errors": [],
+            "pass": true,
+            "rules_checked": [
+              "ERA_001",
+              "AGE_001",
+              "PROP_001"
+            ],
+            "warnings": []
+          },
+          "model": null,
+          "negative": "年龄错误，脸部漂移，年代错误，现代设备，服装错误，道具错误，画面闪烁，2006禁止现代智能手机、LED灯、现代家具，25岁苏晚晴禁止使用45岁造型，2006必须使用米黄色有线座机",
+          "negative_categories": {
+            "canon": [
+              "年龄错误",
+              "年代错误",
+              "现代设备",
+              "服装错误",
+              "道具错误",
+              "2006禁止现代智能手机、LED灯、现代家具",
+              "25岁苏晚晴禁止使用45岁造型",
+              "2006必须使用米黄色有线座机"
+            ],
+            "identity": [
+              "脸部漂移"
+            ],
+            "quality": [
+              "画面闪烁"
+            ]
+          },
+          "positive": "电影级真人写实短剧，SCENE_BEICHENG_DESIGN_INSTITUTE，CHAR_SW25_MASTER，北城设计院门口，建筑设计原稿，苏晚晴25岁",
+          "reference_list": [
+            {
+              "id": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+              "match": "设计院门口|北城设计院|设计院",
+              "name": "北城设计院门口",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_ARCHIVE_DESIGN",
+              "match": "建筑设计原稿|设计原稿|原稿",
+              "name": "建筑设计原稿",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "shot_contract",
+              "name": "CHAR_SW25_MASTER",
+              "type": "declared"
+            }
+          ],
+          "references": [
+            {
+              "id": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+              "match": "设计院门口|北城设计院|设计院",
+              "name": "北城设计院门口",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_ARCHIVE_DESIGN",
+              "match": "建筑设计原稿|设计原稿|原稿",
+              "name": "建筑设计原稿",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "shot_contract",
+              "name": "CHAR_SW25_MASTER",
+              "type": "declared"
+            }
+          ],
+          "shot_id": "SHOT002"
+        },
+        "resolved_assets": {
+          "asset_ids": [
+            "SCENE_BEICHENG_DESIGN_INSTITUTE",
+            "PROP_ARCHIVE_DESIGN",
+            "CHAR_SW25_MASTER"
+          ],
+          "assets": [
+            {
+              "id": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+              "match": "设计院门口|北城设计院|设计院",
+              "name": "北城设计院门口",
+              "type": "scene"
+            },
+            {
+              "id": "PROP_ARCHIVE_DESIGN",
+              "match": "建筑设计原稿|设计原稿|原稿",
+              "name": "建筑设计原稿",
+              "type": "prop"
+            },
+            {
+              "id": "CHAR_SW25_MASTER",
+              "match": "shot_contract",
+              "name": "CHAR_SW25_MASTER",
+              "type": "declared"
+            }
+          ],
+          "missing": []
+        },
+        "shot": {
+          "characters": [
+            "CHAR_SW25_MASTER"
+          ],
+          "duration_seconds": 5,
+          "id": "SHOT002",
+          "output": "SHOT002.mp4",
+          "previous_shot_id": "SHOT001",
+          "props": [
+            "PROP_ARCHIVE_DESIGN"
+          ],
+          "reference_image": "F:\\AI短剧\\苏晚晴25.png",
+          "scene": "SCENE_BEICHENG_DESIGN_INSTITUTE",
+          "scene_text": "北城设计院门口",
+          "script": "第二天。苏晚晴离开设计工作室。来到北城设计院门口。她拿着建筑设计原稿。准备提交作品。",
+          "status": "READY",
+          "title": "苏晚晴前往北城设计院提交设计稿",
+          "voices": [
+            "SW25_VOICE_01"
+          ],
+          "year": 2006
+        },
+        "status": "READY",
+        "time": "2026-09-08T11:39:37+08:00",
+        "voice_bindings": [
+          {
+            "character_id": "CHAR_SW25_MASTER",
+            "id": "SW25_VOICE_01",
+            "name": "苏晚晴25岁声音",
+            "required": false
+          }
+        ]
+      }
+    },
+    "director": {
+      "url": "http://127.0.0.1:8190/director/",
+      "status": 200,
+      "ok": true,
+      "elapsed_ms": 33.8,
+      "body": {
+        "raw": "<!doctype html>\n<html lang=\"zh-CN\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"theme-color\" content=\"#0d1118\" />\n    <title>ComfyStudio StudioOS Production Core</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-bDK1CawT.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-Coh9a7vH.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n"
+      }
+    }
+  },
+  "demo": {
+    "project_id": "demo_time_phone",
+    "shot_statuses": {
+      "SHOT001": "READY",
+      "SHOT002": "READY"
+    },
+    "shot001_prepare": "READY",
+    "shot002_prepare": "READY"
+  },
+  "protected_oracles": {
+    "database/version.json": "878f05e1d96353359bfea205115b81629ddf955448570364df5d5f5bcc320aab",
+    "workflows/capsules/h3_reference_to_video/workflow.api.json": "a111af6223bcf09316638368e558d33deb1af42428a196bc31120242155fd8e4"
+  }
+}

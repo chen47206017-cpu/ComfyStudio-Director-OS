@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-04T00:12:17",
+  "project_id": "comfyui-production",
+  "baseline": {
+    "id": "baseline-comfyui-production-20260904",
+    "path": "F:\\一人公司\\comfyui-production",
+    "sha256": "working-tree-observed",
+    "status": "observed-dirty"
+  },
+  "canonical_source": {
+    "id": "canonical-comfyui-production",
+    "path": "F:\\一人公司\\comfyui-production"
+  },
+  "candidate": {
+    "id": "candidate-comfyui-production-20260904",
+    "version": "v0.1-local-autodl",
+    "source_path": "F:\\一人公司\\comfyui-production",
+    "status": "candidate-static"
+  },
+  "delivery": {
+    "policy": "runtime-evidence-required",
+    "artifact_dir": "F:\\一人公司\\comfyui-production\\runtime\\artifacts"
+  },
+  "history": [
+    {
+      "at": "2026-09-04T00:12:17",
+      "event": "initialized",
+      "candidate_id": "candidate-comfyui-production-20260904"
+    }
+  ]
+}

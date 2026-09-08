@@ -1,0 +1,74 @@
+{
+  "task_id": "TASK-20260907-020459",
+  "outcome": "PARTIAL",
+  "claim_level": "runtime-observation-and-static-audit",
+  "summary": "在不修改 G:/ComfyUI、模型、custom_nodes、workflow、输入输出或 Infinite-Canvas 的前提下，完成了 H3 Motion Context 的上游兼容性、运行时节点、模型发现路径和回滚边界审计。当前生产 H3 连续生成状态为 BLOCKED：v0.6.1 需要 ComfyUI >=0.34.0；上游把 v0.3.1 指向 0.33.4 或更早，但它无法补齐当前 /object_info 中缺失的原生 MiniMaxH3ReferenceToVideo 与所有 Motion Context/Extender 节点。",
+  "changed_files": [
+    "docs/H3_UPGRADE_AUDIT.md",
+    "docs/H3_MODEL_INVENTORY.md",
+    "docs/H3_UPGRADE_MANIFEST.md",
+    "docs/H3_EXTENDER_API_SCHEMA.md",
+    "docs/H3_RESUME_TEST.md",
+    "docs/H3_CONTINUITY_QC_REPORT.md",
+    "docs/H3_FINAL_ACCEPTANCE_REPORT.md",
+    "reports/h3/upstream_motion_context_audit.json",
+    "reports/h3/runtime_baseline_summary.json",
+    "reports/h3/runtime-subject.json",
+    "reports/h3/install_manifest.json",
+    "reports/h3/static_import_dependency_check.json",
+    "reports/h3/iteration_result.json"
+  ],
+  "verification": [
+    "artifact_lineage.py check: exit 0; lineage reported READY.",
+    "Read-only live probe: /system_stats and /object_info at 127.0.0.1:8188 returned HTTP 200; the named native H3, Motion Context, and Extender classes were absent.",
+    "reports/h3 JSON parse validation: all five structured evidence files parsed successfully before this result file was added.",
+    "python -m pytest -q: blocked because the project default Python has no pytest module; no dependency was installed.",
+    "python scripts/run_project_tests.py: exit 0; 44 standard-library contract tests passed.",
+    "iteration_workflow.py prepare: blocked by the pre-existing SESSION_BRIEF trust gate; no source or runtime workaround was applied.",
+    "iteration_workflow.py finish: blocked by the same SESSION_BRIEF trust gate; no .codex task result was written manually."
+  ],
+  "criteria_evidence": [
+    {
+      "criterion": "Current ComfyUI version and Motion Context candidates have evidence; incompatibility is recorded without forced installation.",
+      "evidence": "v0.6.1 declares ComfyUI >=0.34.0 while the live endpoint reports 0.27.0. The upstream legacy v0.3.1 route does not solve the separate absence of the native H3 graph node, and no local import/runtime test occurred.",
+      "kind": "static_and_runtime",
+      "source": "reports/h3/upstream_motion_context_audit.json"
+    },
+    {
+      "criterion": "The runtime API and H3 node absence are evidenced without altering the service.",
+      "evidence": "The active probe received HTTP 200 from both endpoints and found all named H3/Motion Context/Extender classes absent.",
+      "kind": "runtime_observation",
+      "source": "reports/h3/runtime-subject.json"
+    },
+    {
+      "criterion": "Only one H3 chaining implementation can own a later run.",
+      "evidence": "Motion Context and Extender remain NOT_INSTALLED_NOT_ENABLED; no custom-node write or restart occurred.",
+      "kind": "static_audit",
+      "source": "reports/h3/install_manifest.json"
+    },
+    {
+      "criterion": "Unverified media work is not claimed as success.",
+      "evidence": "No Clip, Validate, Retry, Trim, Assembly, Resume, MP4, output hash, or continuity conclusion is recorded as executed.",
+      "kind": "negative_evidence",
+      "source": "docs/H3_FINAL_ACCEPTANCE_REPORT.md"
+    }
+  ],
+  "preservation_evidence": [
+    "No plugin source was cloned into G:/ComfyUI/custom_nodes.",
+    "No dependency installation, ComfyUI restart, model download, model move, model load, cache redirection, workflow write, or Infinite-Canvas change occurred.",
+    "The listener remained loopback-only; no API key, paid API, proxy, or public listener change was made."
+  ],
+  "negative_evidence": [
+    "Pre-existing reference files carry 2026-09-07 timestamps, which are future-dated relative to this 2026-09-06 iteration. They are retained as hashed provenance but are not used as current-process proof.",
+    "The current process record could not be re-inspected because the sandbox denied Windows process access.",
+    "FFmpeg was locatable but its version could not be executed in the sandbox.",
+    "Direct Git/raw plugin retrieval failed with Windows Schannel SEC_E_NO_CREDENTIALS, so no static import or dependency check was fabricated."
+  ],
+  "unverified": [
+    "A compatible ComfyUI core/native H3 node combination.",
+    "Complete discoverable H3 model paths matching the baseline graph.",
+    "Motion Context import/registration and its official example workflow loading.",
+    "Clip 1/Clip 2 generation, continuity, audio behavior, cache, Trim, Assembly, Resume, MP4, SHA-256, VRAM peak, RAM peak, and timing."
+  ],
+  "next_step": "Use a separate, explicitly approved production compatibility plan before any core upgrade, model-path change, or custom-node install. The first subsequent action must be a pre-change backup and a fresh node/API snapshot; it must then test one pinned chaining owner only."
+}

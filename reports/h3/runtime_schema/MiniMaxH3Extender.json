@@ -1,0 +1,408 @@
+﻿{
+    "input":  {
+                  "required":  {
+                                   "model":  [
+                                                 "MODEL",
+                                                 {
+                                                     "lazy":  true,
+                                                     "tooltip":  "MiniMax H3 Ref2VA model. Evaluated only while MODE is REF2VA."
+                                                 }
+                                             ],
+                                   "clip":  [
+                                                "CLIP"
+                                            ],
+                                   "vae":  [
+                                               "VAE"
+                                           ],
+                                   "run_mode":  [
+                                                    [
+                                                        "clip_by_clip",
+                                                        "full_batch"
+                                                    ],
+                                                    {
+                                                        "default":  "clip_by_clip"
+                                                    }
+                                                ],
+                                   "width":  [
+                                                 "INT",
+                                                 {
+                                                     "default":  896,
+                                                     "min":  32,
+                                                     "max":  4096,
+                                                     "step":  32,
+                                                     "tooltip":  "Manual resolution width, also used as Auto fallback when no internal image reference is loaded."
+                                                 }
+                                             ],
+                                   "height":  [
+                                                  "INT",
+                                                  {
+                                                      "default":  576,
+                                                      "min":  32,
+                                                      "max":  4096,
+                                                      "step":  32,
+                                                      "tooltip":  "Manual resolution height, also used as Auto fallback when no internal image reference is loaded."
+                                                  }
+                                              ],
+                                   "ref_image_size":  [
+                                                          [
+                                                              "match",
+                                                              "max"
+                                                          ],
+                                                          {
+                                                              "default":  "match"
+                                                          }
+                                                      ],
+                                   "steps":  [
+                                                 "INT",
+                                                 {
+                                                     "default":  4,
+                                                     "min":  1,
+                                                     "max":  10000,
+                                                     "step":  1
+                                                 }
+                                             ],
+                                   "sampler_name":  [
+                                                        [
+                                                            "euler",
+                                                            "euler_cfg_pp",
+                                                            "euler_ancestral",
+                                                            "euler_ancestral_cfg_pp",
+                                                            "heun",
+                                                            "heunpp2",
+                                                            "exp_heun_2_x0",
+                                                            "exp_heun_2_x0_sde",
+                                                            "dpm_2",
+                                                            "dpm_2_ancestral",
+                                                            "lms",
+                                                            "dpm_fast",
+                                                            "dpm_adaptive",
+                                                            "dpmpp_2s_ancestral",
+                                                            "dpmpp_2s_ancestral_cfg_pp",
+                                                            "dpmpp_sde",
+                                                            "dpmpp_sde_gpu",
+                                                            "dpmpp_2m",
+                                                            "dpmpp_2m_cfg_pp",
+                                                            "dpmpp_2m_sde",
+                                                            "dpmpp_2m_sde_gpu",
+                                                            "dpmpp_2m_sde_heun",
+                                                            "dpmpp_2m_sde_heun_gpu",
+                                                            "dpmpp_3m_sde",
+                                                            "dpmpp_3m_sde_gpu",
+                                                            "ddpm",
+                                                            "lcm",
+                                                            "ipndm",
+                                                            "ipndm_v",
+                                                            "deis",
+                                                            "res_multistep",
+                                                            "res_multistep_cfg_pp",
+                                                            "res_multistep_ancestral",
+                                                            "res_multistep_ancestral_cfg_pp",
+                                                            "gradient_estimation",
+                                                            "gradient_estimation_cfg_pp",
+                                                            "er_sde",
+                                                            "seeds_2",
+                                                            "seeds_3",
+                                                            "sa_solver",
+                                                            "sa_solver_pece",
+                                                            "ddim",
+                                                            "uni_pc",
+                                                            "uni_pc_bh2"
+                                                        ],
+                                                        {
+                                                            "default":  "euler"
+                                                        }
+                                                    ],
+                                   "scheduler":  [
+                                                     [
+                                                         "simple",
+                                                         "sgm_uniform",
+                                                         "karras",
+                                                         "exponential",
+                                                         "ddim_uniform",
+                                                         "beta",
+                                                         "normal",
+                                                         "linear_quadratic",
+                                                         "kl_optimal"
+                                                     ],
+                                                     {
+                                                         "default":  "simple"
+                                                     }
+                                                 ],
+                                   "denoise":  [
+                                                   "FLOAT",
+                                                   {
+                                                       "default":  1.0,
+                                                       "min":  0.01,
+                                                       "max":  1.0,
+                                                       "step":  0.01
+                                                   }
+                                               ],
+                                   "context_length":  [
+                                                          [
+                                                              "22",
+                                                              "5",
+                                                              "39",
+                                                              "56"
+                                                          ],
+                                                          {
+                                                              "default":  "22"
+                                                          }
+                                                      ],
+                                   "audio_context_length":  [
+                                                                "INT",
+                                                                {
+                                                                    "default":  0,
+                                                                    "min":  0,
+                                                                    "max":  240,
+                                                                    "step":  1
+                                                                }
+                                                            ],
+                                   "clips_json":  [
+                                                      "STRING",
+                                                      {
+                                                          "default":  "{\"version\":1,\"clips\":[{\"id\":\"clip_1\",\"name\":\"\",\"prompt\":\"\",\"seed\":3431044717292991,\"seed_mode\":\"randomize\",\"duration\":10.0,\"validated\":false,\"color_adjustment\":{\"saturation\":100.0,\"contrast\":100.0,\"brightness\":100.0},\"loras\":[],\"local_refs\":{\"version\":1,\"images\":[],\"videos\":[],\"audios\":[]},\"first_frame\":null,\"last_frame\":null,\"guides\":[],\"first_source\":\"manual\"}]}",
+                                                          "multiline":  true
+                                                      }
+                                                  ],
+                                   "resolution_mode":  [
+                                                           [
+                                                               "auto_from_ref",
+                                                               "manual"
+                                                           ],
+                                                           {
+                                                               "default":  "auto_from_ref",
+                                                               "tooltip":  "Auto uses internal Ref 1 as the aspect-ratio guide; with no internal image references it falls back to width/height."
+                                                           }
+                                                       ],
+                                   "megapixels":  [
+                                                      "FLOAT",
+                                                      {
+                                                          "default":  0.4,
+                                                          "min":  0.01,
+                                                          "max":  16.0,
+                                                          "step":  0.01,
+                                                          "tooltip":  "Target total pixels for Auto resolution. Auto and Manual canvases use the MiniMax H3 32-pixel grid; Auto snaps downward without exceeding the requested pixel budget."
+                                                      }
+                                                  ],
+                                   "refs_json":  [
+                                                     "STRING",
+                                                     {
+                                                         "default":  "{\"version\":2,\"refs\":[null,null,null,null,null,null,null,null,null]}",
+                                                         "multiline":  true
+                                                     }
+                                                 ],
+                                   "generation_mode":  [
+                                                           [
+                                                               "ref2va",
+                                                               "fl2va"
+                                                           ],
+                                                           {
+                                                               "default":  "ref2va"
+                                                           }
+                                                       ]
+                               },
+                  "optional":  {
+                                   "fl2va_model":  [
+                                                       "MODEL",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "lazy":  true,
+                                                           "tooltip":  "Optional MiniMax H3 FL2VA model. Evaluated only while MODE is FL2VA."
+                                                       }
+                                                   ],
+                                   "audio_vae":  [
+                                                     "VAE",
+                                                     {
+                                                         "forceInput":  true
+                                                     }
+                                                 ],
+                                   "ref_audio":  [
+                                                     "AUDIO",
+                                                     {
+                                                         "forceInput":  true,
+                                                         "tooltip":  "Legacy alias of ref_audio_1. Kept for older workflows; new workflows should prefer ref_audio_1..ref_audio_3."
+                                                     }
+                                                 ],
+                                   "ref_audio_1":  [
+                                                       "AUDIO",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 standalone reference audio 1. Up to three standalone audio references are supported."
+                                                       }
+                                                   ],
+                                   "ref_audio_2":  [
+                                                       "AUDIO",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 standalone reference audio 2."
+                                                       }
+                                                   ],
+                                   "ref_audio_3":  [
+                                                       "AUDIO",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 standalone reference audio 3."
+                                                       }
+                                                   ],
+                                   "ref_video_1":  [
+                                                       "IMAGE",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 reference video 1 as an IMAGE frame batch. H3 expects 24 fps; use ref_video_fps_1 when the source batch came from another frame rate. Use \u003cVideo 1\u003e in prompts."
+                                                       }
+                                                   ],
+                                   "ref_video_fps_1":  [
+                                                           "FLOAT",
+                                                           {
+                                                               "forceInput":  true,
+                                                               "tooltip":  "Optional source FPS from Get Video Components for ref_video_1. When disconnected the Extender assumes the IMAGE batch is already 24 fps."
+                                                           }
+                                                       ],
+                                   "ref_video_audio_1":  [
+                                                             "AUDIO",
+                                                             {
+                                                                 "forceInput":  true,
+                                                                 "tooltip":  "Optional soundtrack of ref_video_1."
+                                                             }
+                                                         ],
+                                   "ref_video_2":  [
+                                                       "IMAGE",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 reference video 2 as an IMAGE frame batch. H3 expects 24 fps; use ref_video_fps_2 when the source batch came from another frame rate. Use \u003cVideo 2\u003e in prompts."
+                                                       }
+                                                   ],
+                                   "ref_video_fps_2":  [
+                                                           "FLOAT",
+                                                           {
+                                                               "forceInput":  true,
+                                                               "tooltip":  "Optional source FPS from Get Video Components for ref_video_2. When disconnected the Extender assumes the IMAGE batch is already 24 fps."
+                                                           }
+                                                       ],
+                                   "ref_video_audio_2":  [
+                                                             "AUDIO",
+                                                             {
+                                                                 "forceInput":  true,
+                                                                 "tooltip":  "Optional soundtrack of ref_video_2."
+                                                             }
+                                                         ],
+                                   "ref_video_3":  [
+                                                       "IMAGE",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "tooltip":  "Optional MiniMax H3 reference video 3 as an IMAGE frame batch. H3 expects 24 fps; use ref_video_fps_3 when the source batch came from another frame rate. Use \u003cVideo 3\u003e in prompts."
+                                                       }
+                                                   ],
+                                   "ref_video_fps_3":  [
+                                                           "FLOAT",
+                                                           {
+                                                               "forceInput":  true,
+                                                               "tooltip":  "Optional source FPS from Get Video Components for ref_video_3. When disconnected the Extender assumes the IMAGE batch is already 24 fps."
+                                                           }
+                                                       ],
+                                   "ref_video_audio_3":  [
+                                                             "AUDIO",
+                                                             {
+                                                                 "forceInput":  true,
+                                                                 "tooltip":  "Optional soundtrack of ref_video_3."
+                                                             }
+                                                         ],
+                                   "ref_pack":  [
+                                                    "H3_REF_PACK",
+                                                    {
+                                                        "tooltip":  "Optional external image-reference pack. Connected Ref N slots are imported into the matching internal Ref N slots on Queue; empty slots leave internal references untouched."
+                                                    }
+                                                ],
+                                   "prompt_pack":  [
+                                                       "H3_PROMPT_PACK",
+                                                       {
+                                                           "tooltip":  "Optional external prompt pack. New/changed packs are imported into the normal clip textareas and synchronize the clip count."
+                                                       }
+                                                   ]
+                               },
+                  "hidden":  {
+                                 "unique_id":  "UNIQUE_ID",
+                                 "prompt":  "PROMPT"
+                             }
+              },
+    "input_order":  {
+                        "required":  [
+                                         "model",
+                                         "clip",
+                                         "vae",
+                                         "run_mode",
+                                         "width",
+                                         "height",
+                                         "ref_image_size",
+                                         "steps",
+                                         "sampler_name",
+                                         "scheduler",
+                                         "denoise",
+                                         "context_length",
+                                         "audio_context_length",
+                                         "clips_json",
+                                         "resolution_mode",
+                                         "megapixels",
+                                         "refs_json",
+                                         "generation_mode"
+                                     ],
+                        "optional":  [
+                                         "fl2va_model",
+                                         "audio_vae",
+                                         "ref_audio",
+                                         "ref_audio_1",
+                                         "ref_audio_2",
+                                         "ref_audio_3",
+                                         "ref_video_1",
+                                         "ref_video_fps_1",
+                                         "ref_video_audio_1",
+                                         "ref_video_2",
+                                         "ref_video_fps_2",
+                                         "ref_video_audio_2",
+                                         "ref_video_3",
+                                         "ref_video_fps_3",
+                                         "ref_video_audio_3",
+                                         "ref_pack",
+                                         "prompt_pack"
+                                     ],
+                        "hidden":  [
+                                       "unique_id",
+                                       "prompt"
+                                   ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "H3_MOTION_DISK_CACHE",
+                   "INT",
+                   "INT",
+                   "STRING",
+                   "FLOAT",
+                   "STRING"
+               ],
+    "output_is_list":  [
+                           false,
+                           false,
+                           false,
+                           false,
+                           false,
+                           false
+                       ],
+    "output_name":  [
+                        "cache",
+                        "clip_count",
+                        "validated_count",
+                        "status",
+                        "cache_size_mb",
+                        "build"
+                    ],
+    "name":  "MiniMaxH3Extender",
+    "display_name":  "MiniMax H3 Extender",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  false,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

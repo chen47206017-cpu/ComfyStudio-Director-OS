@@ -1,0 +1,248 @@
+{
+  "task_type": "high_risk",
+  "goal": "继续执行 ComfyStudio StudioOS V10.1 Director Demo Production Upgrade：修复 Demo 生成界面的真实反馈与选中态问题，优先当前镜头场景解析，补齐运行态验收证据；不修改旧数据库结构、不删除资产、不声称 H3 已产出 MP4，所有新时间使用 Asia/Shanghai。",
+  "reference_projects": [],
+  "acceptance": {
+    "request_quote": "继续执行 ComfyStudio StudioOS V10.1 Director Demo Production Upgrade：修复 Demo 生成界面的真实反馈与选中态问题，优先当前镜头场景解析，补齐运行态验收证据；不修改旧数据库结构、不删除资产、不声称 H3 已产出 MP4，所有新时间使用 Asia/Shanghai。",
+    "request_sha256": "57bc520bf95755c88625c9f98921fff9a4ed5913eae1cd697c991d1346e54f81",
+    "request_summary": "在既有 CURRENT 工程上继续做 V10.1 增量修复，使导演 Demo 能保留当前镜头选择、显示可操作的后端错误信息，并让当前场景声明优先于旧场景文本；随后启动并验证 8190 与 8189 的真实连接。",
+    "user_scenario": "导演选择 SHOT002、点击预检或生成时，界面不应跳回 SHOT001；H3 预检、Canon 门禁或提交失败时，应显示后端返回的 reason_code/问题；SHOT002 的参考列表应以当前北城设计院场景为主。",
+    "observable_outcome": "前端构建通过；后端 Demo 测试通过；运行中的 8190 返回健康、Demo 项目和两个镜头预检；8189 返回 system_stats/object_info 且 H3 节点可见；证据报告使用 Asia/Shanghai 时间并将真实 MP4 状态保持为未验证。",
+    "preserved_behaviors": [
+      "保留现有 V8/V10 API、SQLite job store、Canon 规则、Canvas 数据和 8189 Worker 连接",
+      "不删除或覆盖 assets、database、workflows、历史 reports 与 upgrade_logs",
+      "不把 HTTP 200、队列提交或测试客户端结果升级为真实 MP4 生成成功"
+    ],
+    "examples": [
+      {
+        "given": "当前 Demo 项目已加载且导演选择 SHOT002",
+        "when": "刷新 Demo 状态或生成请求返回后刷新项目",
+        "then": "仍保持 SHOT002 选中，除非该镜头已从服务端响应中消失"
+      },
+      {
+        "given": "H3 预检或 Canon 门禁返回 422/502",
+        "when": "导演执行预检或生成",
+        "then": "状态栏保留 reason_code、Canon 错误或 preflight 摘要，而不是只显示通用失败"
+      }
+    ],
+    "counterexamples": [
+      {
+        "case": "8190 未启动或 H3 预检未通过",
+        "must_not": "不得报告为真实视频已生成或 PASS；必须保留为 BLOCKED/UNVERIFIED/PARTIAL"
+      }
+    ],
+    "assumptions": [
+      {
+        "statement": "允许启动当前 F 盘 CURRENT backend/app.py；不得触碰已确认的 8189 PID 6220/24484",
+        "status": "verified",
+        "evidence": "2026-09-08T10:41:12+08:00 只读进程核验确认 8190 无监听且 8189 PID 6220 属于 F 盘 staging ComfyUI 0.34.0"
+      },
+      {
+        "statement": "本轮不执行真实 H3 生成，除非预检、上传、提交和输出回收证据全部可记录",
+        "status": "verified",
+        "evidence": "当前验收目标与既有 run manifest 均把 real_mp4 标为 UNVERIFIED；本轮只验证服务与 Demo 预检链路"
+      }
+    ],
+    "open_questions": []
+  },
+  "scope": {
+    "allowed_files": [
+      "frontend/src/main.tsx",
+      "backend/services/asset_resolver.py",
+      "tests/test_demo_v101.py",
+      "tools/v101_runtime_probe.py",
+      "reports/runs/v101_demo_feedback_20260908/*"
+    ],
+    "pattern_authorization": {
+      "reason": "运行探针和本轮验收报告需要在固定 reports/runs 子目录内新增少量证据文件",
+      "max_matches": 12
+    },
+    "allowed_symbols": [],
+    "forbidden": [
+      "database/**",
+      "assets/**",
+      "workflows/**",
+      "G:/我的文档/deepseek/**",
+      "F:/一人公司/comfyui-production/staging/comfyui-v0.34.0/**",
+      "8189 process lifecycle"
+    ]
+  },
+  "non_goals": [
+    "不升级或修改 ComfyUI 8189",
+    "不实现或宣称真实 H3 MP4 已完成",
+    "不重构为微服务",
+    "不修改数据库核心结构或历史 Canon 规则"
+  ],
+  "impact": "本轮触及生产导演台前端反馈、Demo 解析辅助函数、运行探针和对应测试；可能影响用户看到的状态文案，但不改变既有 API 端点或持久化结构。",
+  "user_authorization": "用户已明确要求继续开发并实际执行本地 ComfyStudio V10.1 升级；授权范围限于 F:\\一人公司\\comfyui-production\\ComfyStudio_StudioOS_CURRENT，且明确要求先验证、不得破坏旧资产和数据库。",
+  "success_criteria": [
+    "refreshDemoProject 保留仍存在的当前 demoShotId，不因后台刷新自动跳回默认镜头",
+    "非 2xx Demo API 响应保留 JSON 错误体并在状态栏显示可操作的 reason_code 或错误摘要",
+    "SHOT002 的当前 scene_text/声明场景优先用于资产解析，避免把上一场景误当作当前参考场景",
+    "Python Demo 回归测试、前端 TypeScript 检查和生产构建全部通过",
+    "启动确认路径的 StudioOS 8190 后，health/live、demo/project、两个 prepare 和 director 页面可访问",
+    "运行报告明确记录 8189 H3 节点证据，并将真实 MP4 生成状态保持为 UNVERIFIED/PARTIAL"
+  ],
+  "verification": [
+    "python -m unittest tests.test_demo_v101 tests.test_backend_v10 tests.test_comfy_execution -v",
+    "npm run build",
+    "npx tsc --noEmit",
+    "受控启动 F:\\一人公司\\comfyui-production\\START_ComfyStudio_Production.ps1 后用 HTTP 客户端核验 8190/8189 路由"
+  ],
+  "verification_plan": [
+    {
+      "id": "backend-demo-regression",
+      "kind": "command",
+      "level": "static",
+      "cwd": ".",
+      "argv": ["python", "-m", "unittest", "tests.test_demo_v101", "tests.test_backend_v10", "tests.test_comfy_execution", "-v"],
+      "timeout_seconds": 180,
+      "covers": [
+        "SHOT002 的当前 scene_text/声明场景优先用于资产解析，避免把上一场景误当作当前参考场景",
+        "Python Demo 回归测试、前端 TypeScript 检查和生产构建全部通过",
+        "保留现有 V8/V10 API、SQLite job store、Canon 规则、Canvas 数据和 8189 Worker 连接",
+        "不删除或覆盖 assets、database、workflows、历史 reports 与 upgrade_logs"
+      ]
+    },
+    {
+      "id": "frontend-build",
+      "kind": "command",
+      "level": "static",
+      "cwd": "frontend",
+      "argv": ["npm", "run", "build"],
+      "timeout_seconds": 180,
+      "covers": [
+        "refreshDemoProject 保留仍存在的当前 demoShotId，不因后台刷新自动跳回默认镜头",
+        "非 2xx Demo API 响应保留 JSON 错误体并在状态栏显示可操作的 reason_code 或错误摘要",
+        "Python Demo 回归测试、前端 TypeScript 检查和生产构建全部通过"
+      ]
+    },
+    {
+      "id": "frontend-types",
+      "kind": "command",
+      "level": "static",
+      "cwd": "frontend",
+      "argv": ["npx", "tsc", "--noEmit"],
+      "timeout_seconds": 180,
+      "covers": [
+        "refreshDemoProject 保留仍存在的当前 demoShotId，不因后台刷新自动跳回默认镜头",
+        "非 2xx Demo API 响应保留 JSON 错误体并在状态栏显示可操作的 reason_code 或错误摘要",
+        "Python Demo 回归测试、前端 TypeScript 检查和生产构建全部通过"
+      ]
+    },
+    {
+      "id": "live-studio-comfy",
+      "kind": "command",
+      "level": "runtime",
+      "cwd": ".",
+      "argv": ["python", "tools/v101_runtime_probe.py"],
+      "timeout_seconds": 180,
+      "oracle_files": ["database/version.json", "workflows/capsules/h3_reference_to_video/workflow.api.json"],
+      "covers": [
+        "启动确认路径的 StudioOS 8190 后，health/live、demo/project、两个 prepare 和 director 页面可访问",
+        "运行报告明确记录 8189 H3 节点证据，并将真实 MP4 生成状态保持为 UNVERIFIED/PARTIAL",
+        "8190 未启动或 H3 预检未通过",
+        "不把 HTTP 200、队列提交或测试客户端结果升级为真实 MP4 生成成功"
+      ]
+    }
+  ],
+  "workflow_phase_contract": {
+    "phase_id": "v101-feedback-runtime-evidence",
+    "entry_invariants": [
+      {
+        "signal": "8189 system_stats/object_info",
+        "expected": "HTTP 200 且 H3 节点可观察",
+        "evidence_source": "runtime probe JSON"
+      },
+      {
+        "signal": "8190 listener",
+        "expected": "启动前端口空闲或进程归属明确；只启动 CURRENT backend/app.py",
+        "evidence_source": "startup.log and runtime probe JSON"
+      }
+    ],
+    "exit_invariants": [
+      {
+        "signal": "Demo project and prepare routes",
+        "expected": "project=demo_time_phone；SHOT001/SHOT002 prepare 返回 READY",
+        "evidence_source": "runtime probe JSON"
+      },
+      {
+        "signal": "real MP4 evidence",
+        "expected": "没有 MP4 回收证据时保持 UNVERIFIED/PARTIAL",
+        "evidence_source": "v101 run manifest"
+      }
+    ],
+    "next_phase": "real-h3-smoke-only-after-explicit-review",
+    "on_entry_mismatch": "stop-and-observe",
+    "on_failure": "stop-and-preserve"
+  },
+  "destructive_actions": [
+    {
+      "action": "删除或覆盖受保护生产数据",
+      "target": "database/assets/workflows/history reports and upgrade_logs",
+      "authorized_failure_class": "用户明确要求删除受保护数据",
+      "authorization_quote": "不删除资产",
+      "independent_observer": "受控文件范围与变更基线检查",
+      "rollback": "停止修改并保留原文件；不得执行删除或覆盖",
+      "evidence_required": [
+        "变更前文件哈希",
+        "finish 阶段范围核验",
+        "本轮报告中列出受保护目录未改动"
+      ],
+      "on_unproven": "stop-and-preserve"
+    }
+  ],
+  "artifact_identity": {
+    "project_id": "comfystudio-studioos-current",
+    "baseline": {
+      "id": "backend-app-before-v101-feedback",
+      "path": "backend/app.py",
+      "sha256": "DBE27C22ADA8062112425BD240F8676AC55A936B95DF7BDAA632762710E9E20E",
+      "status": "baseline-verified"
+    },
+    "canonical_source": {
+      "id": "current-project-root",
+      "path": "."
+    },
+    "candidate": {
+      "id": "v10.1-demo-feedback-20260908",
+      "version": "V10.1-demo-feedback",
+      "source_path": ".",
+      "status": "candidate-static"
+    },
+    "delivery": {
+      "policy": "runtime-evidence-required",
+      "artifact_dir": "reports/runs/v101_demo_feedback_20260908"
+    }
+  },
+  "evidence_protocol": {
+    "claim_ceiling": "runtime-verified",
+    "observed_artifacts": [
+      {
+        "role": "runtime-subject",
+        "path": "backend/app.py",
+        "sha256": "computed-at-finish",
+        "observed_at": "at-finish",
+        "version": "V10.1-demo-feedback"
+      },
+      {
+        "role": "runtime-subject",
+        "path": "frontend/src/main.tsx",
+        "sha256": "computed-at-finish",
+        "observed_at": "at-finish",
+        "version": "V10.1-demo-feedback"
+      }
+    ],
+    "conflict_rule": "block-and-downgrade",
+    "freshness_rule": "current-task-only",
+    "unreadable_rule": "unreadable-is-not-evidence"
+  },
+  "stop_conditions": [
+    "发现影响范围超出已确认文件时停止并说明",
+    "8189 PID/路径与已核验身份不一致时停止，不结束未知进程",
+    "没有可读取的真实 MP4、哈希和元数据时，不将本轮结论提升为 H3 生成 PASS"
+  ],
+  "impact": "本轮触及生产导演台前端反馈、Demo 解析辅助函数、运行探针和对应测试；可能影响用户看到的状态文案，但不改变既有 API 端点或持久化结构。",
+  "user_authorization": "用户已明确要求继续开发并实际执行本地 ComfyStudio V10.1 升级；授权范围限于 F:\\一人公司\\comfyui-production\\ComfyStudio_StudioOS_CURRENT，且明确要求先验证、不得破坏旧资产和数据库。",
+  "rollback": "本轮仅修改契约允许的前端、解析器、测试、运行探针与新增 reports 证据目录；如验证失败，停止 8190 并保留原文件，不回滚或覆盖任何 database/assets/workflows。"
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "comfystudio.canvas.v10",
+  "revision": 1,
+  "nodes": [
+    {
+      "id": "asset-studio",
+      "type": "studio",
+      "position": {
+        "x": 60,
+        "y": 190
+      },
+      "data": {
+        "label": "2006设计工作室",
+        "kind": "scene",
+        "assetId": "SCENE_2006_STUDIO",
+        "state": "ready"
+      },
+      "measured": {
+        "width": 175,
+        "height": 108
+      }
+    },
+    {
+      "id": "shot-001",
+      "type": "studio",
+      "position": {
+        "x": 330,
+        "y": 190
+      },
+      "data": {
+        "label": "Shot 001 · 电话响起",
+        "kind": "shot",
+        "summary": "中景 / 室内 / 2006",
+        "state": "idle"
+      },
+      "measured": {
+        "width": 175,
+        "height": 93
+      }
+    },
+    {
+      "id": "prompt-001",
+      "type": "studio",
+      "position": {
+        "x": 620,
+        "y": 190
+      },
+      "data": {
+        "label": "提示词编译器",
+        "kind": "prompt",
+        "summary": "等待 Canon 与资产",
+        "state": "idle"
+      },
+      "measured": {
+        "width": 175,
+        "height": 93
+      }
+    },
+    {
+      "id": "model-001",
+      "type": "studio",
+      "position": {
+        "x": 920,
+        "y": 190
+      },
+      "data": {
+        "label": "MiniMax H3 模型路由",
+        "kind": "model",
+        "summary": "ComfyUI · 8189",
+        "state": "idle"
+      },
+      "measured": {
+        "width": 175,
+        "height": 93
+      }
+    },
+    {
+      "id": "output-001",
+      "type": "studio",
+      "position": {
+        "x": 1200,
+        "y": 190
+      },
+      "data": {
+        "label": "镜头 001 生成结果",
+        "kind": "output",
+        "summary": "等待生成",
+        "state": "idle"
+      },
+      "measured": {
+        "width": 175,
+        "height": 93
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-studio-shot",
+      "source": "asset-studio",
+      "target": "shot-001",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e-shot-prompt",
+      "source": "shot-001",
+      "target": "prompt-001",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e-prompt-model",
+      "source": "prompt-001",
+      "target": "model-001",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e-model-output",
+      "source": "model-001",
+      "target": "output-001",
+      "type": "smoothstep",
+      "animated": true
+    }
+  ],
+  "viewport": {
+    "x": -45.875,
+    "y": 681.7,
+    "zoom": 0.45
+  },
+  "bindings": [
+    {
+      "id": "binding-character_identity-CHAR_SW45_MASTER",
+      "assetId": "CHAR_SW45_MASTER",
+      "assetName": "苏晚晴45岁",
+      "role": "character_identity",
+      "enabled": true,
+      "sourceShot": "shot-001"
+    }
+  ],
+  "id": "director",
+  "updated_at": "2026-09-08T07:44:40+08:00"
+}

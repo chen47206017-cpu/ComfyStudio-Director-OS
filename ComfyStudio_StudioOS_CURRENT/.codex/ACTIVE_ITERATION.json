@@ -1,0 +1,9 @@
+{
+  "contract": ".codex/tasks/TASK-20260908-115905/TASK_CONTRACT_DRAFT.json",
+  "contract_sha256": "3f32e047b0418b8331f2bbdc22cfe27b63b70fd30058100c5920f08023710f11",
+  "goal": "读取我附上的《ComfyStudio_StudioOS_V10.1-V44_30分钟实施快车道总控_v1.0.md》，立即进入 IMPLEMENTATION_FASTLANE_V44。不要重新写方案，不要停在只读审计，从第0节开始连续修改、测试、修复并生成证据。除文档规定的授权阻塞外不要暂停询问。",
+  "task_type": "high_risk",
+  "prepared_at": "2026-09-08T12:16:28",
+  "supersedes": ".codex/tasks/TASK-20260908-103918/TASK_CONTRACT_DRAFT.json",
+  "supersede_reason": "用户已将旧 V10.1 反馈和预检任务升级为 V44 本机 local_comfy Render Pipeline；旧任务证据与未验证 MP4 状态保留，新任务负责 lane、严格 MP4 验证、安全播放和真实运行证据。"
+}

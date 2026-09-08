@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "UNAVAILABLE",
+  "target": "NikoDemon80/ComfyUI-H3-Motion-Context",
+  "source_checkout_created": false,
+  "python_import_executed": false,
+  "dependency_install_executed": false,
+  "reason": "Direct Git/raw source retrieval failed with Windows Schannel SEC_E_NO_CREDENTIALS. The compatibility gate was already blocked, so no archive, clone, pip command, or custom-node write was attempted.",
+  "documentation_only_notes": {
+    "current_release": "v0.6.1",
+    "declared_minimum_comfyui": "0.34.0",
+    "declared_python": ">=3.10",
+    "standalone_requirements_file": "not declared by the upstream repository documentation"
+  },
+  "claim_boundary": "This is not an import success or dependency compatibility result."
+}

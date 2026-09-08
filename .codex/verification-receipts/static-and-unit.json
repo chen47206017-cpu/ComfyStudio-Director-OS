@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "static-and-unit",
+    "kind": "command",
+    "level": "static",
+    "argv": [
+      "python",
+      "scripts/run_project_tests.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 180,
+    "covers": [
+      "A fresh Settings instance and .env.example default COMFY_API_PORT to 8092 while explicit environment/.env/-Port values still take precedence.",
+      "The launcher and checker share that default and distinguish a full H3-enabled control-plane listener from a health-only legacy listener without a process mutation.",
+      "The operating documentation directs the management page to 8092 by default and retains the no-stop boundary for both observed listeners.",
+      "Tests pass, secret scan finds no credentials, and the H3 manifest remains deferred without a model-file inspection."
+    ]
+  },
+  "contract_sha256": "4497ab774698ede98bbb2f6510b3eee44b038e245779d63f5ce3d71923aafe51",
+  "started_at": "2026-09-04T04:41:35",
+  "finished_at": "2026-09-04T04:41:43",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/static-and-unit.stdout.log",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": ".codex/verification-receipts/static-and-unit.stderr.log",
+  "stderr_sha256": "5f99455c58eedb3552894f2203fc6675ffc3e4e6e5a7f5a80773aa02bc59af8e",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/config.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "d128a55e630b0dca50b7b79d526d530bbcfd1a4e063e6d6c8c596d803339bade"
+    }
+  ],
+  "oracle_hashes": {}
+}

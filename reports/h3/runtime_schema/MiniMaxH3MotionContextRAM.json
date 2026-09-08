@@ -1,0 +1,76 @@
+﻿{
+    "input":  {
+                  "required":  {
+                                   "conditioning":  [
+                                                        "CONDITIONING"
+                                                    ],
+                                   "latent":  [
+                                                  "LATENT"
+                                              ],
+                                   "context_latent":  [
+                                                          "LATENT"
+                                                      ],
+                                   "context_length":  [
+                                                          [
+                                                              "22",
+                                                              "5",
+                                                              "39",
+                                                              "56"
+                                                          ],
+                                                          {
+                                                              "default":  "22"
+                                                          }
+                                                      ],
+                                   "audio_context_length":  [
+                                                                "INT",
+                                                                {
+                                                                    "default":  0,
+                                                                    "min":  0,
+                                                                    "max":  240,
+                                                                    "step":  1
+                                                                }
+                                                            ]
+                               }
+              },
+    "input_order":  {
+                        "required":  [
+                                         "conditioning",
+                                         "latent",
+                                         "context_latent",
+                                         "context_length",
+                                         "audio_context_length"
+                                     ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "CONDITIONING",
+                   "INT",
+                   "INT",
+                   "INT",
+                   "STRING"
+               ],
+    "output_is_list":  [
+                           false,
+                           false,
+                           false,
+                           false,
+                           false
+                       ],
+    "output_name":  [
+                        "conditioning",
+                        "trim_frames",
+                        "video_context_tokens",
+                        "audio_context_tokens",
+                        "build"
+                    ],
+    "name":  "MiniMaxH3MotionContextRAM",
+    "display_name":  "MiniMax H3 Motion Context RAM",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  false,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

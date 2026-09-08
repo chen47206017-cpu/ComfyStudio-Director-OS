@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-09-03",
+  "comfyui": {
+    "root": "G:\\ComfyUI",
+    "version": "0.27.0",
+    "git_commit": null,
+    "git_commit_status": "The observed G:\\ComfyUI\\.git directory did not contain usable repository metadata."
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "torchaudio": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "driver": "610.88",
+    "gpu_memory_mib": 16311
+  },
+  "network": {
+    "comfyui_url": "http://127.0.0.1:8188",
+    "integration_api_url": "http://127.0.0.1:8092",
+    "integration_api_status": "managed_h3_capable_source; live process reload still required to apply source changes",
+    "public_binding": false
+  },
+  "storage": {
+    "comfyui_root_volume": "G:",
+    "comfyui_root_filesystem": "exFAT",
+    "integration_root": "F:\\一人公司\\comfyui-production",
+    "integration_root_filesystem": "not verified by this sandbox"
+  },
+  "workflow_runtime": {
+    "validated_workflow": "wan2.1_i2v_ref_5s_local",
+    "core_node_source": "comfy_extras\\nodes_wan.py",
+    "custom_node_requirement": "ComfyUI-VideoHelperSuite 1.7.9"
+  },
+  "known_limits": [
+    "Global ffmpeg invocation was not available to this sandbox, although the validated VHS export completed successfully through the local ComfyUI runtime.",
+    "The target Qwen Image Edit, LTX 2.5, and Wan 2.2 weights are not verified as installed.",
+    "The installed Wan2.1 workflow is a technical local draft baseline, not a final visual-quality pipeline."
+  ]
+}

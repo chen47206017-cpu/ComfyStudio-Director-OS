@@ -1,0 +1,18 @@
+{
+  "schema": "comfystudio.binding-map.v1",
+  "capsule_id": "h3_reference_to_video",
+  "late_binding": true,
+  "rules": {
+    "reference_image": {
+      "node": "137",
+      "input": "image",
+      "accepted_roles": ["character_identity", "character_look", "scene", "prop", "style"]
+    },
+    "previous_video": {
+      "node": "136",
+      "input": "ref_images.ref_image_0",
+      "accepted_roles": ["previous_video", "continuity_frame", "motion_reference"]
+    }
+  },
+  "numbering": "编号仅在提交前按实际上传顺序生成，稳定 asset_id 不被改写"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "api-preset-contract",
+    "kind": "command",
+    "level": "runtime",
+    "argv": [
+      "python",
+      "scripts/run_api_smoke.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 180,
+    "oracle_files": [
+      "tests/api_smoke.py"
+    ],
+    "covers": [
+      "CLOUD_5090_QUALITY reports a 1080x1920 delivery target, 24 fps, 121 frames, approximately 5.04 seconds, 9:16, 1080p竖, and an explicit SUBTITLE_LOCK_V1 burn requirement while LOCAL_DRAFT remains low resolution."
+    ]
+  },
+  "contract_sha256": "f8cf7fc8acdbecfa9b3178c08ada122e72d2dc96e67b891ed5f828cea63164f0",
+  "started_at": "2026-09-04T05:30:15",
+  "finished_at": "2026-09-04T05:30:16",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/api-preset-contract.stdout.log",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": ".codex/verification-receipts/api-preset-contract.stderr.log",
+  "stderr_sha256": "e203210dd13e9548222d2284be9539f7febdc35b03992e8cd13aae43271e2e3e",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/server.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "77c7febf3f3a068836fde28cc27c7d4031b145b07b4938b894a7cfb09276578a"
+    }
+  ],
+  "oracle_hashes": {
+    "tests/api_smoke.py": "49035ad7bd4f87b9e3cb6740665f6d4abfb491ffc9af684e3e5f2669b5300cd5"
+  }
+}

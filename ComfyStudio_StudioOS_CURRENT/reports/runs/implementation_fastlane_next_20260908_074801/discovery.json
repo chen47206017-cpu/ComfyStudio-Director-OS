@@ -1,0 +1,108 @@
+{
+  "schema": "comfystudio.discovery.v1",
+  "run_id": "implementation_fastlane_next_2026-09-08T07:48:01+08:00",
+  "observed_at_beijing": "2026-09-08T07:48:01+08:00",
+  "business_timezone": "Asia/Shanghai",
+  "workers": [
+    {
+      "port": 8188,
+      "status": "BLOCKED",
+      "reason": "由于目标计算机积极拒绝，无法连接。 (127.0.0.1:8188)"
+    },
+    {
+      "port": 8189,
+      "status": "READY",
+      "system_stats": {
+        "system": {
+          "os": "win32",
+          "ram_total": 34076749824,
+          "ram_free": 15996502016,
+          "comfyui_version": "0.34.0",
+          "required_frontend_version": "1.49.6",
+          "installed_templates_version": "0.11.48",
+          "required_templates_version": "0.11.48",
+          "comfy_package_versions": [
+            {
+              "name": "comfyui-frontend-package",
+              "installed": "1.49.6",
+              "required": "1.49.6"
+            },
+            {
+              "name": "comfyui-workflow-templates",
+              "installed": "0.11.48",
+              "required": "0.11.48"
+            },
+            {
+              "name": "comfyui-embedded-docs",
+              "installed": "0.5.10",
+              "required": "0.5.10"
+            },
+            {
+              "name": "comfy-kitchen",
+              "installed": "0.2.31",
+              "required": "0.2.31"
+            },
+            {
+              "name": "comfy-aimdo",
+              "installed": "0.4.15",
+              "required": "0.4.15"
+            }
+          ],
+          "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "pytorch_version": "2.10.0+cu130",
+          "embedded_python": false,
+          "deploy_environment": "local-git",
+          "argv": [
+            "main.py",
+            "--listen",
+            "127.0.0.1",
+            "--port",
+            "8189",
+            "--extra-model-paths-config",
+            "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0\\extra_model_paths.yaml",
+            "--input-directory",
+            "G:\\ComfyStudioData\\workers\\h3-f\\input",
+            "--output-directory",
+            "G:\\ComfyStudioData\\workers\\h3-f\\output",
+            "--temp-directory",
+            "F:\\一人公司\\comfyui-production\\runtime\\temp\\h3-f",
+            "--disable-mmap"
+          ]
+        },
+        "devices": [
+          {
+            "name": "cuda:0 NVIDIA GeForce RTX 5060 Ti : cudaMallocAsync",
+            "type": "cuda",
+            "index": 0,
+            "vram_total": 17102864384,
+            "vram_free": 15908995072,
+            "torch_vram_total": 0,
+            "torch_vram_free": 0
+          }
+        ]
+      },
+      "object_info_status": 200
+    }
+  ],
+  "materials": [
+    {
+      "path": "F:\\AI短剧\\苏晚晴45.png",
+      "status": "FOUND",
+      "bytes": 2560144,
+      "sha256": "51037BBABF74BE953B5EF633D3749D16022D0648BAB27566FEE0E0607EC13182"
+    },
+    {
+      "path": "F:\\AI短剧\\H3_UPGRADE_TEST\\backup\\pre_h3_upgrade\\workflows\\MiniMax_H3.json",
+      "status": "FOUND",
+      "bytes": 5572,
+      "sha256": "A111AF6223BCF09316638368E558D33DEB1AF42428A196BC31120242155FD8E4"
+    },
+    {
+      "path": "F:\\AI短剧\\H3_UPGRADE_TEST\\backup\\pre_h3_upgrade\\workflows\\MiniMax_H3.config.json",
+      "status": "FOUND",
+      "bytes": 1863,
+      "sha256": "6FD926CB318CF679B04DA846E5D2772CDCF2BE9ADD543EAAF4AA1BE423EC937E"
+    }
+  ],
+  "expected_missing": []
+}

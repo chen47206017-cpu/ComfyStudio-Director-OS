@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-08T11:07:43",
+  "project_id": "comfystudio-studioos-current",
+  "baseline": {
+    "id": "backend-app-before-v101-feedback",
+    "path": "backend/app.py",
+    "sha256": "DBE27C22ADA8062112425BD240F8676AC55A936B95DF7BDAA632762710E9E20E",
+    "status": "baseline-verified"
+  },
+  "canonical_source": {
+    "id": "current-project-root",
+    "path": "."
+  },
+  "candidate": {
+    "id": "v10.1-demo-feedback-20260908",
+    "version": "V10.1-demo-feedback",
+    "source_path": ".",
+    "status": "candidate-static"
+  },
+  "delivery": {
+    "policy": "runtime-evidence-required",
+    "artifact_dir": "reports/runs/v101_demo_feedback_20260908"
+  },
+  "history": [
+    {
+      "at": "2026-09-08T11:07:43",
+      "event": "initialized",
+      "candidate_id": "v10.1-demo-feedback-20260908"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+﻿H3 PAGEFILE BEFORE
+==================
+
+时间：
+2026-09-07 12:41:51
+
+AutomaticManagedPagefile:
+False
+
+PageFileSetting:
+
+
+PageFileUsage:
+
+Name            AllocatedBaseSize CurrentUsage PeakUsage
+----            ----------------- ------------ ---------
+D:\pagefile.sys              5888         1197      2507
+
+
+
+
+Registry PagingFiles:
+
+
+H3 PAGEFILE AFTER
+=================
+
+时间：
+2026-09-07 12:41:51
+
+AutomaticManagedPagefile:
+False
+
+Registry PagingFiles:
+D:\pagefile.sys 5888 5888
+F:\pagefile.sys 32768 49152
+
+
+CIM Settings:
+
+Name            InitialSize MaximumSize
+----            ----------- -----------
+D:\pagefile.sys        5888        5888
+F:\pagefile.sys       32768       49152
+
+
+
+
+PAGEFILE_CONFIG_GATE:
+PASS

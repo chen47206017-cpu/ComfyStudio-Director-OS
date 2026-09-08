@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "project-regression",
+    "kind": "command",
+    "level": "static",
+    "argv": [
+      "python",
+      "scripts/run_project_tests.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 180,
+    "covers": [
+      "The H3 catalog and dry-run response distinguish a project planning contract from a vendor-submittable AutoDL request body, and no longer fabricate ref_image_*/ref_audio_* fields for legacy v5/v2 wrappers.",
+      "Image-only planning still selects minimax_h3_lightx2v_v5 and image-plus-audio planning still selects minimax_h3_image_audio_to_video_v2, with hosted URL safety checks and no provider/job side effect.",
+      "The source recognizes 1080x1920 as the final delivery target but says the legacy H3 source resolution must be verified per current workflow drawer and cannot be claimed as direct 1080p.",
+      "POST /api/comfyui/h3/dry-run remains no-I/O and keeps MINIMAX_H3 as BLOCKED_LOCAL_H3 / DRY_RUN_ONLY.",
+      "The two user-supplied workflow IDs remain registered in the selector: minimax_h3_lightx2v_v5 and minimax_h3_image_audio_to_video_v2.",
+      "AUTODL_ALLOW_PAID_SUBMIT remains disabled by default, and direct H3 job submission remains blocked with HTTP 409.",
+      "A source file or a stale document claims that v5/v2 accepts particular ref_image/ref_audio fields, duration limits, or direct 1080p output without an active workflow drawer verification.",
+      "The H3 workflow spec and public docs match the code's unverified-vendor-schema boundary."
+    ]
+  },
+  "contract_sha256": "1103aa633058234f06b897a266a1343d5d48ad388c4f66a6f5767770bb204e25",
+  "started_at": "2026-09-05T03:18:53",
+  "finished_at": "2026-09-05T03:19:01",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/project-regression.stdout.log",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": ".codex/verification-receipts/project-regression.stderr.log",
+  "stderr_sha256": "28efe77a506c0a1fe660071d5178a38a45140f2739e3f59ae53a792e141d6055",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/h3.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "fffd2dc56498e8496e6aab607c4fd99433903f8992c2b75f109ec0d16c5877ff"
+    }
+  ],
+  "oracle_hashes": {}
+}

@@ -1,0 +1,195 @@
+{
+  "prompt": {
+    "12": {
+      "inputs": {
+        "vae_name": "wan_2.1_vae.safetensors"
+      },
+      "class_type": "VAELoader"
+    },
+    "3": {
+      "inputs": {
+        "batch_index": 0,
+        "length": 1,
+        "image": [
+          "1",
+          0
+        ]
+      },
+      "class_type": "ImageFromBatch"
+    },
+    "11": {
+      "inputs": {
+        "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "type": "wan"
+      },
+      "class_type": "CLIPLoader"
+    },
+    "31": {
+      "inputs": {
+        "samples": [
+          "30",
+          0
+        ],
+        "vae": [
+          "12",
+          0
+        ]
+      },
+      "class_type": "VAEDecode"
+    },
+    "16": {
+      "inputs": {
+        "clip_vision": [
+          "13",
+          0
+        ],
+        "crop": "center",
+        "image": [
+          "4",
+          0
+        ]
+      },
+      "class_type": "CLIPVisionEncode"
+    },
+    "10": {
+      "inputs": {
+        "weight_dtype": "default",
+        "unet_name": "Wan2.1\\wan2.1_i2v_720p_14B_fp8_scaled.safetensors"
+      },
+      "class_type": "UNETLoader"
+    },
+    "21": {
+      "inputs": {
+        "min_cfg": 1,
+        "model": [
+          "10",
+          0
+        ]
+      },
+      "class_type": "VideoLinearCFGGuidance"
+    },
+    "1": {
+      "inputs": {
+        "skip_first_frames": 0,
+        "custom_height": 0,
+        "select_every_nth": 1,
+        "custom_width": 0,
+        "force_rate": 0,
+        "frame_load_cap": 121,
+        "video": "10000.mp4"
+      },
+      "class_type": "VHS_LoadVideo"
+    },
+    "14": {
+      "inputs": {
+        "text": "masterpiece, best quality, highres, cinematic lighting, natural skin texture, consistent face",
+        "clip": [
+          "11",
+          0
+        ]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "20": {
+      "inputs": {
+        "width": 432,
+        "vae": [
+          "12",
+          0
+        ],
+        "negative": [
+          "15",
+          0
+        ],
+        "start_image": [
+          "4",
+          0
+        ],
+        "batch_size": 1,
+        "control_video": [
+          "1",
+          0
+        ],
+        "length": 121,
+        "height": 768,
+        "clip_vision_output": [
+          "16",
+          0
+        ],
+        "positive": [
+          "14",
+          0
+        ]
+      },
+      "class_type": "WanFunControlToVideo"
+    },
+    "15": {
+      "inputs": {
+        "text": "blurry, flickering, distorted face, ugly, deformed, low quality",
+        "clip": [
+          "11",
+          0
+        ]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "30": {
+      "inputs": {
+        "denoise": 1,
+        "seed": 20260903,
+        "negative": [
+          "20",
+          1
+        ],
+        "sampler_name": "dpmpp_3m_sde",
+        "latent_image": [
+          "20",
+          2
+        ],
+        "positive": [
+          "20",
+          0
+        ],
+        "cfg": 5,
+        "model": [
+          "21",
+          0
+        ],
+        "steps": 24,
+        "scheduler": "karras"
+      },
+      "class_type": "KSampler"
+    },
+    "4": {
+      "inputs": {
+        "image": "suwanqing45_ref.png"
+      },
+      "class_type": "LoadImage"
+    },
+    "13": {
+      "inputs": {
+        "clip_name": "clip_vision_h.safetensors"
+      },
+      "class_type": "CLIPVisionLoader"
+    },
+    "40": {
+      "inputs": {
+        "filename_prefix": "wanvideo_suwanqing_ref_5s_local",
+        "frame_rate": 24,
+        "save_output": true,
+        "pix_fmt": "yuv420p",
+        "megabit": true,
+        "format": "video/nvenc_h264-mp4",
+        "images": [
+          "31",
+          0
+        ],
+        "save_metadata": true,
+        "loop_count": 0,
+        "pingpong": false,
+        "bitrate": 10
+      },
+      "class_type": "VHS_VideoCombine"
+    }
+  }
+}

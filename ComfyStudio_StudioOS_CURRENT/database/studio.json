@@ -1,0 +1,16 @@
+﻿{
+"version":"4.0",
+
+"assets":[],
+
+"reference_slots":[
+
+"Picture1",
+"Picture2",
+"Picture3",
+"Video1",
+"Audio1"
+
+]
+
+}

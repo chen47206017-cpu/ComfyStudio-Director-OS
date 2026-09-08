@@ -1,0 +1,10 @@
+{
+  "version": "ComfyStudio Manager V1",
+  "created_at": "2026-09-07T14:18:30",
+  "custom_node": "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0\\custom_nodes\\ComfyStudio_Asset_Library",
+  "frontend": "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0\\custom_nodes\\ComfyStudio_Asset_Library\\web\\comfystudio_manager.js",
+  "production_workflow": "F:\\一人公司\\comfyui-production\\workflows\\smoke\\H3-R2V-PRODUCTION_ASSETS_v2.json",
+  "asset_registry": "F:\\一人公司\\comfyui-production\\config\\comfystudio\\asset_registry.json",
+  "manager_config": "F:\\一人公司\\comfyui-production\\config\\comfystudio\\manager_v1.json",
+  "backup": "F:\\一人公司\\comfyui-production\\backups\\comfystudio-manager\\20260907-141830"
+}

@@ -1,0 +1,97 @@
+{
+  "task_type": "high_risk",
+  "goal": "读取我附上的《ComfyStudio_StudioOS_V10.1-V44_30分钟实施快车道总控_v1.0.md》，立即进入 IMPLEMENTATION_FASTLANE_V44。不要重新写方案，不要停在只读审计，从第0节开始连续修改、测试、修复并生成证据。除文档规定的授权阻塞外不要暂停询问。",
+  "reference_projects": [],
+  "acceptance": {
+    "request_quote": "读取我附上的《ComfyStudio_StudioOS_V10.1-V44_30分钟实施快车道总控_v1.0.md》，立即进入 IMPLEMENTATION_FASTLANE_V44。不要重新写方案，不要停在只读审计，从第0节开始连续修改、测试、修复并生成证据。除文档规定的授权阻塞外不要暂停询问。",
+    "request_sha256": "71fffeaff155424b795ef9c851ae632be69cde4cbea90013b7f83ef9b7e4b260",
+    "request_summary": "在用户指定的 F 盘 CURRENT 生产工程中，从既有 V10.1 Director Demo 增量升级 V44 核心渲染路径、中文导演 UI、全能参考、可保存 ReactFlow 和严格视频验收；真实执行仅允许 local_comfy/127.0.0.1:8189，外部/付费 lanes 只显示明确阻塞。",
+    "user_scenario": "导演在 http://127.0.0.1:8190/director/ 选择 SHOT002 和“本机 ComfyUI 8189”，点击生成。系统展示 Canon、Prompt、Capsule/Worker 预检、创建 Durable Job、提交 prompt 并轮询。只有下载到 StudioOS 受控输出目录且经 ftyp、ffprobe、视频流、时长、SHA-256 验证的 MP4 才显示“已完成”和视频播放器；无 MP4 时清楚显示失败或未验证。",
+    "observable_outcome": "导演台默认简体中文，显示本机/AutoDL/API lane 选择与全能参考；可见 ReactFlow 连线能保存、刷新恢复；后端 job 仅在 verified MP4 非空时转 SUCCEEDED；浏览器能播放经白名单 media route 暴露的已验证 MP4；测试、构建、运行时 preflight 和 run manifest 均采用 Asia/Shanghai +08:00 证据。",
+    "preserved_behaviors": [
+      "保留既有 V8、V10、/api/prompt API、Demo JSON、Canvas CAS、Canon 规则和现有 SQLite job store 的历史记录",
+      "不删除、覆盖、移动或重写 database、assets、workflows、Canon、历史 reports、upgrade_logs 或用户输出",
+      "不停止、重启、升级、安装、删除、移动、哈希或修改 8189 Worker / ComfyUI runtime；仅通过 HTTP 调用其公开接口",
+      "AutoDL5090 与 API 未配置时不得回退到本机、不得发起外部网络或付费调用",
+      "没有真实 decodable MP4、hash、ffprobe、Job/prompt history 和受控路径证据时不得声称 H3 或 Production READY 成功"
+    ],
+    "examples": [
+      {"given": "lane=local_comfy 且 8189 可探测、Capsule 预检通过、参考图可上传", "when": "导演对 SHOT002 点击生成", "then": "服务使用 local-8189 创建一个幂等 Job、保存 prompt_id 并且仅提交一次；随后的刷新仅查询 queue/history/outputs，不会自动二次提交"},
+      {"given": "history 返回图片、WAV、空文件、HTML 错误页或不可解析 .mp4", "when": "Job refresh 收集输出", "then": "Job 转 FAILED，reason_code 为 OUTPUT_MP4_VERIFICATION_FAILED，运行时与 UI 不显示成功或视频播放器"},
+      {"given": "history 返回受控路径内的有效 MP4，且 ftyp、ffprobe、video stream、duration 和 SHA-256 均成功", "when": "Job refresh 完成", "then": "Job 转 SUCCEEDED，Demo runtime 保存 output metadata，媒体仅可经 job output id route 播放"},
+      {"given": "用户选择 AutoDL5090 或 API，尚无 URL/凭据/付费授权", "when": "点击生成", "then": "返回中文 BLOCKED 和明确 reason_code，不发送任何外部请求"}
+    ],
+    "counterexamples": [
+      {"case": "HTTP 200、H3 节点存在、workflow preflight READY、prompt 队列已接收、单元测试通过", "must_not": "不得单独作为 MP4 或 READY_LOCAL_PRODUCTION 成功证据"},
+      {"case": "输出文件不在受控 StudioOS reports/job_outputs 根目录，或 output id 与 JobStore 无关", "must_not": "不得通过 media route 暴露任意本机路径"}
+    ],
+    "assumptions": [],
+    "open_questions": []
+  },
+  "scope": {
+    "allowed_files": [
+      "backend/app.py", "backend/v10_core.py", "backend/config/__init__.py", "backend/config/paths.py", "backend/services/job_service.py", "backend/services/output_validation.py", "backend/services/workflow_capsule.py", "backend/services/worker_registry.py", "frontend/src/main.tsx", "frontend/src/styles.css", "frontend/vite.config.ts", "tests/test_demo_v101.py", "tests/test_backend_v10.py", "tests/test_comfy_execution.py", "tests/test_root_resolver.py", "tools/v101_runtime_probe.py", "tools/verify_v44.py", "tools/fastlane_v44.ps1", "studioos.root.json", "reports/runs/v44_*/*"
+    ],
+    "pattern_authorization": {"reason": "V44 要求一次带北京时间 run_id 的证据目录和报告文件；不允许改写历史 reports。", "max_matches": 120},
+    "allowed_symbols": [],
+    "forbidden": ["database/**", "assets/**", "workflows/**", "demo/projects/**", "G:/我的文档/deepseek/**", "G:/ComfyUI/**", "F:/一人公司/comfyui-production/staging/comfyui-v0.34.0/**", "8189 process lifecycle", "paid external API calls", "model downloads"]
+  },
+  "non_goals": ["不升级或重新搭建 ComfyUI，不改变 8189 的进程生命周期", "不实现付费 AutoDL/API 真执行；只实现明确的可选入口与阻塞语义", "不创建假 MP4、假 prompt_id、假截图、假 preflight 或假测试结果", "不为版本账本生成没有真实工程入口的 Demo/空壳页面", "不迁移或重写 protected JSON/SQLite schema；优先利用已有 JobStore 和附属证据 JSON"],
+  "impact": "本轮将影响导演台生成流程、Job 输出判定、Job media 安全访问、Root Resolver、Vite 嵌套路径和 V44 验证工具。代码改动不应覆盖业务数据库或资产；真实 local_comfy 运行会由现有 JobStore 增加运行态记录、ComfyUI 输出自身产物和 StudioOS reports/job_outputs 受控副本。",
+  "user_authorization": "用户已明确授权在 F:\\一人公司\\comfyui-production\\ComfyStudio_StudioOS_CURRENT 继续 V44 实施，并要求 SHOT002 使用当前 127.0.0.1:8189 真实 workflow 生成 MP4；用户同时明确禁止删除资产、破坏数据库、覆盖 Canon、触碰或升级 G 盘研发/ComfyUI runtime。",
+  "success_criteria": [
+    "导演台有真实 <select> lane 控件，默认 local_comfy；AutoDL5090/API 在未配置时以中文 BLOCKED 返回且不外发",
+    "SHOT002 generate 真正走 Canon -> Prompt -> Capsule preflight -> upload -> /prompt -> Durable Job，不因 refresh 重复 submit",
+    "Workflow 在内存深拷贝后才注入 prompt/duration/seed/reference；Capsule 预检记录 workflow/capsule hash、worker snapshot 和阻塞原因",
+    "任何非 MP4、空/错误文件、没有 ftyp、ffprobe 失败、无 video stream 或时长非正的输出都不能使 Job SUCCEEDED",
+    "可验证 MP4 保存 SHA-256、mime、时长和 ffprobe 证据；Demo runtime 只为 verified MP4 保存 SUCCEEDED",
+    "已验证 Job output 只能通过 job_id/output_id 白名单 route 播放；路径穿越、其他文件和未验证 output 被拒绝",
+    "前端在 verified MP4 存在时显示视频播放器、时长、哈希短码和 Job ID；不存在时清楚显示未取得可验证 MP4",
+    "默认 Director UI 使用中文，已有 ReactFlow edges 和 bindings 能保存、刷新恢复，且有真实全能参考预设/绑定数据行为",
+    "根解析不硬编码用户中文绝对路径，使用环境变量、root marker 和有限候选；原路径仍可兼容",
+    "Python 单元/集成、TypeScript、Vite build、真实 HTTP preflight、Director 界面关键验收和 V44 manifest 都有当前北京时间证据",
+    "仅在真实 mp4、ffprobe、hash、history、Job chain、Director 界面播放都齐全时允许最终 READY_LOCAL_PRODUCTION；否则 manifest 必须降级为 PARTIAL、READY_CORE/H3_BLOCKED 或 BLOCKED_EXTERNAL"
+  ],
+  "verification": [
+    "python -m unittest tests.test_demo_v101 tests.test_backend_v10 tests.test_comfy_execution tests.test_root_resolver -v",
+    "python -m py_compile backend/app.py backend/v10_core.py backend/services/job_service.py backend/services/output_validation.py backend/services/workflow_capsule.py backend/services/worker_registry.py tools/v101_runtime_probe.py tools/verify_v44.py",
+    "npx tsc --noEmit", "npm run build", "tools/verify_v44.py --project . --run-dir reports/runs/<beijing_run_id>", "当前 8190 Director 的浏览器交互、console/network、截图与媒体 playback 验收", "仅当 preflight 成功时，通过 HTTP 对 8189 执行一次 SHOT002 local_comfy smoke，并记录 prompt/history/output/ffprobe/hash；失败不重试提交"
+  ],
+  "verification_plan": [
+    {"id": "v44-backend-unit", "kind": "command", "level": "static", "cwd": ".", "argv": ["python", "-m", "unittest", "tests.test_demo_v101", "tests.test_backend_v10", "tests.test_comfy_execution", "tests.test_root_resolver", "-v"], "timeout_seconds": 240, "covers": ["导演台有真实 <select> lane 控件，默认 local_comfy；AutoDL5090/API 在未配置时以中文 BLOCKED 返回且不外发", "SHOT002 generate 真正走 Canon -> Prompt -> Capsule preflight -> upload -> /prompt -> Durable Job，不因 refresh 重复 submit", "Workflow 在内存深拷贝后才注入 prompt/duration/seed/reference；Capsule 预检记录 workflow/capsule hash、worker snapshot 和阻塞原因", "任何非 MP4、空/错误文件、没有 ftyp、ffprobe 失败、无 video stream 或时长非正的输出都不能使 Job SUCCEEDED", "可验证 MP4 保存 SHA-256、mime、时长和 ffprobe 证据；Demo runtime 只为 verified MP4 保存 SUCCEEDED", "已验证 Job output 只能通过 job_id/output_id 白名单 route 播放；路径穿越、其他文件和未验证 output 被拒绝", "保留既有 V8、V10、/api/prompt API、Demo JSON、Canvas CAS、Canon 规则和现有 SQLite job store 的历史记录", "不删除、覆盖、移动或重写 database、assets、workflows、Canon、历史 reports、upgrade_logs 或用户输出", "不停止、重启、升级、安装、删除、移动、哈希或修改 8189 Worker / ComfyUI runtime；仅通过 HTTP 调用其公开接口", "AutoDL5090 与 API 未配置时不得回退到本机、不得发起外部网络或付费调用", "HTTP 200、H3 节点存在、workflow preflight READY、prompt 队列已接收、单元测试通过", "输出文件不在受控 StudioOS reports/job_outputs 根目录，或 output id 与 JobStore 无关"]},
+    {"id": "v44-python-compile", "kind": "command", "level": "static", "cwd": ".", "argv": ["python", "-m", "py_compile", "backend/app.py", "backend/v10_core.py", "backend/services/job_service.py", "backend/services/output_validation.py", "backend/services/workflow_capsule.py", "backend/services/worker_registry.py", "tools/v101_runtime_probe.py", "tools/verify_v44.py"], "timeout_seconds": 120, "covers": ["根解析不硬编码用户中文绝对路径，使用环境变量、root marker 和有限候选；原路径仍可兼容", "没有真实 decodable MP4、hash、ffprobe、Job/prompt history 和受控路径证据时不得声称 H3 或 Production READY 成功"]},
+    {"id": "v44-frontend", "kind": "command", "level": "static", "cwd": "frontend", "argv": ["npx", "tsc", "--noEmit"], "timeout_seconds": 180, "covers": ["前端在 verified MP4 存在时显示视频播放器、时长、哈希短码和 Job ID；不存在时清楚显示未取得可验证 MP4", "默认 Director UI 使用中文，已有 ReactFlow edges 和 bindings 能保存、刷新恢复，且有真实全能参考预设/绑定数据行为"]},
+    {"id": "v44-build", "kind": "command", "level": "static", "cwd": "frontend", "argv": ["npm", "run", "build"], "timeout_seconds": 240, "covers": ["Python 单元/集成、TypeScript、Vite build、真实 HTTP preflight、Director 界面关键验收和 V44 manifest 都有当前北京时间证据"]},
+    {"id": "v44-runtime-preflight", "kind": "command", "level": "runtime", "cwd": ".", "argv": ["python", "tools/verify_v44.py", "--project", ".", "--run-dir", "reports/runs/current"], "timeout_seconds": 240, "oracle_files": ["workflows/capsules/h3_reference_to_video/workflow.api.json", "database/canon.json"], "covers": ["仅在真实 mp4、ffprobe、hash、history、Job chain、Director 界面播放都齐全时允许最终 READY_LOCAL_PRODUCTION；否则 manifest 必须降级为 PARTIAL、READY_CORE/H3_BLOCKED 或 BLOCKED_EXTERNAL"]}
+  ],
+  "workflow_phase_contract": {
+    "phase_id": "implementation-fastlane-v44-local-comfy",
+    "entry_invariants": [
+      {"signal": "project root", "expected": "F drive CURRENT specified by user, no automatic path migration", "evidence_source": "root marker + baseline"},
+      {"signal": "database", "expected": "existing sqlite hash is captured before a real JobStore write; no restore/overwrite", "evidence_source": "V44 protected_hashes.json"},
+      {"signal": "worker", "expected": "8189 is dynamically probed using /system_stats, /object_info and /queue; no lifecycle actions", "evidence_source": "runtime snapshot"}
+    ],
+    "exit_invariants": [
+      {"signal": "runtime status", "expected": "manifest status calculated from artifacts, never hard-coded", "evidence_source": "manifest.json"},
+      {"signal": "MP4", "expected": "SUCCEEDED only with a verified MP4 and safe player route; otherwise PARTIAL/BLOCKED", "evidence_source": "job evidence + ffprobe JSON"}
+    ],
+    "next_phase": "two-and-three-clip-continuity-only-after-local-smoke-evidence",
+    "on_entry_mismatch": "stop-and-observe",
+    "on_failure": "stop-and-preserve"
+  },
+  "destructive_actions": [
+    {"action": "runtime append to existing JobStore caused by a user-authorized local render", "target": "database/studioos_jobs.sqlite3", "authorized_failure_class": "real local_comfy render requires durable job persistence", "authorization_quote": "必须生成一个真实 MP4；自动回写Job状态", "independent_observer": "before/after SHA-256 backup plus Job ID/event evidence", "rollback": "do not restore or delete database rows; mark failed Job terminally and preserve evidence", "evidence_required": ["backup copy", "before hash", "after hash", "new job ids", "timestamps +08:00"], "on_unproven": "do-not-submit-real-render"}
+  ],
+  "artifact_identity": {"project_id": "comfystudio-studioos-current", "baseline": {"id": "backend-app-before-v101-feedback", "path": "backend/app.py", "sha256": "DBE27C22ADA8062112425BD240F8676AC55A936B95DF7BDAA632762710E9E20E", "status": "baseline-verified"}, "canonical_source": {"id": "current-project-root", "path": "."}, "candidate": {"id": "v10.1-demo-feedback-20260908", "version": "V10.1-demo-feedback", "source_path": ".", "status": "candidate-static"}, "delivery": {"policy": "runtime-evidence-required", "artifact_dir": "reports/runs/v101_demo_feedback_20260908"}},
+  "evidence_protocol": {
+    "claim_ceiling": "runtime-verified",
+    "observed_artifacts": [
+      {"role": "runtime-subject", "path": "backend/app.py", "sha256": "computed-at-finish", "observed_at": "at-finish", "version": "V10.1-V44"},
+      {"role": "director-ui", "path": "frontend/src/main.tsx", "sha256": "computed-at-finish", "observed_at": "at-finish", "version": "V10.1-V44"},
+      {"role": "job-runtime", "path": "database/studioos_jobs.sqlite3", "sha256": "captured-before-and-after", "observed_at": "real-render-only", "version": "existing"}
+    ],
+    "conflict_rule": "block-and-downgrade", "freshness_rule": "current-task-only", "unreadable_rule": "unreadable-is-not-evidence"
+  },
+  "stop_conditions": ["发现需要删除、覆盖或不可逆迁移用户数据", "需要下载单个超过 1GB 的模型、真实付费/API 调用或用户凭据", "需要升级、替换、重启或修改 G 盘 / 8189 ComfyUI runtime", "目标源码存在用户未提交改动且无法与本次受限范围安全合并", "runtime preflight 无法确认 Worker、Capsule、参考图或 workflow input 安全时，不提交真实 render；继续完成 fake/UI/code/evidence 工作", "真实 history/output 无法产生 verified MP4 时，不重试无证据相同提交，不报告成功"],
+  "rollback": "代码验证失败时停止后续阶段并保留 V44 证据。不得以 git reset、文件覆盖或数据库恢复破坏历史；前端 build 产物由 Vite 在 ui/dist 增量写入，源码修改通过当前 run baseline 清单记录。真实 Job 失败时仅写终态 FAILED/ORPHANED 并保留 Job/Event/Output evidence，不删改 8189 或既有数据库。"
+}

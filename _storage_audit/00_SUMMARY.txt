@@ -1,0 +1,85 @@
+﻿ComfyStudio Storage Audit
+=========================
+
+北京时间:
+2026-09-07 09:38:11
+
+Source:
+F:\一人公司\comfyui-production
+
+Reference Target:
+G:\ComfyUI
+
+Total Files:
+1387
+
+Total Size:
+40.24 GB
+
+Top-level folders:
+staging : 0.055 GB / 1112 files
+runtime : 0.027 GB / 24 files
+artifacts : 0.025 GB / 12 files
+scripts : 0 GB / 20 files
+src : 0 GB / 20 files
+_storage_audit : 0 GB / 3 files
+workflows : 0 GB / 8 files
+tests : 0 GB / 14 files
+sample_assets : 0 GB / 11 files
+handoff : 0 GB / 5 files
+docs : 0 GB / 22 files
+backups : 0 GB / 13 files
+.codex : 0 GB / 95 files
+reports : 0 GB / 7 files
+integration : 0 GB / 0 files
+
+
+Largest files:
+19.53 GB : F:\一人公司\comfyui-production\minimax_h3_ref2va_pruned_int8_convrot.safetensors
+14.61 GB : F:\一人公司\comfyui-production\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors
+4.85 GB : F:\一人公司\comfyui-production\minimax_h3_video_vae_fp16.safetensors
+0.564 GB : F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32 (1).safetensors
+0.564 GB : F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32.safetensors
+0.014 GB : F:\一人公司\comfyui-production\artifacts\upscaled_candidates\suwanqing45_subtitled_1080x1920_candidate.mp4
+0.012 GB : F:\一人公司\comfyui-production\ComfyUI-0.34.0.zip
+0.012 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-v0.34.0.zip
+0.008 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\llama_tokenizer\tokenizer.json
+0.007 GB : F:\一人公司\comfyui-production\runtime\artifacts\local_suwanqing45_5s_20260904\suwanqing45_local_draft_5s.mp4
+0.007 GB : F:\一人公司\comfyui-production\artifacts\wan2.1_i2v_suwanqing_5s\wanvideo_suwanqing_ref_5s_local_00001.mp4
+0.006 GB : F:\一人公司\comfyui-production\runtime\artifacts\d14f40680fe241b6a91a2258d5cccaab\wanvideo_suwanqing_ref_5s_local_00002.mp4
+0.006 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\qwen35_tokenizer\vocab.json
+0.004 GB : F:\一人公司\comfyui-production\runtime\artifacts\subtitle_lock_preview_cpu.mp4
+0.003 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\qwen35_tokenizer\merges.txt
+0.003 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\qwen25_tokenizer\vocab.json
+0.003 GB : F:\一人公司\comfyui-production\runtime\artifacts\subtitle_lock_preview.mp4
+0.003 GB : F:\一人公司\comfyui-production\runtime\artifacts\subtitle_lock_preview_clean.mp4
+0.002 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\t5_tokenizer\tokenizer.json
+0.002 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\text_encoders\qwen25_tokenizer\merges.txt
+0.001 GB : F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\sd1_tokenizer\vocab.json
+0.001 GB : F:\一人公司\comfyui-production\comfy-mcp-main.zip
+0.001 GB : F:\一人公司\comfyui-production\artifacts\wan2.1_i2v_suwanqing_5s\frame_2_50.png
+0.001 GB : F:\一人公司\comfyui-production\runtime\artifacts\subtitle_lock_preview_cpu_mid.png
+0.001 GB : F:\一人公司\comfyui-production\artifacts\wan2.1_i2v_suwanqing_5s\frame_last.png
+0.001 GB : F:\一人公司\comfyui-production\runtime\artifacts\local_suwanqing45_5s_20260904\frame_last.png
+0.001 GB : F:\一人公司\comfyui-production\runtime\artifacts\subtitle_lock_preview_mid.png
+0.001 GB : F:\一人公司\comfyui-production\artifacts\wan2.1_i2v_suwanqing_5s\frame_000.png
+0.001 GB : F:\一人公司\comfyui-production\runtime\artifacts\local_suwanqing45_5s_20260904\frame_first.png
+0.001 GB : F:\一人公司\comfyui-production\artifacts\wan2.1_i2v_suwanqing_5s\wanvideo_suwanqing_ref_5s_local_00001.png
+
+
+Model files:
+19.53 GB : F:\一人公司\comfyui-production\minimax_h3_ref2va_pruned_int8_convrot.safetensors
+14.61 GB : F:\一人公司\comfyui-production\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors
+4.85 GB : F:\一人公司\comfyui-production\minimax_h3_video_vae_fp16.safetensors
+0.564 GB : F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32 (1).safetensors
+0.564 GB : F:\一人公司\comfyui-production\minimax_h3_audio_vae_fp32.safetensors
+
+
+Git repositories:
+
+
+G:\ComfyUI collisions:
+5
+
+REPORT DIRECTORY:
+F:\一人公司\comfyui-production\_storage_audit

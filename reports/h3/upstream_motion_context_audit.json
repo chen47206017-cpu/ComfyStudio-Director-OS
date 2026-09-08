@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-09-06",
+  "purpose": "Read-only upstream compatibility audit for the existing G:/ComfyUI production instance.",
+  "source_access": {
+    "repository_pages_reviewed": [
+      "https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context",
+      "https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context/releases/tag/v0.3.1"
+    ],
+    "direct_git_or_raw_fetch": {
+      "status": "FAILED",
+      "reason": "Windows Schannel returned SEC_E_NO_CREDENTIALS; no plugin source was downloaded or written to G:/ComfyUI."
+    },
+    "static_import_check": {
+      "status": "NOT_RUN",
+      "reason": "No plugin checkout was created because the runtime compatibility gate is closed."
+    }
+  },
+  "motion_context": {
+    "repository": "NikoDemon80/ComfyUI-H3-Motion-Context",
+    "default_branch": "main",
+    "current_release": {
+      "tag": "v0.6.1",
+      "commit": "d6fb99813863ce7c3cf3bdd09cd43cd9bfdc3e0a",
+      "license": "GPL-3.0",
+      "declared_minimum_comfyui": "0.34.0",
+      "declared_python": ">=3.10"
+    },
+    "legacy_candidate": {
+      "tag": "v0.3.1",
+      "commit": "725a731e644c669601799da1eb63f4e7497c628f",
+      "upstream_position": "The current upstream README directs ComfyUI 0.33.4 or older to v0.3.1, while the release is titled ComfyUI 0.33 compatibility. No local source import test was possible. Even if v0.3.1 imports on 0.27.0, this host lacks the native MiniMaxH3ReferenceToVideo node needed to run an H3 chain."
+    },
+    "declared_nodes": [
+      "MiniMaxH3MotionContext",
+      "MiniMaxH3MotionContextTrim",
+      "MiniMaxH3MotionContextSaveLatent",
+      "MiniMaxH3MotionContextLoadLatent",
+      "MiniMaxH3MotionContextChain",
+      "MiniMaxH3MotionContextSeamProbe"
+    ],
+    "shipped_example_workflow": "example_workflows/MiniMax H3 - fl2va - ref2va.json",
+    "dependency_notes": "No standalone requirements file is declared by the repository. Documentation relies on ComfyUI Torch/safetensors; torchaudio is only described for decoded-audio fallback."
+  },
+  "existing_runtime_gate": {
+    "comfyui_path": "G:/ComfyUI",
+    "comfyui_version": "0.27.0",
+    "h3_native_node": "MiniMaxH3ReferenceToVideo",
+    "h3_native_node_registered": false,
+    "motion_context_nodes_registered": false,
+    "decision": "BLOCKED",
+    "reason": [
+      "The current v0.6.1 release declares ComfyUI >=0.34.0 while the live core is 0.27.0.",
+      "The legacy v0.3.1 path cannot supply the missing native H3 graph node, and no local source import test was possible.",
+      "The live /object_info response lacks the native MiniMaxH3ReferenceToVideo node required by the preserved baseline graph."
+    ]
+  },
+  "extender": {
+    "repository": "tritant/ComfyUI_MiniMax_H3_Extender",
+    "audited_commit": "88cc10d4db3d51f88e6a3fe097f5a750edf05ab3",
+    "status": "NOT_INSTALLED_NOT_ENABLED",
+    "decision": "Excluded by the active single-owner contract; it must not be enabled alongside Motion Context."
+  },
+  "installation_result": {
+    "plugin_written_to_custom_nodes": false,
+    "dependencies_installed": false,
+    "comfyui_restarted": false,
+    "production_assets_modified": false
+  }
+}

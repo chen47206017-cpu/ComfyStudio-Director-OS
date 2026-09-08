@@ -1,0 +1,31 @@
+{
+  "id": "h3_reference_to_video",
+  "name": "MiniMax H3 参考图生视频",
+  "version": "1.0.0",
+  "source": "F:\\AI短剧\\H3_UPGRADE_TEST\\backup\\pre_h3_upgrade\\workflows\\MiniMax_H3.json",
+  "required_node_classes": [
+    "MiniMaxH3ReferenceToVideo",
+    "MiniMaxH3MotionContextRAM",
+    "MiniMaxH3Extender",
+    "LoadImage",
+    "SaveVideo"
+  ],
+  "required_models": [
+    "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+    "minimax_h3_video_vae_fp16.safetensors",
+    "minimax_h3_audio_vae_fp32.safetensors"
+  ],
+  "slots": [
+    {"id": "prompt", "type": "text", "node": "138", "input": "value"},
+    {"id": "duration_seconds", "type": "number", "node": "132", "input": "value"},
+    {"id": "aspect_ratio", "type": "enum", "node": "115", "input": "aspect_ratio"},
+    {"id": "reference_image", "type": "image", "node": "137", "input": "image"},
+    {"id": "seed", "type": "integer", "node": "129", "input": "noise_seed"}
+  ],
+  "outputs": [{"node": "92", "type": "video", "field": "video"}],
+  "binding_map": "binding_map.json",
+  "model_verification": {"strategy": "worker_model_roots_basename_size_sha256", "required": true},
+  "tested_runtime": {"comfy_version": "0.34.0", "lane": "local_h3", "status": "UNVERIFIED"},
+  "feature_flags": {"motion_context": true, "extender": true, "real_gpu_smoke": false}
+}

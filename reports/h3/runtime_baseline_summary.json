@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-09-06",
+  "mode": "read-only",
+  "time_scope": "The live API probe was performed on 2026-09-06. Pre-existing source records carry 2026-09-07T01:16-01:17+08:00 timestamps, which are future-dated relative to this iteration and are retained as provenance only, not as current observations.",
+  "live_endpoint_recheck": {
+    "system_stats": "HTTP 200",
+    "object_info": "HTTP 200",
+    "comfyui_version": "0.27.0",
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+    "listen": "127.0.0.1:8188",
+    "argv": "main.py --listen 127.0.0.1 --port 8188 --preview-method auto"
+  },
+  "future_dated_reference_process_record": {
+    "pid": 40436,
+    "python": "G:/ComfyUI/venv/Scripts/python.exe",
+    "working_directory": "G:/ComfyUI",
+    "source": "F:/AI短剧/H3_UPGRADE_TEST/logs/comfyui-pre-extender-process.json",
+    "timestamp_validity": "FUTURE_DATED_REFERENCE_ONLY"
+  },
+  "node_evidence": {
+    "future_dated_reference_node_count": 1136,
+    "missing_nodes": [
+      "MiniMaxH3MotionContext",
+      "MiniMaxH3MotionContextTrim",
+      "MiniMaxH3MotionContextSaveLatent",
+      "MiniMaxH3MotionContextLoadLatent",
+      "MiniMaxH3MotionContextChain",
+      "MiniMaxH3MotionContextSeamProbe",
+      "MiniMaxH3ReferenceToVideo",
+      "MiniMaxH3Extender"
+    ],
+    "interpretation": "The API is healthy, but it cannot presently execute the preserved H3 graph or any Motion Context chain."
+  },
+  "storage_observation": {
+    "C_free_bytes": 6102892544,
+    "F_free_bytes": 116669534208,
+    "note": "No cache directory was created or redirected in this iteration."
+  },
+  "ffmpeg": {
+    "located_path": "C:/Users/chen4/AppData/Local/Microsoft/WinGet/Links/ffmpeg.exe",
+    "version_status": "UNVERIFIED",
+    "reason": "The sandbox denied execution of the discovered executable. No assembly claim is made."
+  },
+  "future_dated_reference_hashes": {
+    "system_stats_pre_extender": "5F4F2244D6FB05FDC7578A739941AE54EF21F0A83ECF2FB44F6B1879C3CE9B61",
+    "object_info_pre_extender": "B6023D1EDF0DFC80FD2906AF6F8C96C718CC26B6A8B7BA814930CE4A2B64D386",
+    "object_info_pre_extender_summary": "D64FD5DF30FB7C2E53432D5D69896B5E09467F5AF63C560EA8DE27EA61AD9499",
+    "comfyui_pre_extender_process": "C521DB86B7217E246A9B7A0A15314C7BC3280678D904C65C0E17B8CB89641FEF"
+  }
+}

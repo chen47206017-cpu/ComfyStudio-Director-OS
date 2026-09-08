@@ -1,0 +1,91 @@
+{
+  "schema": "comfystudio.fastlane.acceptance.v1",
+  "run_id": "implementation_fastlane_2026-09-08T06:52:07+08:00",
+  "observed_at_beijing": "2026-09-08T06:52:07+08:00",
+  "business_timezone": "Asia/Shanghai",
+  "status": "PARTIAL",
+  "modified_files": [
+    "backend/app.py",
+    "backend/v10_core.py",
+    "frontend/src/main.tsx",
+    "tests/test_backend_v10.py",
+    "ui/dist/index.html",
+    "ui/dist/assets/index-DKN8qTYt.js",
+    "ui/dist/assets/index-Dzq2u0zn.css"
+  ],
+  "new_files": [
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/index.html",
+    "frontend/vite.config.ts",
+    "frontend/tsconfig.json",
+    "frontend/src/styles.css",
+    "reports/timebase_correction/manifest.json",
+    "reports/timebase_correction/v8_phase0_audit.corrected.json",
+    "reports/timebase_correction/V8_MIGRATION_PLAN.corrected.md"
+  ],
+  "verification": {
+    "unittest": "6/6 passed",
+    "py_compile": "passed",
+    "typescript": "passed",
+    "production_build": "passed",
+    "http_8190": [
+      {
+        "endpoint": "/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 474
+      },
+      {
+        "endpoint": "/director/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 474
+      },
+      {
+        "endpoint": "/assets/index-DKN8qTYt.js",
+        "status": 200,
+        "content_type": "text/javascript; charset=utf-8",
+        "bytes": 343996
+      },
+      {
+        "endpoint": "/assets/index-Dzq2u0zn.css",
+        "status": 200,
+        "content_type": "text/css; charset=utf-8",
+        "bytes": 25351
+      },
+      {
+        "endpoint": "/api/v10/health/live",
+        "status": 200,
+        "content_type": "application/json",
+        "bytes": 97
+      },
+      {
+        "endpoint": "/api/v10/health/ready",
+        "status": 200,
+        "content_type": "application/json",
+        "bytes": 138
+      },
+      {
+        "endpoint": "/api/v10/assets",
+        "status": 200,
+        "content_type": "application/json",
+        "bytes": 506
+      }
+    ],
+    "http_8189": {
+      "status": "UNAVAILABLE",
+      "error": "由于目标计算机积极拒绝，无法连接。 (127.0.0.1:8189)"
+    }
+  },
+  "risks": [
+    "ComfyUI 127.0.0.1:8189 currently unavailable; no H3/Motion Context/video generation claim is made.",
+    "Flask development server used for smoke verification; production WSGI deployment remains pending.",
+    "Canvas storage is currently single-file global state; SQLite job durability and browser E2E are deferred."
+  ],
+  "next_phase": [
+    "Keep the 8190 route and bundle fix as the stable baseline.",
+    "Restore and verify ComfyUI 8189 before wiring real workflow submission.",
+    "Then add durable jobs/QC persistence and browser-level ReactFlow verification."
+  ]
+}

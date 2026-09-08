@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "state": "PENDING_USER_DOWNLOAD",
+  "observed_at": "2026-09-03",
+  "timestamp_policy": {
+    "task_baseline_date": "2026-09-03",
+    "filesystem_timestamp_anomaly": "2026-09-04 may appear in machine file metadata; it is an untrusted system-clock timestamp and is not evidence of a later observation."
+  },
+  "scope": "MiniMax H3 local model transfer readiness only",
+  "inspection_policy": {
+    "model_files": "DEFERRED",
+    "filesystem_access": "MANIFEST_ONLY",
+    "network_access": "NONE",
+    "proxy_changes": "NONE",
+    "hashing": "DEFERRED",
+    "model_loading": "PROHIBITED",
+    "active_transfer_owner": "USER_MANAGED_POWERSHELL"
+  },
+  "source_verification": {
+    "status": "UNVERIFIED_USER_SUPPLIED",
+    "network_checked": false,
+    "notes": [
+      "Repository and filename coordinates below were transcribed from the user's commands.",
+      "No Hugging Face request, token use, proxy change, or remote metadata check was performed.",
+      "A source coordinate is not evidence that a file is complete, authentic, licensed, or compatible with the installed ComfyUI runtime."
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "minimax_h3_ref2va_pruned_nvfp4",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "lilcheaty/MiniMax-H3-NVFP4",
+      "source_path": "minimax_h3_ref2va_pruned_nvfp4.safetensors",
+      "target_relative_path": "models\\diffusion_models\\minimax_h3_ref2va_pruned_nvfp4.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "minimax_h3_fl2va_pruned_nvfp4_fp8",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "rockerBOO/minimax-h3-nvfp4-fp8",
+      "source_path": "minimax_h3_fl2va_pruned_nvfp4_fp8.safetensors",
+      "target_relative_path": "models\\diffusion_models\\minimax_h3_fl2va_pruned_nvfp4_fp8.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "qwen3vl_32b_minimax_h3_nvfp4_awq",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "rockerBOO/minimax-h3-nvfp4-convrot",
+      "source_path": "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "target_relative_path": "models\\text_encoders\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "minimax_h3_video_vae_fp16",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "Comfy-Org/MiniMax-H3",
+      "source_path": "vae/minimax_h3_video_vae_fp16.safetensors",
+      "target_relative_path": "models\\vae\\minimax_h3_video_vae_fp16.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "minimax_h3_audio_vae_fp32",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "Comfy-Org/MiniMax-H3",
+      "source_path": "vae/minimax_h3_audio_vae_fp32.safetensors",
+      "target_relative_path": "models\\vae\\minimax_h3_audio_vae_fp32.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "minimax_h3_turbo_4step_ema_ckpt500",
+      "status": "PENDING",
+      "verification": "DEFERRED",
+      "repository": "Comfy-Org/MiniMax-H3",
+      "source_path": "loras/minimax_h3_turbo_4step_ema_ckpt500.safetensors",
+      "target_relative_path": "models\\loras\\minimax_h3_turbo_4step_ema_ckpt500.safetensors",
+      "size_bytes": null,
+      "sha256": null
+    }
+  ],
+  "next_step": "After the user confirms the PowerShell transfer has stopped, a separately authorized audit may inspect file presence, size, hash, and ComfyUI node compatibility."
+}

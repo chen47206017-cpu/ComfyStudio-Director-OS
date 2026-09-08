@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "api-smoke",
+    "kind": "command",
+    "level": "runtime",
+    "argv": [
+      "python",
+      "scripts/run_api_smoke.py"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 180,
+    "oracle_files": [
+      "tests/api_smoke.py"
+    ],
+    "covers": [
+      "Image-only planning still selects minimax_h3_lightx2v_v5 and image-plus-audio planning still selects minimax_h3_image_audio_to_video_v2, with hosted URL safety checks and no provider/job side effect.",
+      "POST /api/comfyui/h3/dry-run remains no-I/O and keeps MINIMAX_H3 as BLOCKED_LOCAL_H3 / DRY_RUN_ONLY.",
+      "AUTODL_ALLOW_PAID_SUBMIT remains disabled by default, and direct H3 job submission remains blocked with HTTP 409."
+    ]
+  },
+  "contract_sha256": "1103aa633058234f06b897a266a1343d5d48ad388c4f66a6f5767770bb204e25",
+  "started_at": "2026-09-05T03:21:05",
+  "finished_at": "2026-09-05T03:21:06",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/api-smoke.stdout.log",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": ".codex/verification-receipts/api-smoke.stderr.log",
+  "stderr_sha256": "d65f6a08e6b07b677551afd9fb77179036e692d23699573d0aa267de1beab643",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/h3.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "fffd2dc56498e8496e6aab607c4fd99433903f8992c2b75f109ec0d16c5877ff"
+    }
+  ],
+  "oracle_hashes": {
+    "tests/api_smoke.py": "52e5ef90b803b91561bd0634c7c49f5fd78ebcd88b1b314e3cd056d5a6139814"
+  }
+}

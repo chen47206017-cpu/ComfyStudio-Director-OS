@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "asset_id": "SW45_NEUTRAL_CONTROL_VIDEO_V1",
+  "source_portrait": {
+    "path": "F:\\一人公司\\comfyui-production\\sample_assets\\normalized\\suwanqing45_primary_portrait.png",
+    "sha256": "982321e2abeba73cd4cb805fc5d119a49ef418d343000e6615b33d20570d757c"
+  },
+  "output": {
+    "path": "F:\\一人公司\\comfyui-production\\sample_assets\\normalized\\suwanqing45_neutral_control.mp4",
+    "sha256": "3639e712c4b1068bfd0cf77a4e8550dc70e8b5d96ab3cb72d86d72aa635e2954"
+  },
+  "media": {
+    "width": 432,
+    "height": 768,
+    "frames": 121,
+    "fps": 24,
+    "duration_seconds": 5.04,
+    "verification": "generation_graph_and_prior_media_inspection"
+  },
+  "execution": {
+    "comfy_url": "http://127.0.0.1:8188",
+    "prompt_id": "10d162a5-e944-414b-a4d4-e61728ecb314",
+    "graph": "LoadImage -> ImageScale -> RepeatImageBatch(121) -> VHS_VideoCombine(24fps)",
+    "model_loading": "none"
+  }
+}

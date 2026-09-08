@@ -1,0 +1,36 @@
+﻿H3 NO-MMAP PATCH REPORT
+========================
+
+时间：
+2026-09-07 12:26:10
+
+Runtime:
+F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0
+
+Python:
+F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\.venv\Scripts\python.exe
+
+目标文件：
+F:\一人公司\comfyui-production\staging\comfyui-v0.34.0\ComfyUI-0.34.0\comfy\utils.py
+
+备份：
+F:\一人公司\comfyui-production\backups\h3-nommap-20260907-122609\utils.py
+
+SHA256 BEFORE:
+F3EE59BAF72F6910B7662224854E372C713BA3AD01C89739BA092E5EE22460E6
+
+SHA256 BACKUP:
+F3EE59BAF72F6910B7662224854E372C713BA3AD01C89739BA092E5EE22460E6
+
+SHA256 AFTER:
+1EC63AC3D0E599A51D9A46CCD3C258076651F971B1C2F5D5383EDF3D1C567060
+
+修复内容：
+1. --disable-mmap 时优先绕过 comfy_aimdo mmap。
+2. 不再通过 safetensors.safe_open().get_tensor() 读取。
+3. 改用 safetensors.torch.load_file backend=pread。
+4. metadata 使用普通 open/read 读取 safetensors header。
+5. 未启用 --disable-mmap 时保持原 aimdo / safe_open 行为。
+
+状态：
+PATCH_APPLIED_AND_SYNTAX_VALIDATED

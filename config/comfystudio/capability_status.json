@@ -1,0 +1,31 @@
+﻿{
+    "schema_version":  1,
+    "updated_at":  "2026-09-07T13:41:31",
+    "capabilities":  {
+                         "single_image_reference":  {
+                                                        "storage":  "ready",
+                                                        "workflow":  "connected"
+                                                    },
+                         "multi_image_reference":  {
+                                                       "storage":  "ready",
+                                                       "workflow":  "pending_binding"
+                                                   },
+                         "video_reference":  {
+                                                 "storage":  "ready",
+                                                 "workflow":  "pending_motion_context_binding"
+                                             },
+                         "voice_reference":  {
+                                                 "storage":  "ready",
+                                                 "workflow":  "pending_voice_pipeline"
+                                             },
+                         "dialogue_audio":  {
+                                                "storage":  "ready",
+                                                "workflow":  "pending_audio_mux"
+                                            },
+                         "asset_library":  {
+                                               "storage":  "ready",
+                                               "registry":  "ready",
+                                               "graphical_ui":  "pending"
+                                           }
+                     }
+}

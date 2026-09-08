@@ -1,0 +1,49 @@
+{
+  "schema": "comfystudio.fastlane.acceptance.v1",
+  "run_id": "implementation_fastlane_final_2026-09-08T06:54:20+08:00",
+  "observed_at_beijing": "2026-09-08T06:54:20+08:00",
+  "business_timezone": "Asia/Shanghai",
+  "status": "PARTIAL",
+  "modified_files": [
+    "backend/app.py",
+    "backend/v10_core.py",
+    "frontend/src/main.tsx",
+    "tests/test_backend_v10.py",
+    "ui/dist/index.html",
+    "ui/dist/assets/index-DKN8qTYt.js",
+    "ui/dist/assets/index-Dzq2u0zn.css"
+  ],
+  "new_files": [
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/index.html",
+    "frontend/vite.config.ts",
+    "frontend/tsconfig.json",
+    "frontend/src/styles.css",
+    "reports/timebase_correction/manifest.json",
+    "reports/timebase_correction/v8_phase0_audit.corrected.json",
+    "reports/timebase_correction/V8_MIGRATION_PLAN.corrected.md",
+    "reports\\protected_hashes_20260908_065420.json"
+  ],
+  "verification": {
+    "unittest": "6/6 passed",
+    "py_compile": "passed",
+    "typescript": "passed",
+    "production_build": "passed",
+    "http_8190": "real smoke passed: /, /director/, Vite JS/CSS, health/live, health/ready, assets all 200",
+    "http_8189": "UNAVAILABLE: connection refused at 127.0.0.1:8189",
+    "canon_gate": "V10 and legacy prompt/submit routes block 2006 modern-device conflicts with 422",
+    "canvas_cas": "revision save and stale revision conflict verified",
+    "protected_data": "hash manifest written; originals not modified"
+  },
+  "risks": [
+    "ComfyUI 127.0.0.1:8189 is offline; H3/Motion Context and MP4 generation remain unverified.",
+    "8190 smoke used Flask development server; production WSGI deployment remains pending.",
+    "Canvas persistence is still single-file global state; durable SQLite jobs and browser E2E remain deferred."
+  ],
+  "next_phase": [
+    "Restore ComfyUI 8189 and verify /object_info plus a real dry-run/queued workflow.",
+    "Add durable job/output/QC persistence after executor availability is proven.",
+    "Run browser-level ReactFlow interaction verification against the live 8190 service."
+  ]
+}

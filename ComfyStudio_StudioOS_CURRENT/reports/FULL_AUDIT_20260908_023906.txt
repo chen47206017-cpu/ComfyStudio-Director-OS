@@ -1,0 +1,69 @@
+ComfyStudio FULL AUDIT 20260908_023906
+[OK] ROOT工程存在
+[OK] 目录 backend
+[OK] 目录 backend\v8
+[OK] 目录 backend\routes
+[OK] 目录 backend\v8\api
+[OK] 目录 backend\v8\engines
+[OK] 目录 backend\v8\storage
+[OK] 目录 database
+[OK] 目录 database\v8
+[OK] 目录 ui
+[OK] 目录 reports
+[OK] 文件 backend\app.py
+[OK] 文件 backend\routes\v8_routes.py
+[OK] 文件 backend\v8\routes.py
+[OK] 文件 backend\v8\api\comfy_router.py
+[OK] 文件 backend\v8\api\production_api.py
+[OK] 文件 backend\v8\api\production_pipeline_api.py
+[OK] 文件 backend\v8\engines\canon_gate.py
+[OK] 文件 backend\v8\engines\prompt_compiler.py
+[OK] 文件 backend\v8\engines\script_parser.py
+[OK] 文件 backend\v8\engines\continuity_manager.py
+[OK] 文件 backend\v8\engines\asset_registry.py
+[OK] 文件 backend\v8\engines\shot_state.py
+[OK] 文件 backend\v8\storage\production_store.py
+[OK] 文件 backend\v8\storage\pipeline_store.py
+[OK] 文件 database\v8\pipeline.json
+[OK] 文件 database\v8\production.json
+[OK] Python backend\app.py
+[OK] Python backend\routes\v8_routes.py
+[OK] Python backend\v8\api\production_pipeline_api.py
+[OK] Python backend\v8\engines\asset_registry.py
+[OK] Python backend\v8\engines\shot_state.py
+[OK] Python backend\v8\storage\pipeline_store.py
+[OK] V8.2 API
+[OK] V8.4 Director API
+[OK] V8.5 Pipeline API
+Map([<Rule '/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/api/v8/status' (HEAD, GET, OPTIONS) -> v8_api.status>,
+ <Rule '/api/v8/canon/check' (POST, OPTIONS) -> v8_api.canon>,
+ <Rule '/api/v8/prompt/build' (POST, OPTIONS) -> v8_api.prompt>,
+ <Rule '/api/v8/comfy/submit' (POST, OPTIONS) -> v8_api.comfy>,
+ <Rule '/api/v8/production/parse' (POST, OPTIONS) -> v8_api.production_parse>,
+ <Rule '/api/v8/production/continuity' (POST, OPTIONS) -> v8_api.production_continuity>,
+ <Rule '/api/v8/production/save' (POST, OPTIONS) -> v8_api.production_save>,
+ <Rule '/api/v8/production/shots' (HEAD, GET, OPTIONS) -> v8_api.production_shots>,
+ <Rule '/api/v8/production/assets' (HEAD, GET, OPTIONS) -> v8_api.production_assets>,
+ <Rule '/api/v8/production/check' (POST, OPTIONS) -> v8_api.production_check>,
+ <Rule '/api/v8/api/v8/director/canvas' (HEAD, GET, OPTIONS) -> v8_api.director_api.canvas>,
+ <Rule '/api/v8/api/v8/director/canvas/save' (POST, OPTIONS) -> v8_api.director_api.canvas_save>,
+ <Rule '/api/v8/api/v8/director/reference/link' (POST, OPTIONS) -> v8_api.director_api.reference>,
+ <Rule '/api/v8/api/v8/director/assets' (HEAD, GET, OPTIONS) -> v8_api.director_api.assets>,
+ <Rule '/api/v8/api/v8/pipeline/status' (HEAD, GET, OPTIONS) -> v8_api.production_pipeline_api.status>,
+ <Rule '/api/v8/api/v8/pipeline/shot/create' (POST, OPTIONS) -> v8_api.production_pipeline_api.create_shot>,
+ <Rule '/api/v8/api/v8/pipeline/queue' (HEAD, GET, OPTIONS) -> v8_api.production_pipeline_api.queue>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> index>,
+ <Rule '/api/status' (HEAD, GET, OPTIONS) -> status>,
+ <Rule '/api/assets' (HEAD, GET, OPTIONS) -> assets>,
+ <Rule '/api/shots' (HEAD, GET, OPTIONS) -> shots>,
+ <Rule '/api/canon' (HEAD, GET, OPTIONS) -> canon>,
+ <Rule '/api/prompt' (POST, OPTIONS) -> prompt>,
+ <Rule '/api/reference' (HEAD, GET, OPTIONS) -> reference>])
+[OK] /api/shots 数量1
+[OK] v8_api 数量2
+[OK] register_blueprint 数量1
+[OK] JSON正常 database\v8\pipeline.json
+[OK] JSON正常 database\v8\production.json
+[OK] Assets目录存在
+[OK] 8190运行

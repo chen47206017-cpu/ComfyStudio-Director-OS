@@ -1,0 +1,52 @@
+{
+  "id": "minimax_h3_unified_v1",
+  "kind": "engine_spec",
+  "engine": "MINIMAX_H3",
+  "status": "BLOCKED_LOCAL_H3",
+  "providers": {
+    "LOCAL": {
+      "status": "BLOCKED_LOCAL_H3",
+      "reason": "The current local ComfyUI runtime does not expose native MiniMax H3 nodes."
+    },
+    "AUTODL_COMFYUI": {
+      "status": "DRY_RUN_ONLY",
+      "selector": "POST /api/comfyui/h3/dry-run",
+      "transport_contract": "VERIFIED_GENERIC_WORKFLOW_API",
+      "workflow_schema_status": "USER_SUPPLIED_UNVERIFIED",
+      "submit_allowed": false,
+      "image_only_workflow": "minimax_h3_lightx2v_v5",
+      "image_audio_workflow": "minimax_h3_image_audio_to_video_v2",
+      "schema_evidence": null
+    }
+  },
+  "planner_input_schema": {
+    "contract_scope": "PROJECT_NO_IO_PLANNER",
+    "additional_properties": false,
+    "vendor_schema_status": "USER_SUPPLIED_UNVERIFIED",
+    "required": ["prompt", "reference_images"],
+    "prompt": {"type": "string", "min_length": 1, "max_length": 10000},
+    "duration": {"type": "integer", "minimum": 1, "maximum": 15, "default": 5},
+    "resolution": {
+      "type": "string",
+      "allowed": ["480p\u7ad6", "480p\u6a2a", "768p\u7ad6", "768p\u6a2a"],
+      "default": "768p\u7ad6"
+    },
+    "reference_images": {"type": "array", "minimum": 1, "maximum": 9, "item": "hosted_http_url"},
+    "reference_audios": {"type": "array", "minimum": 0, "maximum": 3, "item": "hosted_http_url"},
+    "reference_videos": {"type": "array", "minimum": 0, "maximum": 3, "item": "hosted_http_url", "status": "UNAVAILABLE_IN_CURRENT_PROJECT_PLANNER"},
+    "seed": {"type": "integer", "minimum": 0, "status": "PROJECT_PLANNER_ONLY"}
+  },
+  "vendor_submission": {
+    "status": "BLOCKED_PENDING_SCHEMA_EVIDENCE",
+    "submit_allowed": false,
+    "schema_status": "USER_SUPPLIED_UNVERIFIED",
+    "schema_evidence": null,
+    "body": null
+  },
+  "non_goals": [
+    "No local H3 prompt graph is included.",
+    "No local path is published as a hosted reference URL.",
+    "No MiniMax H3 AutoDL task is submitted by this integration while this selector is dry-run only.",
+    "No legacy AutoDL H3 request fields, duration limits, or source resolution are treated as verified without current workflow-drawer evidence."
+  ]
+}

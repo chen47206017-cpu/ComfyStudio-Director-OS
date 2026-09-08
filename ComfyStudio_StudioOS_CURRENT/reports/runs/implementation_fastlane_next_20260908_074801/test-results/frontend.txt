@@ -1,0 +1,2 @@
+npx tsc --noEmit: passed
+npm run build: passed

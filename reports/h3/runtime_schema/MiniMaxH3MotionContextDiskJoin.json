@@ -1,0 +1,107 @@
+﻿{
+    "input":  {
+                  "required":  {
+                                   "samples":  [
+                                                   "LATENT",
+                                                   {
+                                                       "lazy":  true
+                                                   }
+                                               ],
+                                   "validated":  [
+                                                     "BOOLEAN",
+                                                     {
+                                                         "default":  false
+                                                     }
+                                                 ],
+                                   "run_mode":  [
+                                                    [
+                                                        "full_batch",
+                                                        "clip_by_clip"
+                                                    ],
+                                                    {
+                                                        "default":  "full_batch"
+                                                    }
+                                                ],
+                                   "fps":  [
+                                               "FLOAT",
+                                               {
+                                                   "default":  24.0,
+                                                   "min":  1.0,
+                                                   "max":  240.0,
+                                                   "step":  0.001
+                                               }
+                                           ]
+                               },
+                  "optional":  {
+                                   "previous_cache":  [
+                                                          "H3_MOTION_DISK_CACHE"
+                                                      ],
+                                   "trim_frames":  [
+                                                       "INT",
+                                                       {
+                                                           "forceInput":  true,
+                                                           "lazy":  true
+                                                       }
+                                                   ]
+                               },
+                  "hidden":  {
+                                 "unique_id":  "UNIQUE_ID"
+                             }
+              },
+    "input_order":  {
+                        "required":  [
+                                         "samples",
+                                         "validated",
+                                         "run_mode",
+                                         "fps"
+                                     ],
+                        "optional":  [
+                                         "previous_cache",
+                                         "trim_frames"
+                                     ],
+                        "hidden":  [
+                                       "unique_id"
+                                   ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "H3_MOTION_DISK_CACHE",
+                   "LATENT",
+                   "INT",
+                   "INT",
+                   "STRING",
+                   "FLOAT",
+                   "STRING",
+                   "STRING"
+               ],
+    "output_is_list":  [
+                           false,
+                           false,
+                           false,
+                           false,
+                           false,
+                           false,
+                           false,
+                           false
+                       ],
+    "output_name":  [
+                        "cache",
+                        "cached_samples",
+                        "clip_count",
+                        "frame_count",
+                        "status",
+                        "cache_size_mb",
+                        "cache_path",
+                        "build"
+                    ],
+    "name":  "MiniMaxH3MotionContextDiskJoin",
+    "display_name":  "MiniMax H3 Motion Context Disk Join",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  false,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

@@ -1,0 +1,105 @@
+﻿{
+    "input":  {
+                  "optional":  {
+                                   "ref_1":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 1. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_2":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 2. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_3":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 3. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_4":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 4. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_5":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 5. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_6":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 6. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_7":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 7. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_8":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 8. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ],
+                                   "ref_9":  [
+                                                 "IMAGE",
+                                                 {
+                                                     "forceInput":  true,
+                                                     "tooltip":  "External image for Extender Ref 9. Connected slots keep their exact Ref number; empty slots are left untouched. If an IMAGE batch is connected, the first image is imported."
+                                                 }
+                                             ]
+                               }
+              },
+    "input_order":  {
+                        "optional":  [
+                                         "ref_1",
+                                         "ref_2",
+                                         "ref_3",
+                                         "ref_4",
+                                         "ref_5",
+                                         "ref_6",
+                                         "ref_7",
+                                         "ref_8",
+                                         "ref_9"
+                                     ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "H3_REF_PACK",
+                   "INT"
+               ],
+    "output_is_list":  [
+                           false,
+                           false
+                       ],
+    "output_name":  [
+                        "ref_pack",
+                        "ref_count"
+                    ],
+    "name":  "MiniMaxH3ReferencePackBridge",
+    "display_name":  "MiniMax H3 Reference Pack Bridge",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  false,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

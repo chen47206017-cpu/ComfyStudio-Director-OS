@@ -1,0 +1,134 @@
+﻿{
+    "input":  {
+                  "required":  {
+                                   "cache":  [
+                                                 "H3_MOTION_DISK_CACHE"
+                                             ],
+                                   "vae":  [
+                                               "VAE"
+                                           ],
+                                   "audio_vae":  [
+                                                     "VAE"
+                                                 ],
+                                   "fps":  [
+                                               "FLOAT",
+                                               {
+                                                   "default":  24.0,
+                                                   "min":  1.0,
+                                                   "max":  240.0,
+                                                   "step":  0.001
+                                               }
+                                           ],
+                                   "filename_prefix":  [
+                                                           "STRING",
+                                                           {
+                                                               "default":  "MiniMax_H3_cached"
+                                                           }
+                                                       ],
+                                   "output_directory":  [
+                                                            "STRING",
+                                                            {
+                                                                "default":  ""
+                                                            }
+                                                        ],
+                                   "codec":  [
+                                                 [
+                                                     "H.264",
+                                                     "H.264 CPU (libx264)",
+                                                     "H.265 / HEVC",
+                                                     "FFV1 lossless"
+                                                 ],
+                                                 {
+                                                     "default":  "H.264",
+                                                     "tooltip":  "H.264 automatically uses NVIDIA NVENC hardware encoding when available, with transparent libx264 CPU fallback. Choose H.264 CPU (libx264) to force software encoding."
+                                                 }
+                                             ],
+                                   "crf":  [
+                                               "INT",
+                                               {
+                                                   "default":  17,
+                                                   "min":  0,
+                                                   "max":  51,
+                                                   "step":  1
+                                               }
+                                           ],
+                                   "preset":  [
+                                                  [
+                                                      "ultrafast",
+                                                      "superfast",
+                                                      "veryfast",
+                                                      "faster",
+                                                      "fast",
+                                                      "medium",
+                                                      "slow"
+                                                  ],
+                                                  {
+                                                      "default":  "fast"
+                                                  }
+                                              ],
+                                   "audio_bitrate":  [
+                                                         [
+                                                             "128k",
+                                                             "192k",
+                                                             "256k",
+                                                             "320k"
+                                                         ],
+                                                         {
+                                                             "default":  "192k"
+                                                         }
+                                                     ],
+                                   "autoplay":  [
+                                                    "BOOLEAN",
+                                                    {
+                                                        "default":  true,
+                                                        "tooltip":  "Auto-play the video preview when generating finishes or the node is loaded."
+                                                    }
+                                                ]
+                               },
+                  "hidden":  {
+                                 "unique_id":  "UNIQUE_ID",
+                                 "prompt":  "PROMPT",
+                                 "extra_pnginfo":  "EXTRA_PNGINFO"
+                             }
+              },
+    "input_order":  {
+                        "required":  [
+                                         "cache",
+                                         "vae",
+                                         "audio_vae",
+                                         "fps",
+                                         "filename_prefix",
+                                         "output_directory",
+                                         "codec",
+                                         "crf",
+                                         "preset",
+                                         "audio_bitrate",
+                                         "autoplay"
+                                     ],
+                        "hidden":  [
+                                       "unique_id",
+                                       "prompt",
+                                       "extra_pnginfo"
+                                   ]
+                    },
+    "is_input_list":  false,
+    "output":  [
+                   "VIDEO"
+               ],
+    "output_is_list":  [
+                           false
+                       ],
+    "output_name":  [
+                        "video"
+                    ],
+    "name":  "MiniMaxH3MotionContextDiskFinalDecode",
+    "display_name":  "MiniMax H3 Extender Final Decode / Preview",
+    "description":  "",
+    "python_module":  "custom_nodes.ComfyUI_MiniMax_H3_Extender",
+    "category":  "MiniMax H3",
+    "output_node":  true,
+    "has_intermediate_output":  false,
+    "search_aliases":  [
+
+                       ]
+}

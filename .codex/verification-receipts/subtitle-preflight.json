@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "check": {
+    "id": "subtitle-preflight",
+    "kind": "command",
+    "level": "static",
+    "argv": [
+      "python",
+      "scripts/validate_subtitles.py",
+      "sample_assets/subtitles/SUBTITLE_LOCK_V1_preview.ass",
+      "--video-width",
+      "1080",
+      "--video-height",
+      "1920"
+    ],
+    "cwd": ".",
+    "timeout_seconds": 60,
+    "covers": [
+      "Project regression, API smoke, workflow JSON validation, subtitle preflight, secret scan, and manifest-only download-state checks pass without accessing the protected model file."
+    ]
+  },
+  "contract_sha256": "1103aa633058234f06b897a266a1343d5d48ad388c4f66a6f5767770bb204e25",
+  "started_at": "2026-09-05T03:21:13",
+  "finished_at": "2026-09-05T03:21:13",
+  "exit_code": 0,
+  "timed_out": false,
+  "sensitive_output_detected": 0,
+  "stdout": ".codex/verification-receipts/subtitle-preflight.stdout.log",
+  "stdout_sha256": "5e6f2a44698fb5f61d57be1099508b2d38f85c8089340c734ea4cf3db5854faf",
+  "stderr": ".codex/verification-receipts/subtitle-preflight.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "subjects": [
+    {
+      "path": "src/comfyui_production/h3.py",
+      "version": "v0.1-local-autodl",
+      "sha256": "fffd2dc56498e8496e6aab607c4fd99433903f8992c2b75f109ec0d16c5877ff"
+    }
+  ],
+  "oracle_hashes": {}
+}

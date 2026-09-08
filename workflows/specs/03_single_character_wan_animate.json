@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "blocked_workflow_specification",
+  "id": "03_single_character_wan_animate",
+  "execution_status": "BLOCKED",
+  "reason": "Wan2.2 Animate 14B FP8 is not installed or validated. It must not be represented as a dual-character binding solution.",
+  "providers": ["LOCAL", "REMOTE_STATIC"],
+  "media_transport": "Use real local image and driving-video files; asset:// identifiers are prohibited.",
+  "inputs": {
+    "character_image": {"media_type": "image", "role": "single_character"},
+    "driving_video": {"media_type": "video", "role": "motion_reference"},
+    "mode": {"type": "string", "allowed": ["move", "mix"]},
+    "character_mask": {"media_type": "image", "optional": true, "role": "character_mask"},
+    "prompt": {"type": "string"},
+    "duration_seconds": {"type": "number", "allowed": [4, 5]},
+    "seed": {"type": "integer"}
+  },
+  "required_components": ["Wan2.2 Animate 14B FP8", "single-character identity check"],
+  "quality_gates": ["reject multiple faces or identity drift", "flag unstable action continuation as NEEDS_REVIEW"],
+  "presets": {"LOCAL_DRAFT": "low-memory technical motion test", "CLOUD_5090_QUALITY": "quality motion render at 24 fps"},
+  "outputs": ["raw_video_mp4", "identity_review_frames", "run_metadata_json"]
+}

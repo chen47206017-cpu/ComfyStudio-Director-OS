@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "asset_id": "SW45_PRIMARY_PORTRAIT_V1",
+  "source": {
+    "path": "F:\\AI短剧\\苏晚晴45.png",
+    "sha256": "51037bbabf74be953b5ef633d3749d16022d0648bab27566fee0e0607ec13182",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "derivative": {
+    "path": "F:\\一人公司\\comfyui-production\\sample_assets\\normalized\\suwanqing45_primary_portrait.png",
+    "sha256": "982321e2abeba73cd4cb805fc5d119a49ef418d343000e6615b33d20570d757c",
+    "dimensions": {
+      "width": 270,
+      "height": 480
+    },
+    "operation": "pixel_crop_only",
+    "crop_box_left_top_right_bottom": [
+      276,
+      23,
+      546,
+      503
+    ],
+    "text_policy": "central portrait panel only; surrounding character-sheet text excluded"
+  },
+  "usage": {
+    "character_id": "SW45",
+    "allowed_use": "local technical validation",
+    "cloud_upload": "requires separate user approval and a user-managed public media URL"
+  }
+}

@@ -1,0 +1,19 @@
+﻿{
+  "version": 1,
+  "workflows": [
+    {
+      "id": "h3-r2v-official",
+      "name": "MiniMax H3 Ref2VA Official",
+      "path": "F:\\一人公司\\comfyui-production\\workflows\\official_h3\\video_minimax_h3_r2v.json",
+      "type": "master",
+      "write_protected": true
+    },
+    {
+      "id": "h3-r2v-smoke-001",
+      "name": "H3 R2V Smoke 001",
+      "path": "F:\\一人公司\\comfyui-production\\workflows\\smoke\\H3-R2V-SMOKE-001.json",
+      "type": "candidate",
+      "write_protected": false
+    }
+  ]
+}

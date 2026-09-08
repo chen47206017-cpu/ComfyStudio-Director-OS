@@ -1,0 +1,31 @@
+{
+  "provider": "LOCAL",
+  "workflow_id": "01_three_images_masterframe_i2v",
+  "inputs": {
+    "prompt": "A dramatic apartment hallway shot with two distinct versions of the same woman.",
+    "negative_prompt": "split screen, collage, duplicate face, fused face, age swap, wardrobe swap",
+    "duration_seconds": 5,
+    "seed": 20260903
+  },
+  "media": {
+    "character_a_image": {
+      "path": "F:\\AI短剧\\character_a_SW45.png",
+      "media_type": "image",
+      "role": "character_a"
+    },
+    "character_b_image": {
+      "path": "F:\\AI短剧\\character_b_SW25.png",
+      "media_type": "image",
+      "role": "character_b"
+    },
+    "scene_or_layout_image": {
+      "path": "F:\\AI短剧\\scene_old_apartment.png",
+      "media_type": "image",
+      "role": "scene"
+    }
+  },
+  "options": {
+    "preset": "CLOUD_5090_QUALITY"
+  },
+  "status": "example_only_pipeline_not_installed"
+}

@@ -1,0 +1,26 @@
+﻿{
+
+"models":[
+
+
+{
+"id":"MINIMAX_H3",
+"name":"MiniMax H3"
+},
+
+
+{
+"id":"SEEDANCE_2.5",
+"name":"Seedance 2.5"
+},
+
+
+{
+"id":"COMFY_LOCAL",
+"name":"ComfyUI Local"
+}
+
+
+]
+
+}

@@ -1,0 +1,11 @@
+{
+  "id": "demo_time_phone",
+  "title": "楼上是25岁的我，楼下是未来女儿",
+  "version": "1.0.0",
+  "status": "DEMO_READY_PARTIAL",
+  "timezone": "Asia/Shanghai",
+  "default_shot_id": "SHOT001",
+  "workflow_capsule": "h3_reference_to_video",
+  "created_at": "dynamic",
+  "description": "V10.1 Director Production Demo：角色身份、声音、年代道具与跨镜连续性。"
+}

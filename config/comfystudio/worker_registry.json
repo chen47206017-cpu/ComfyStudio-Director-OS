@@ -1,0 +1,26 @@
+﻿{
+    "schema_version":  1,
+    "workers":  [
+                    {
+                        "id":  "h3-f",
+                        "display_name":  "MiniMax H3 本地 Worker",
+                        "endpoint":  "http://127.0.0.1:8189",
+                        "runtime_root":  "F:\\一人公司\\comfyui-production\\staging\\comfyui-v0.34.0\\ComfyUI-0.34.0",
+                        "model_root":  "G:\\ComfyUI\\models",
+                        "input_root":  "G:\\ComfyStudioData\\workers\\h3-f\\input",
+                        "output_root":  "G:\\ComfyStudioData\\workers\\h3-f\\output",
+                        "status":  "candidate",
+                        "capabilities":  {
+                                             "image_reference":  true,
+                                             "multi_image_storage":  true,
+                                             "reference_to_video":  true,
+                                             "motion_context_nodes":  true,
+                                             "video_reference_storage":  true,
+                                             "audio_reference_storage":  true,
+                                             "audio_reference_workflow_connected":  false,
+                                             "video_reference_workflow_connected":  false,
+                                             "production_baseline":  false
+                                         }
+                    }
+                ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "database/assets.json",
+    "sha256": "B52B299B9496DF33621FABBFF7A28D8AB8A74459B1749DDACBB030BD2008A39C",
+    "bytes": 503
+  },
+  {
+    "path": "database/canon.json",
+    "sha256": "FBCC007D776E8BB4DE759DC313798E0A5F1A961EA606A09C614E41491ABCF442",
+    "bytes": 276
+  },
+  {
+    "path": "database/shots.json",
+    "sha256": "99F27EE7E1A94C89365708EEAAD73F377C70AD99C1CDD3691D6F8E01A8B7C2C2",
+    "bytes": 226
+  },
+  {
+    "path": "database/reference.json",
+    "sha256": "84BAD757C4F8EC8761DC73DB5E919B1811960433DD6D3A6563F69528E1FFA3E9",
+    "bytes": 109
+  },
+  {
+    "path": "database/projects.json",
+    "sha256": "B8654412EAAE138D3337AAFDF6489285C85818F61336CF904F03FE2177504FE4",
+    "bytes": 101
+  },
+  {
+    "path": "database/studio.json",
+    "sha256": "204BE45C151232FC7BEACB47FE67C454F6D1937221ECF7C72E2A768491D49B72",
+    "bytes": 120
+  },
+  {
+    "path": "database/studio_version.json",
+    "sha256": "1AAD3347B6947D670708130241123DEDB56AE157BEF7F06A49D52AE3BD560C73",
+    "bytes": 73
+  },
+  {
+    "path": "database/version.json",
+    "sha256": "878F05E1D96353359BFEA205115B81629DDF955448570364DF5D5F5BCC320AAB",
+    "bytes": 88
+  }
+]

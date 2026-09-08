@@ -1,0 +1,52 @@
+{
+  "schema": "comfystudio.run-manifest.v2",
+  "run_id": "implementation_fastlane_next_2026-09-08T07:48:01+08:00",
+  "observed_at_beijing": "2026-09-08T08:03:07.0311357+08:00",
+  "business_timezone": "Asia/Shanghai",
+  "status": "PARTIAL",
+  "phase": "durable-job-comfy-client",
+  "evidence": [
+    "discovery.json",
+    "capabilities.json",
+    "workflow-preflight/h3_reference_to_video.json",
+    "protected-hashes.json",
+    "test-results/unittest.txt",
+    "test-results/frontend.txt",
+    "runtime-snapshots/browser_e2e.json",
+    "runtime-snapshots/execution_chain_recheck.json",
+    "test-results/comfy-execution.txt"
+  ],
+  "changes": [
+    "Worker Registry discovers 8188 and 8189 dynamically",
+    "Workflow Capsule for real MiniMax H3 source workflow",
+    "SQLite durable jobs with idempotency and cancel",
+    "Chinese Director UI with All-in-one Reference binding",
+    "Director/Engineering mode shared graph and Canvas CAS",
+    "ComfyClient支持输入上传、prompt_id归一、历史输出解析、view下载与SHA-256校验",
+    "Durable Jobs增加事件/输出查询、refresh与queue/history reconcile",
+    "Capsule增加binding_map与模型文件路径/大小/SHA-256预检",
+    "dry_run作业不再伪装为QUEUED，真实提交与预检状态分离"
+  ],
+  "browser_e2e": {
+    "status": "PASSED",
+    "console_errors": 0,
+    "network_critical_errors": 0,
+    "visible_nodes": 5,
+    "visible_edges": 4,
+    "reference_binding": "角色身份 → 苏晚晴45岁",
+    "reload_restored": true,
+    "mode_switch_preserved_graph": true,
+    "url": "http://127.0.0.1:8190/director/"
+  },
+  "gates": {
+    "core": "READY_CORE",
+    "h3": "H3_CAPABILITY_DISCOVERED_MODEL_PREFLIGHT_UNVERIFIED",
+    "real_mp4": "UNVERIFIED",
+    "packaging": "UNVERIFIED"
+  },
+  "next_actions": [
+    "在确认低成本参数后提交一次真实H3 smoke",
+    "从真实history回收MP4并执行容器/ffprobe/哈希校验",
+    "生成LAST.png、END5.mp4与continuity provenance"
+  ]
+}
