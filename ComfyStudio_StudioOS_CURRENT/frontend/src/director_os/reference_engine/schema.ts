@@ -1,52 +1,63 @@
 ﻿
+export type ReferenceType =
+
+"CHARACTER"
+
+|
+
+"SCENE"
+
+|
+
+"PROP"
+
+|
+
+"VIDEO"
+
+
+;
+
+
 export interface ReferenceAsset{
 
 
 id:string;
 
 
-type:
-"CHARACTER"
-|
-"SCENE"
-|
-"PROP"
-|
-"VIDEO_FRAME";
+type:ReferenceType;
+
+
+name:string;
 
 
 path:string;
 
 
-priority:number;
+weight:number;
+
+
+tags:string[];
+
 
 
 }
 
 
 
-export interface ReferencePackage{
+export interface ReferencePack{
 
 
 shotId:string;
 
 
-year:number;
+assets:ReferenceAsset[];
 
 
-characterRefs:ReferenceAsset[];
+inheritPrevious:boolean;
 
-
-sceneRefs:ReferenceAsset[];
-
-
-propRefs:ReferenceAsset[];
-
-
-videoRefs:ReferenceAsset[];
 
 
 }
-
 
 

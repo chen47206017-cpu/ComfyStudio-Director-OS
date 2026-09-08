@@ -1,24 +1,15 @@
 ﻿
 
 import {
-
-createReferencePackage
-
+buildReferencePack
 }
-
-from "../reference_engine/reference_package";
-
+from "../reference_engine/builder";
 
 
 import {
-
-validateReferencePackage
-
+validateReferencePack
 }
-
 from "../reference_engine/validator";
-
-
 
 
 
@@ -26,22 +17,33 @@ export class ReferenceEngine{
 
 
 
-build(data:any){
+run(
+shot:any
+){
 
 
-const pkg=
-createReferencePackage(data);
+const pack=
+buildReferencePack(
+shot
+);
+
+
+
+const check=
+validateReferencePack(
+pack
+);
 
 
 
 return {
 
 
-package:pkg,
+pack,
 
 
-validation:
-validateReferencePackage(pkg)
+check
+
 
 
 };

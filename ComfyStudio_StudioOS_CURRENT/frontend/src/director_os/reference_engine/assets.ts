@@ -3,114 +3,165 @@
 export const referenceAssets={
 
 
-SW25_FACE_DNA:{
 
-id:"SW25_FACE_DNA",
-
-type:"character",
-
-name:"25岁苏晚晴",
-
-source:"Mixed1",
-
-image:[
-"Mixed1"
-],
-
-priority:10,
-
-locked:true
-
-},
+SW25_FACE:{
 
 
+id:"SW25_FACE",
 
-SW45_FACE_DNA:{
 
-id:"SW45_FACE_DNA",
+type:"CHARACTER",
 
-type:"character",
 
-name:"45岁苏晚晴",
+name:"25岁苏晚晴Face DNA",
 
-source:"Mixed45",
 
-image:[
-"Mixed45"
-],
+path:"Mixed1",
 
-priority:10,
 
-locked:true
+weight:1.0,
+
+
+tags:[
+
+"face",
+
+"age25",
+
+"identity"
+
+]
 
 },
 
 
 
-CN40_FACE_DNA:{
 
-id:"CN40_FACE_DNA",
+SW45_FACE:{
 
-type:"character",
+
+id:"SW45_FACE",
+
+
+type:"CHARACTER",
+
+
+name:"45岁苏晚晴Face DNA",
+
+
+path:"Mixed45",
+
+
+weight:1.0,
+
+
+tags:[
+
+"face",
+
+"age45",
+
+"identity"
+
+]
+
+},
+
+
+
+
+CN40_FACE:{
+
+
+id:"CN40_FACE",
+
+
+type:"CHARACTER",
+
 
 name:"40岁陈念",
 
-source:"MixedCN",
 
-image:[
-"MixedCN"
-],
+path:"MixedCN",
 
-priority:10,
 
-locked:true
+weight:1.0,
+
+
+tags:[
+
+"future",
+
+"identity"
+
+]
 
 },
 
 
 
-STUDIO_2006_REFERENCE:{
 
-id:"STUDIO_2006_REFERENCE",
+STUDIO2006:{
 
-type:"scene",
+
+id:"STUDIO2006",
+
+
+type:"SCENE",
+
 
 name:"2006苏晚晴工作室",
 
-source:"Mixed3",
 
-image:[
-"Mixed3"
-],
+path:"Mixed3",
 
-priority:9,
 
-locked:true
+weight:0.9,
+
+
+tags:[
+
+"scene",
+
+"2006"
+
+]
 
 },
 
 
 
-PHONE_2006_REFERENCE:{
 
-id:"PHONE_2006_REFERENCE",
+PHONE2006:{
 
-type:"prop",
+
+id:"PHONE2006",
+
+
+type:"PROP",
+
 
 name:"米黄色有线座机",
 
-source:"Mixed4",
 
-image:[
-"Mixed4"
-],
+path:"Mixed4",
 
-priority:9,
 
-locked:true
+weight:0.9,
+
+
+tags:[
+
+"prop",
+
+"2006"
+
+]
 
 }
 
 
 };
+
+
 

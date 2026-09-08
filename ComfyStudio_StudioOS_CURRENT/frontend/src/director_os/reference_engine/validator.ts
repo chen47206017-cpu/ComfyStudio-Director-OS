@@ -1,41 +1,26 @@
 ﻿
 
-export function validateReferencePackage(
-
-pkg:any
-
+export function validateReferencePack(
+pack:any
 ){
 
 
-const issues:string[]=[];
 
-
-
-if(!pkg.shotId)
-
-issues.push(
-"SHOT_ID_MISSING"
-);
+const issues=[];
 
 
 
 if(
-pkg.characterRefs.length===0
-)
+!pack.assets ||
+pack.assets.length===0
+){
 
 issues.push(
-"CHARACTER_REFERENCE_MISSING"
+"NO_REFERENCE"
 );
 
 
-
-if(
-pkg.sceneRefs.length===0
-)
-
-issues.push(
-"SCENE_REFERENCE_MISSING"
-);
+}
 
 
 
@@ -49,7 +34,9 @@ issues.length===0,
 issues
 
 
+
 };
+
 
 
 }
