@@ -1,22 +1,139 @@
 ﻿
 {
-"name":"comfystudio-director-os",
 
-"version":"60.3.0",
+"name":
 
-"main":"main.js",
+"comfystudio-director-os",
 
-"scripts":{
 
-"start":"electron ."
+"version":
+
+"60.4.0",
+
+
+"main":
+
+"main.js",
+
+
+"scripts":
+
+{
+
+
+"start":
+
+"electron .",
+
+
+"build":
+
+"electron-builder"
+
+
 
 },
 
-"dependencies":{
 
-"electron":"latest"
+"build":
+
+{
+
+
+"appId":
+
+"com.comfystudio.director",
+
+
+"productName":
+
+"ComfyStudio Director OS",
+
+
+"directories":
+
+{
+
+
+"output":
+
+"release"
+
+
+},
+
+
+"win":
+
+{
+
+
+"target":
+
+"nsis",
+
+
+"icon":
+
+"icons/icon.ico"
+
+
+
+},
+
+
+"nsis":
+
+{
+
+
+"oneClick":
+
+false,
+
+
+"allowToChangeInstallationDirectory":
+
+true,
+
+
+"createDesktopShortcut":
+
+true,
+
+
+"createStartMenuShortcut":
+
+true
+
+
 
 }
+
+
+
+},
+
+
+"devDependencies":
+
+{
+
+
+"electron":
+
+"latest",
+
+
+"electron-builder":
+
+"latest"
+
+
+
+}
+
+
 
 }
 
