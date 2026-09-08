@@ -1,5 +1,5 @@
 ﻿
-export interface ModelProfile{
+export interface ModelCapability{
 
 
 id:string;
@@ -14,12 +14,35 @@ provider:string;
 type:string;
 
 
-strength:string;
+resolution:string;
+
+
+referenceSupport:boolean;
+
+
+videoLength:number;
 
 
 costLevel:string;
 
 
 }
+
+
+
+export interface ModelDecision{
+
+
+model:string;
+
+
+reason:string;
+
+
+estimatedCost:string;
+
+
+}
+
 
 
