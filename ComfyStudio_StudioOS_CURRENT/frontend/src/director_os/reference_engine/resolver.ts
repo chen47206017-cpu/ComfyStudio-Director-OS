@@ -1,8 +1,7 @@
 ﻿
-
 import {
 
-referenceAssets
+references
 
 }
 
@@ -10,93 +9,24 @@ from "./database";
 
 
 
-
 export function resolveReference(
 
-shot:any
+ids:string[]
 
 ){
 
 
 
-const result:any[]=[];
+return ids.map(
 
+id=>
 
-
-if(shot.characters){
-
-shot.characters.forEach(
-
-(c:string)=>{
-
-
-const asset=
-
-(referenceAssets as any)[c];
-
-
-if(asset){
-
-result.push(asset);
-
-}
-
-
-}
+(references as any)[id]
 
 )
 
-}
+.filter(Boolean);
 
-
-
-if(shot.scene){
-
-const asset=
-
-(referenceAssets as any)[shot.scene];
-
-
-if(asset){
-
-result.push(asset);
-
-}
-
-}
-
-
-
-
-if(shot.props){
-
-shot.props.forEach(
-
-(p:string)=>{
-
-
-const asset=
-
-(referenceAssets as any)[p];
-
-
-if(asset){
-
-result.push(asset);
-
-}
-
-
-}
-
-)
-
-}
-
-
-
-
-return result;
 
 
 }

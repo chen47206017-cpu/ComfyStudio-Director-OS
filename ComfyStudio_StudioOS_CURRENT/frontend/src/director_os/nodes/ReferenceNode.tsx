@@ -1,5 +1,4 @@
 ﻿
-
 import React from "react";
 
 
@@ -20,24 +19,17 @@ export default function ReferenceNode(
 ){
 
 
-const engine=
 
-new ReferenceEngine();
-
+const engine=new ReferenceEngine();
 
 
-function check(){
+
+function resolve(){
 
 
 console.log(
 
-engine.check(
-
-data.reference,
-
-data.year
-
-)
+engine.resolve(data.references)
 
 );
 
@@ -53,26 +45,26 @@ return (
 
 <h3>
 
-Reference参考引擎节点
+Reference参考节点
 
 </h3>
 
 
 <button
 
-onClick={check}
+onClick={resolve}
 
 >
 
-检查参考资产
+加载参考资产
 
 </button>
 
 
 </div>
 
-)
 
+)
 
 
 }

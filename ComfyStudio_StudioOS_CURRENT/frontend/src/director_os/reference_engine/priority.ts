@@ -1,5 +1,4 @@
 ﻿
-
 export const referencePriority={
 
 
@@ -10,6 +9,9 @@ SCENE:8,
 
 
 PROP:7,
+
+
+SHOT:6,
 
 
 STYLE:5

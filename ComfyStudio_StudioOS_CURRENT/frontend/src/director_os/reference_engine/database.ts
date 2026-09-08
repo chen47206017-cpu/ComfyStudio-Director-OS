@@ -1,116 +1,119 @@
 ﻿
-
-export const referenceAssets={
-
+export const references={
 
 
-SW25_FACE_01:{
+SW25_FACE_DNA:{
 
 
-id:"SW25_FACE_01",
+id:"SW25_FACE_DNA",
 
 
 type:"CHARACTER",
 
 
-name:"25岁苏晚晴Face DNA",
+name:"苏晚晴25岁Face DNA",
 
 
-year:2006,
+source:"Mixed1",
 
 
 priority:10,
 
 
-role:"人物身份锁定",
+tags:[
 
+"25岁",
+"女性",
+"角色锁定"
 
-image:"Mixed1"
-
+]
 
 },
 
 
 
-SW45_FACE_01:{
+SW45_FACE_DNA:{
 
 
-id:"SW45_FACE_01",
+id:"SW45_FACE_DNA",
 
 
 type:"CHARACTER",
 
 
-name:"45岁苏晚晴Face DNA",
+name:"苏晚晴45岁Face DNA",
 
 
-year:2026,
-
-
-priority:10,
-
-
-role:"人物身份锁定",
-
-
-image:"Mixed45"
-
-
-},
-
-
-
-CN40_FACE_01:{
-
-
-id:"CN40_FACE_01",
-
-
-type:"CHARACTER",
-
-
-name:"40岁陈念",
-
-
-year:2046,
+source:"Mixed45",
 
 
 priority:10,
 
 
-role:"未来女儿身份锁定",
+tags:[
 
+"45岁",
+"成熟女性"
 
-image:"MixedCN"
-
+]
 
 },
 
 
 
-STUDIO2006_REF:{
+STUDIO_2006:{
 
 
-id:"STUDIO2006_REF",
+id:"STUDIO_2006",
 
 
 type:"SCENE",
 
 
-name:"2006工作室",
+name:"2006苏晚晴工作室",
 
 
-year:2006,
+source:"Mixed3",
 
 
 priority:8,
 
 
-role:"空间锁定",
+tags:[
+
+"2006",
+"室内设计"
+
+]
+
+},
 
 
-image:"Mixed3"
 
+PHONE_2006:{
+
+
+id:"PHONE_2006",
+
+
+type:"PROP",
+
+
+name:"米黄色有线电话",
+
+
+source:"Mixed4",
+
+
+priority:7,
+
+
+tags:[
+
+"座机",
+"2006"
+
+]
 
 }
 
