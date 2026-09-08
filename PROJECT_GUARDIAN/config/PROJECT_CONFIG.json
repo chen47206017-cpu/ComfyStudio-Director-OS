@@ -1,0 +1,33 @@
+﻿{
+"default":"local_gpu",
+
+"providers":[
+
+{
+"id":"local_gpu",
+"name":"RTX5060Ti Local",
+"enabled":true
+},
+
+{
+"id":"autodl5090",
+"name":"AutoDL RTX5090",
+"enabled":false
+},
+
+{
+"id":"wan3",
+"name":"Wan3 API",
+"enabled":false
+},
+
+{
+"id":"seedance25",
+"name":"Seedance2.5",
+"enabled":false
+}
+
+]
+
+}
+
