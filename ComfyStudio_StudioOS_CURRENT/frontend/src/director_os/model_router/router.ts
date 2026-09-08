@@ -1,76 +1,60 @@
 ﻿
 
-export function routeModel(task:any){
+import {
+
+modelRegistry
+
+}
+
+from "./models";
 
 
 
-if(task.priority==="QUALITY"){
+
+export function routeModel(
+task:any
+){
 
 
-return {
+
+if(
+task.priority==="QUALITY"
+){
 
 
-model:"SEEDANCE_25",
-
-
-reason:"最高人物一致性与影视质量"
-
-
-};
+return modelRegistry.SEEDANCE_25;
 
 
 }
 
 
 
-if(task.local===true){
+if(
+task.priority==="SPEED"
+){
 
 
-return {
-
-
-model:"COMFY_LOCAL",
-
-
-reason:"本地GPU生成"
-
-
-};
+return modelRegistry.SEEDANCE_FAST;
 
 
 }
 
 
 
-if(task.cost==="LOW"){
+if(
+task.local===true
+){
 
 
-return {
-
-
-model:"MINIMAX_H3",
-
-
-reason:"低成本测试"
-
-
-};
+return modelRegistry.COMFY_LOCAL;
 
 
 }
 
 
 
-return {
 
-
-model:"SEEDANCE_20",
-
-
-reason:"平衡质量成本"
-
-
-};
+return modelRegistry.SEEDANCE_25;
 
 
 
