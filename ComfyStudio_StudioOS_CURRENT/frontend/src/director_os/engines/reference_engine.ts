@@ -1,21 +1,24 @@
 ﻿
 import {
 
-resolveReference
+validateReference
 
 }
 
-from "../reference_engine/resolver";
+from "../reference_engine/validator";
+
 
 
 
 export class ReferenceEngine{
 
 
-resolve(ids:string[]){
+validate(id:string){
 
 
-return resolveReference(ids);
+return validateReference(
+id
+);
 
 
 }

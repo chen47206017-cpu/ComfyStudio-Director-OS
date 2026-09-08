@@ -1,39 +1,30 @@
-﻿
-export type ReferenceType=
-
-"CHARACTER"
-|
-"SCENE"
-|
-"PROP"
-|
-"STYLE"
-|
-"SHOT";
-
-
-export interface ReferenceAsset{
-
+﻿export interface ReferenceAsset{
 
 id:string;
 
-
-type:ReferenceType;
-
+type:
+"character" |
+"scene" |
+"prop";
 
 name:string;
 
-
 source:string;
 
+image:string[];
 
 priority:number;
 
-
-tags:string[];
-
+locked:boolean;
 
 }
 
 
+export interface ReferenceValidation{
+
+pass:boolean;
+
+issues:string[];
+
+}
 

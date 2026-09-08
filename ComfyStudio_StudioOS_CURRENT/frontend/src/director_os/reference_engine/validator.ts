@@ -1,69 +1,48 @@
 ﻿
-
 import {
-
 referenceAssets
-
 }
-
-from "./database";
+from "./assets";
 
 
 
 export function validateReference(
-
-id:string,
-
-year:number
-
+id:string
 ){
-
 
 
 const issues:string[]=[];
 
 
-
-const ref:any=
-
+const asset:any=
 (referenceAssets as any)[id];
 
 
 
-if(!ref){
-
+if(!asset){
 
 issues.push(
-
 "REFERENCE_NOT_FOUND"
-
 );
 
 
 return {
 
-
 pass:false,
 
 issues
 
-
 };
-
 
 }
 
 
 
-if(ref.year!==year){
-
+if(!asset.locked){
 
 issues.push(
-
-"REFERENCE_YEAR_CONFLICT"
-
+"REFERENCE_UNLOCKED"
 );
-
 
 }
 
@@ -73,7 +52,6 @@ return {
 
 
 pass:
-
 issues.length===0,
 
 
@@ -81,7 +59,6 @@ issues
 
 
 };
-
 
 
 }
