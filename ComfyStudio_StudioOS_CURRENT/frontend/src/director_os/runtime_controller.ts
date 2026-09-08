@@ -1,62 +1,67 @@
 ﻿
+
 import {
-engineRegistry
+EngineDispatcher
 }
-from "./engine_registry";
+from "./engine_dispatcher";
 
 
 
 export class DirectorRuntime{
 
 
-async execute(workflow:any){
-
-
-for(
-const node of workflow.nodes
-){
-
-
-node.status="RUNNING";
-
-
-try{
-
-
-const engine:any=
-(engineRegistry as any)[node.type];
+dispatcher:
+EngineDispatcher;
 
 
 
-if(engine){
+constructor(){
 
 
-const result=
-await engine.check?
-engine.check(node.data)
-:
-engine.run?
-engine.run(node.data)
-:
-engine.select?
-engine.select(node.data)
-:
-engine.build?
-engine.build(node.data)
-:
-null;
-
-
-
-node.data.result=result;
-
+this.dispatcher=
+new EngineDispatcher();
 
 
 }
 
 
 
+
+
+async executeNode(
+node:any
+){
+
+
+
+node.status="RUNNING";
+
+
+
+try{
+
+
+const result=
+await this.dispatcher.execute(node);
+
+
+
 node.status="SUCCESS";
+
+
+
+return {
+
+
+node,
+
+
+result
+
+
+
+};
+
 
 
 }
@@ -66,8 +71,18 @@ catch(error){
 node.status="FAILED";
 
 
-node.data.error=
-String(error);
+return {
+
+
+node,
+
+
+error
+
+
+
+};
+
 
 
 }
@@ -75,15 +90,38 @@ String(error);
 
 
 }
+
+
+
+
+
+async executeWorkflow(
+workflow:any
+){
+
+
+
+for(
+const node of workflow.nodes
+){
+
+
+await this.executeNode(node);
+
+
+}
+
 
 
 return workflow;
 
 
-}
-
-
 
 }
+
+
+
+}
+
 
 
