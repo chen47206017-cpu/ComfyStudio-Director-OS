@@ -1,0 +1,34 @@
+﻿
+import ScriptNode from "./nodes/ScriptNode";
+import CanonNode from "./nodes/CanonNode";
+import AssetNode from "./nodes/AssetNode";
+import ReferenceNode from "./nodes/ReferenceNode";
+import PromptNode from "./nodes/PromptNode";
+import ModelNode from "./nodes/ModelNode";
+import QCNode from "./nodes/QCNode";
+import DeliveryNode from "./nodes/DeliveryNode";
+
+
+export const directorNodeRegistry={
+
+
+script:ScriptNode,
+
+canon:CanonNode,
+
+asset:AssetNode,
+
+reference:ReferenceNode,
+
+prompt:PromptNode,
+
+model:ModelNode,
+
+qc:QCNode,
+
+delivery:DeliveryNode
+
+
+};
+
+
