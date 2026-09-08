@@ -1,0 +1,11 @@
+﻿F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\@esbuild\win32-x64\esbuild.exe
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\@xyflow\react\dist\esm\index.js
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\@xyflow\react\dist\esm\index.mjs
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\@xyflow\react\dist\esm\components\ReactFlowProvider\index.d.ts
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\@xyflow\react\dist\umd\components\ReactFlowProvider\index.d.ts
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\d3-zoom\dist\d3-zoom.js
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\d3-zoom\src\zoom.js
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\typescript\lib\lib.dom.d.ts
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\typescript\lib\typesMap.json
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\vite\dist\node\index.d.ts
+F:\一人公司\comfyui-production\ComfyStudio_StudioOS_CURRENT\frontend\node_modules\vite\dist\node\chunks\dep-Dm0c1Wj2.js
