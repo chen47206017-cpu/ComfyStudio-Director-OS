@@ -1,28 +1,67 @@
-﻿import React from "react";
+﻿
+
+import React from "react";
 
 
-export default function DeliveryNode(props:any){
+import {
+DeliveryEngine
+}
+from "../engines/delivery_engine";
+
+
+
+export default function DeliveryNode({data}:any){
+
+
+const engine=
+new DeliveryEngine();
+
+
+
+function save(){
+
+
+const result=
+engine.save(data);
+
+
+
+console.log(
+"Delivery",
+result
+);
+
+
+
+}
+
+
 
 return (
 
-<div className="director-node">
-
-<strong>
-{props.data?.label || "DeliveryNode"}
-</strong>
-
-
 <div>
 
-状态:
-{props.data?.status || "等待"}
+
+<h3>
+交付归档节点
+</h3>
+
+
+<button
+onClick={save}
+>
+
+保存版本
+
+</button>
+
 
 </div>
 
+);
 
-</div>
-
-)
 
 }
+
+
 
