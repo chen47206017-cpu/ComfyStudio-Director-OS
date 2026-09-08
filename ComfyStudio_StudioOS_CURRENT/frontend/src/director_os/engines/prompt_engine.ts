@@ -1,20 +1,34 @@
 ﻿
+
 import {
-
 compilePrompt
-
 }
-
 from "../prompt_engine/compiler";
+
+
+
+import {
+buildSeedancePrompt
+}
+from "../prompt_engine/seedance";
+
 
 
 export class PromptEngine{
 
 
-compile(data:any){
+run(context:any){
 
 
-return compilePrompt(data);
+const compiled=
+compilePrompt(context);
+
+
+
+return buildSeedancePrompt(
+compiled
+);
+
 
 
 }

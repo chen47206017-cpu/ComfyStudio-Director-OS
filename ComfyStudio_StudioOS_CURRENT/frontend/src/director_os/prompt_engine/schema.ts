@@ -1,16 +1,17 @@
 ﻿
-export interface PromptPackage{
+export interface PromptContext{
 
 
 episode:string;
 
+
 shot:string;
 
 
-canon:string;
+year:number;
 
 
-characters:string[];
+character:string[];
 
 
 scene:string;
@@ -19,18 +20,36 @@ scene:string;
 props:string[];
 
 
-referenceImages:string[];
+emotion:string;
 
 
 camera:string;
 
 
-lighting:string;
+duration:number;
 
 
-style:string;
+referencePack?:any;
+
 
 
 }
+
+
+
+export interface CompiledPrompt{
+
+
+positive:string;
+
+
+negative:string;
+
+
+references:any;
+
+
+}
+
 
 
