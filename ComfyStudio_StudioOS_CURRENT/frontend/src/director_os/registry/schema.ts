@@ -7,7 +7,7 @@ label:string;
 
 category:string;
 
-enabled:boolean;
+component:any;
 
 }
 

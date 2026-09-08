@@ -1,31 +1,47 @@
 ﻿
-import ReferenceNode from "../nodes/ReferenceNode";
-
+import CanonNode from "../nodes/CanonNode";
 import PromptNode from "../nodes/PromptNode";
-
+import ReferenceNode from "../nodes/ReferenceNode";
 
 
 export const directorNodeRegistry={
 
 
+CanonNode:{
+
+id:"CanonNode",
+
+label:"Canon检查节点",
+
+category:"审核",
+
+component:CanonNode
+
+},
+
+
 ReferenceNode:{
 
-component:ReferenceNode,
+id:"ReferenceNode",
 
 label:"参考资产节点",
 
-category:"资产"
+category:"资产",
+
+component:ReferenceNode
 
 },
 
 
 PromptNode:{
 
-component:PromptNode,
+id:"PromptNode",
 
 label:"提示词编译节点",
 
-category:"生成"
+category:"生成",
+
+component:PromptNode
 
 }
 

@@ -5,8 +5,11 @@ directorNodeRegistry
 from "./nodes";
 
 
+export const nodeTypes={
 
-export const reactFlowNodeTypes={
+
+CanonNode:
+directorNodeRegistry.CanonNode.component,
 
 
 ReferenceNode:
