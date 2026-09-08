@@ -2,44 +2,37 @@
 
 import {
 
-resolveReference
+validateReference
 
 }
 
-from "../reference_engine/resolver";
-
+from "../reference_engine/validator";
 
 
 
 export class ReferenceEngine{
 
 
-buildShotReference(
+check(
 
-shot:any
+id:string,
+
+year:number
 
 ){
 
 
-return {
+return validateReference(
 
+id,
 
-shotId:shot.id,
+year
 
-
-assets:
-
-resolveReference(
-
-shot
-
-)
-
-
-};
+);
 
 
 }
+
 
 
 }

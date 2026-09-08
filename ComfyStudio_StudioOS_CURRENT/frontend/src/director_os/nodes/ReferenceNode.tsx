@@ -13,7 +13,6 @@ from "../engines/reference_engine";
 
 
 
-
 export default function ReferenceNode(
 
 {data}:any
@@ -21,28 +20,24 @@ export default function ReferenceNode(
 ){
 
 
+const engine=
 
-const engine=new ReferenceEngine();
+new ReferenceEngine();
 
 
 
-function generate(){
-
-const result=
-
-engine.buildShotReference(
-
-data.shot
-
-);
-
+function check(){
 
 
 console.log(
 
-"Reference Result",
+engine.check(
 
-result
+data.reference,
+
+data.year
+
+)
 
 );
 
@@ -55,20 +50,21 @@ return (
 
 <div>
 
+
 <h3>
 
-参考图绑定节点
+Reference参考引擎节点
 
 </h3>
 
 
 <button
 
-onClick={generate}
+onClick={check}
 
 >
 
-生成参考资产包
+检查参考资产
 
 </button>
 

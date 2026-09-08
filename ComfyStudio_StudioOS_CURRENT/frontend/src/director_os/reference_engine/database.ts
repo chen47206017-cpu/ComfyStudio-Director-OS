@@ -3,128 +3,120 @@
 export const referenceAssets={
 
 
-CHARACTER_SW25:{
 
-id:"CHARACTER_SW25",
+SW25_FACE_01:{
+
+
+id:"SW25_FACE_01",
+
 
 type:"CHARACTER",
 
-name:"25岁苏晚晴",
 
-source:"Mixed1",
+name:"25岁苏晚晴Face DNA",
+
+
+year:2006,
+
 
 priority:10,
 
-tags:[
 
-"faceDNA",
+role:"人物身份锁定",
 
-"25岁",
 
-"2006"
+image:"Mixed1"
 
-]
 
 },
 
 
 
-CHARACTER_CN40:{
+SW45_FACE_01:{
 
-id:"CHARACTER_CN40",
+
+id:"SW45_FACE_01",
+
 
 type:"CHARACTER",
+
+
+name:"45岁苏晚晴Face DNA",
+
+
+year:2026,
+
+
+priority:10,
+
+
+role:"人物身份锁定",
+
+
+image:"Mixed45"
+
+
+},
+
+
+
+CN40_FACE_01:{
+
+
+id:"CN40_FACE_01",
+
+
+type:"CHARACTER",
+
 
 name:"40岁陈念",
 
-source:"MixedCN",
+
+year:2046,
+
 
 priority:10,
 
-tags:[
 
-"future",
+role:"未来女儿身份锁定",
 
-"2046"
 
-]
+image:"MixedCN"
+
 
 },
 
 
 
-SCENE_STUDIO_2006:{
+STUDIO2006_REF:{
 
-id:"SCENE_STUDIO_2006",
+
+id:"STUDIO2006_REF",
+
 
 type:"SCENE",
 
-name:"2006苏晚晴工作室",
 
-source:"Mixed3",
-
-priority:9,
-
-tags:[
-
-"2006",
-
-"office"
-
-]
-
-},
+name:"2006工作室",
 
 
+year:2006,
 
-PROP_PHONE_2006:{
-
-id:"PROP_PHONE_2006",
-
-type:"PROP",
-
-name:"米黄色有线座机",
-
-source:"Mixed4",
 
 priority:8,
 
-tags:[
 
-"telephone",
-
-"2006"
-
-]
-
-},
+role:"空间锁定",
 
 
+image:"Mixed3"
 
-PROP_DRAWING_2006:{
-
-id:"PROP_DRAWING_2006",
-
-type:"PROP",
-
-name:"建筑设计原稿",
-
-source:"Mixed6",
-
-priority:8,
-
-tags:[
-
-"design",
-
-"document"
-
-]
 
 }
 
 
 
 };
+
 
 

@@ -6,47 +6,41 @@ id:string;
 
 
 type:
-
-"CHARACTER"
-
-|
-
-"SCENE"
-
-|
-
-"PROP"
-
-|
-
+"CHARACTER"|
+"SCENE"|
+"PROP"|
 "STYLE";
 
 
 name:string;
 
 
-source:string;
+year:number;
 
 
 priority:number;
 
 
-tags:string[];
+role:string;
+
+
+image:string;
 
 
 }
 
 
 
-export interface ShotReference{
+export interface ReferenceValidation{
 
 
-shotId:string;
+pass:boolean;
 
 
-assets:ReferenceAsset[];
+issues:string[];
 
 
 }
+
 
 
