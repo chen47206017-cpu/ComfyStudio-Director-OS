@@ -20,21 +20,35 @@ export default function ReferenceNode(
 
 
 
-const engine=new ReferenceEngine();
+const engine=
+
+new ReferenceEngine();
 
 
 
-function resolve(){
+const execute=()=>{
 
 
-console.log(
+const result=
 
-engine.resolve(data.references)
+engine.resolve(
+
+data.refs
 
 );
 
 
-}
+
+console.log(
+
+"Reference Loaded",
+
+result
+
+);
+
+
+};
 
 
 
@@ -45,26 +59,26 @@ return (
 
 <h3>
 
-Reference参考节点
+参考资产节点
 
 </h3>
 
 
 <button
 
-onClick={resolve}
+onClick={execute}
 
 >
 
-加载参考资产
+加载角色/场景/道具参考
 
 </button>
 
 
 </div>
 
-
 )
+
 
 
 }
