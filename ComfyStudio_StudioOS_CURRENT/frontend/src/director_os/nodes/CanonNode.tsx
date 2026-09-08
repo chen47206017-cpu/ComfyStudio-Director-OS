@@ -1,28 +1,55 @@
-﻿import React from "react";
+﻿
+import React from "react";
+
+import {
+ validateShot
+} from "../canon_engine/validator";
 
 
-export default function CanonNode(props:any){
+export default function CanonNode({data}:any){
+
+
+function runCheck(){
+
+
+const result=validateShot(
+data.shot
+);
+
+
+console.log(
+"Canon Result",
+result
+);
+
+
+return result;
+
+}
+
 
 return (
 
-<div className="director-node">
-
-<strong>
-{props.data?.label || "CanonNode"}
-</strong>
-
-
 <div>
 
-状态:
-{props.data?.status || "等待"}
+<h3>
+Canon检查节点
+</h3>
+
+
+<button
+onClick={runCheck}
+>
+
+执行Canon检查
+
+</button>
+
 
 </div>
 
+);
 
-</div>
-
-)
 
 }
 
