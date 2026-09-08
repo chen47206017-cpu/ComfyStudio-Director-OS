@@ -2,13 +2,12 @@
 from pathlib import Path
 
 
-CONFIG=Path(
-"runtime/providers/providers.json"
+CONFIG = Path(
+    "runtime/providers/providers.json"
 )
 
 
 class RouterService:
-
 
     def __init__(self):
 
@@ -21,25 +20,29 @@ class RouterService:
 
     def providers(self):
 
-        return self.config["providers"]
-
+        return self.config.get(
+            "providers",
+            []
+        )
 
 
     def select(self,name=None):
 
         if not name:
-            name=self.config["default_provider"]
+
+            name=self.config.get(
+                "default_provider"
+            )
 
 
-        for p in self.config["providers"]:
+        for p in self.providers():
 
             if p["id"]==name:
+
                 return p
 
 
-        raise Exception(
-            "Provider not found"
-        )
+        return None
 
 
 

@@ -4,10 +4,9 @@ from model_router.service import router_service
 
 
 router=APIRouter(
-prefix="/api/models",
-tags=["models"]
+    prefix="/api/models",
+    tags=["models"]
 )
-
 
 
 @router.get("/providers")
@@ -19,11 +18,13 @@ def providers():
     }
 
 
-
 @router.post("/select")
 def select(data:dict):
 
-    return router_service.select(
-        data.get("provider")
-    )
+    return {
+        "provider":
+        router_service.select(
+            data.get("provider")
+        )
+    }
 

@@ -872,3 +872,16 @@ if __name__ == "__main__":
 
 
 CLS
+
+# V10.2.2 Model Router
+
+try:
+
+    from routes.model_router_api import router as model_router_router
+
+    app.include_router(model_router_router)
+
+except Exception as e:
+
+    print("Model Router:",e)
+
