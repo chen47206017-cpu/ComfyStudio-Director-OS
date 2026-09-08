@@ -1,0 +1,22 @@
+﻿
+{
+"name":"comfystudio-director-os",
+
+"version":"60.3.0",
+
+"main":"main.js",
+
+"scripts":{
+
+"start":"electron ."
+
+},
+
+"dependencies":{
+
+"electron":"latest"
+
+}
+
+}
+
