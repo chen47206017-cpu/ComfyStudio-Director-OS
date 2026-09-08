@@ -1,6 +1,4 @@
-﻿
-import React from "react";
-
+﻿import React from "react";
 
 import {
 
@@ -12,43 +10,35 @@ from "../engines/reference_engine";
 
 
 
+const engine=new ReferenceEngine();
+
+
+
 export default function ReferenceNode(
-
 {data}:any
-
 ){
 
 
-
-const engine=
-
-new ReferenceEngine();
-
-
-
-const execute=()=>{
+function checkReference(){
 
 
 const result=
-
-engine.resolve(
-
-data.refs
-
+engine.validate(
+data.referenceId
 );
 
 
 
 console.log(
-
-"Reference Loaded",
-
+"Reference Check",
 result
-
 );
 
 
-};
+return result;
+
+
+}
 
 
 
@@ -56,32 +46,29 @@ return (
 
 <div>
 
-
 <h3>
-
 参考资产节点
-
 </h3>
 
 
+<div>
+{data.referenceId}
+</div>
+
+
 <button
-
-onClick={execute}
-
+onClick={checkReference}
 >
 
-加载角色/场景/道具参考
+执行参考一致性检查
 
 </button>
 
 
 </div>
 
-)
-
+);
 
 
 }
-
-
 
