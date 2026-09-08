@@ -3,87 +3,33 @@
 export const qcRules={
 
 
-
-timeline:{
-
-
-2006:[
-
-"手机",
-
-"智能设备",
-
-"未来设备"
-
-],
+AGE_CONFLICT:
+"人物年龄与年代不匹配",
 
 
 
-2026:[
-
-"2006座机"
-
-],
+PROP_YEAR_CONFLICT:
+"道具年代错误",
 
 
 
-2046:[
-
-"2006旧家具"
-
-]
-
-
-},
+SCENE_YEAR_CONFLICT:
+"场景年代错误",
 
 
 
-
-character:{
-
-
-2006:{
-
-"苏晚晴":25
-
-},
+SPACE_TIME_MIX:
+"禁止混合时空",
 
 
 
-2026:{
-
-"苏晚晴":45
-
-},
+REFERENCE_MISSING:
+"缺少参考资产",
 
 
 
-2046:{
-
-"陈念":40
-
-}
-
-
-
-},
-
-
-
-
-
-props:{
-
-
-"RECORDER_2046":[2046],
-
-
-"PHONE_2006":[2006],
-
-
-"DESIGN_DRAWING_2006":[2006]
-
-}
+PROMPT_WEAK:
+"提示词信息不足"
 
 
 

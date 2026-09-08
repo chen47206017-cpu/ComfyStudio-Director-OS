@@ -1,49 +1,43 @@
 ﻿
-export type QCLevel =
-
-"BLOCK" |
-
-"WARNING" |
-
-"PASS";
-
-
-
 export interface QCResult{
 
 
-level:QCLevel;
+pass:boolean;
 
 
-passed:boolean;
+score:number;
 
 
-issues:string[];
+errors:string[];
+
+
+warnings:string[];
 
 
 }
 
 
 
-export interface QCContext{
+export interface ShotQCContext{
 
 
 year:number;
 
 
-character:string[];
+characters:any[];
 
 
-scene:string;
+scene:any;
 
 
-props:string[];
+props:any[];
 
 
 references:any;
 
 
 prompt:string;
+
 
 
 }

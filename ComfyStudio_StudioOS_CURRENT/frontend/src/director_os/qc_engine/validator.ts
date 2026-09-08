@@ -2,61 +2,58 @@
 
 import {
 
-qcRules
+QCResult
 
 }
 
-from "./rules";
+from "./schema";
 
 
 
-export function runQC(
+
+export function inspectShot(
 ctx:any
-){
+):QCResult{
 
 
 
-const issues:string[]=[];
+const errors:string[]=[];
 
+
+const warnings:string[]=[];
 
 
 
 // 年代检查
 
-const forbidden:any=
-
-(qcRules.timeline as any)[ctx.year];
-
-
-
-if(forbidden){
-
-
-for(
-const item of forbidden
+if(
+ctx.characters
 ){
+
+ctx.characters.forEach(
+(c:any)=>{
 
 
 if(
-JSON.stringify(ctx.props)
-.includes(item)
-
+c.year &&
+c.year!==ctx.year
 ){
 
 
-issues.push(
-"TIMELINE_PROP_CONFLICT:"+item
+errors.push(
+"AGE_CONFLICT"
 );
 
 
 }
 
 
+
+});
+
+
 }
 
-
-
-}
 
 
 
@@ -66,15 +63,13 @@ issues.push(
 
 
 if(
-ctx.scene.includes("2006")
-&&
-ctx.prompt.includes("未来")
-
+ctx.scene &&
+ctx.scene.year!==ctx.year
 ){
 
 
-issues.push(
-"SCENE_TIME_MIX"
+errors.push(
+"SCENE_YEAR_CONFLICT"
 );
 
 
@@ -85,23 +80,65 @@ issues.push(
 
 
 
+// 道具检查
 
-// 时空融合检查
+
+if(ctx.props){
+
+
+ctx.props.forEach(
+(p:any)=>{
 
 
 if(
-ctx.prompt.includes("三层")
-
+p.year &&
+p.year!==ctx.year
 ){
 
 
-issues.push(
-"TIME_SPACE_MERGE"
+errors.push(
+"PROP_YEAR_CONFLICT"
 );
 
 
 }
 
+
+});
+
+
+}
+
+
+
+
+
+
+
+// Reference检查
+
+
+if(
+!ctx.references
+){
+
+
+warnings.push(
+"REFERENCE_MISSING"
+);
+
+
+}
+
+
+
+
+
+const score=
+Math.max(
+0,
+100-errors.length*20-warnings.length*5
+);
 
 
 
@@ -110,21 +147,17 @@ issues.push(
 return {
 
 
-passed:
-issues.length===0,
+pass:
+errors.length===0,
 
 
-level:
-
-issues.length===0
-
-?"PASS"
-
-:"BLOCK",
+score,
 
 
+errors,
 
-issues
+
+warnings
 
 
 

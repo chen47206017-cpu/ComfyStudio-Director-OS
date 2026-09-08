@@ -2,7 +2,7 @@
 
 import {
 
-runQC
+inspectShot
 
 }
 
@@ -10,13 +10,18 @@ from "../qc_engine/validator";
 
 
 
+
 export class QCEngine{
 
 
-check(data:any){
+check(
+context:any
+){
 
 
-return runQC(data);
+return inspectShot(
+context
+);
 
 
 }
