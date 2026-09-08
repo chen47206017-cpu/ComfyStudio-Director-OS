@@ -5,10 +5,7 @@ export interface QCResult{
 pass:boolean;
 
 
-level:
-"PASS"|
-"WARNING"|
-"FAILED";
+score:number;
 
 
 issues:string[];
@@ -17,26 +14,18 @@ issues:string[];
 }
 
 
-
-export interface QCContext{
-
-
-year:number;
+export interface QCRule{
 
 
-character:string[];
+id:string;
 
 
-scene:string;
+name:string;
 
 
-props:string[];
-
-
-prompt:string;
+severity:string;
 
 
 }
-
 
 

@@ -1,19 +1,14 @@
 ﻿
 
 import {
-
 qcRules
-
 }
-
 from "./rules";
 
 
 
 export function runQC(
-
-context:any
-
+data:any
 ){
 
 
@@ -22,58 +17,33 @@ const issues:string[]=[];
 
 
 
-// 年代检查
-
-
-if(
-
-context.year===2006
-
-&&
-
-context.prompt.includes("智能手机")
-
-){
+if(!data.canon){
 
 issues.push(
-
-"YEAR_DEVICE_CONFLICT"
-
+"CANON_MISSING"
 );
 
 }
 
 
 
-
-// Prompt完整性
-
-
-for(
-
-const field of qcRules.requiredPromptFields
-
-){
-
-
-if(
-
-!context.prompt.includes(field)
-
-){
+if(!data.reference){
 
 issues.push(
-
-"PROMPT_FIELD_MISSING_"+field
-
+"REFERENCE_MISSING"
 );
 
-
 }
 
 
-}
 
+if(!data.prompt){
+
+issues.push(
+"PROMPT_MISSING"
+);
+
+}
 
 
 
@@ -81,21 +51,11 @@ return {
 
 
 pass:
-
 issues.length===0,
 
 
-level:
-
-issues.length===0
-
-?
-
-"PASS"
-
-:
-
-"FAILED",
+score:
+100-(issues.length*15),
 
 
 issues

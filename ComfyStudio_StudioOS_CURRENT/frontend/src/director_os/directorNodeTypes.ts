@@ -86,3 +86,16 @@ ModelNode
 };
 
 
+
+// V10.8.4 QC Node
+
+import QCNode from "./nodes/QCNode";
+
+
+export const qcNodes={
+
+QCNode
+
+};
+
+
